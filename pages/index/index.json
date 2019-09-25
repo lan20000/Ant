@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "主页",
+  "disableScroll": true,
+  "usingComponents": {
+    "controls": "/components/audiocontrols/controls"
+  }
+}

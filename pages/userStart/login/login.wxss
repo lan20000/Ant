@@ -1,0 +1,14 @@
+/* pages/login/login.wxss */
+.body{height:100vh;font-size: 50rpx;padding: 20rpx;}
+button{border:1rpx solid #333;padding:0 40rpx;width:30%;}
+.user{text-align: center;margin-top: 100rpx;position: relative;height: 100%;}
+.user image{width:160rpx;height:160rpx;border-radius: 50%;border:1rpx solid #bbb;}
+.user .nick-name{font-size: 32rpx;padding:20rpx 0;}
+.user button{width:100%;color: red;margin: 35rpx auto;}
+
+.login_name{color: red;padding-top: 25rpx;font-size: 26rpx;display: block;}
+.login_sintxt{color: #000;padding-top: 100rpx;font-size: 26rpx;display: block;}
+
+.Tips_content{position: absolute;bottom: 35rpx;}
+.Tips_content text:first-child{font-weight: 600;color: #333;font-size: 35rpx;display: block;}
+.Tips_content text:last-child{color: #ccc;font-size: 25rpx;}

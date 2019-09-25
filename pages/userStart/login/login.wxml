@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<view class="container body ">
+  <view class="user">
+    <image src="http://flynew.oss-cn-hangzhou.aliyuncs.com/game/wechat/ly/lawyer/ti.png"></image>
+    <text class="login_name">张</text>
+    <text class="login_sintxt">使用该微信12154154登录</text>
+    <button>一键登录</button>
+  </view>
+  <view class="Tips_content">
+    <text class="">温馨提示：</text>
+
+    <text class="">使用一键登录</text>
+  </view>
+</view>
