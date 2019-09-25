@@ -2,7 +2,7 @@
   "pages": [
     "pages/userStart/bindingPhone/bindingPhone",
     "pages/userStart/login/login",
-    
+    "pages/index/index"
   ],
   "window": {
     "navigationBarTitleText": "蚂蚁小程序",
