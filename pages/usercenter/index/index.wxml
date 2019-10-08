@@ -1,0 +1,80 @@
+<!--pages/usercenter/index/index.wxml-->
+
+<myheader title="" btnIcon="home" is="{{false}}" bind:headerBack="headerBack"></myheader>
+<view class="body_content">
+  <view class="bodys">
+    <view class="header">
+      <view class="header_top flex">
+        <view class="flex1">
+          <text class="login ">点击登录</text>
+        </view>
+        <image src="https://img2.woyaogexing.com/2019/10/08/0002034dd4724353964d1df29d625e5a!400x400.jpeg"></image>
+      </view>
+      <text class="header_title">使用手机号码登录unicorn即可成为会员</text>
+    </view>
+  </view>
+  <view class="meun">
+    <view class="flex-ali">
+      <view class="meun_list flex-cen-col flex1">
+        <image src=""></image>
+        <text>我的作品</text>
+      </view>
+      <view class="meun_list flex-cen-col flex1">
+        <image src=""></image>
+        <text>视频库</text>
+      </view>
+      <view class="meun_list flex-cen-col flex1">
+        <image src=""></image>
+        <text>我的关注</text>
+      </view>
+      <view class="meun_list flex-cen-col flex1">
+        <image src=""></image>
+        <text>会员商品</text>
+      </view>
+    </view>
+    <view class="flex-ali">
+      <view class="meun_list flex-cen-col flex1">
+        <image src=""></image>
+        <text>卡券兑换</text>
+      </view>
+      <view class="meun_list flex-cen-col flex1">
+        <image src=""></image>
+        <text>呼叫顾问</text>
+      </view>
+      <view class="meun_list flex-cen-col flex1">
+        <image src=""></image>
+        <text>我的积分</text>
+      </view>
+      <view class="meun_list flex-cen-col flex1">
+        <image src=""></image>
+        <text>邀请好友</text>
+      </view>
+    </view>
+  </view>
+  <view class="set_list">
+    <view class="flex tab-nav-item tab-active">
+      <text class="flex1">我的订单</text>
+      <image src=""></image>
+    </view>
+    <view class="flex">
+      <text class="flex1">地址管理</text>
+      <image src=""></image>
+    </view>
+    <view class="flex">
+      <text class="flex1">手机号码</text>
+      <image src=""></image>
+    </view>
+    <view class="flex">
+      <text class="flex1">个人设置</text>
+      <image src=""></image>
+    </view>
+    <view class="flex">
+      <text class="flex1">关于我们</text>
+      <image src=""></image>
+    </view>
+    <view class="flex">
+      <text class="flex1">用户协议</text>
+      <image src=""></image>
+    </view>
+  </view>
+</view>

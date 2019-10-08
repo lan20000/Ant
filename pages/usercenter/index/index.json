@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "myheader": "/components/myheader/myheader"
+  },
+  "navigationStyle": "custom"
+}
