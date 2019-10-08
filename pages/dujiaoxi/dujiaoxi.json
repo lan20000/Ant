@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+	  "qc-Tabbar": "/components/Tabbar/cmp"
+  },
+   "navigationBarTitleText": "独角戏",
+   "navigationBarBackgroundColor": "#323344"
+}

@@ -1,0 +1,19 @@
+<!--pages/videoDel/videoDel.wxml-->
+<view class="whole">
+	<view class="handVideo">
+		<video src="11"></video>
+	</view>
+	<view class="autherBox">
+		<view class="leftImg" style="background-image:url({{STATICIMG}}/test.jpg)"></view>
+		<view class="rightInfo">
+			<view class="leftTxt">
+				<text class="auName nowrap">韩国舞蹈 Boyfriend </text>
+				<text class="auname2 nowrap">巴拉巴拉小魔仙</text>
+			</view>
+			<view>
+				<view class="focus">关注</view>
+			</view>			
+		</view>
+	</view>
+	<view class="line"></view>
+</view>

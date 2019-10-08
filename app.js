@@ -41,5 +41,6 @@ App({
   },
   globalData: {
     loginNum: 0,//登录失败重新登录次数
+	STATICIMG:"http://game.flyh5.cn/resources/game/wechat/yls/djx/"
   }
 })
