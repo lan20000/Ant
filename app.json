@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/course/schedule/schedule",
     "pages/userStart/login/login",
     "pages/usercenter/index/index",
-    "pages/course/schedule/schedule",
     "pages/course/Coursedetails/Coursedetails",
     "pages/course/Somecode/Somecode",
     "pages/course/scoresuccess/scoresuccess",

@@ -1,1 +1,23 @@
 <!--pages/course/schedule/schedule.wxml-->
+<scroll-view>
+  <view class="content">
+    <view class="m-top">
+      <view class="b_left"></view>
+      <view class="score_d" style="{{true ? 'left:-21rpx' : 'left:-21rpx'}};">
+        <image src="" style="width: 42rpx;height: 42rpx;"></image>
+        <text>14:00</text>
+      </view>
+      <view class="c_right">
+        <view class="score_m">8月22日</view>
+        <view class="score_c flex-ali">
+          <view class="score_img" style=""></view>
+          <view class="flex1">
+            <text class="title">14:00-16:00 芭蕾舞基础课程</text>
+            <text class="name">老师：逗逗</text>
+            <text class="name">已预约</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
