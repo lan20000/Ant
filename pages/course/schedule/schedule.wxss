@@ -10,3 +10,4 @@
 .score_c text{display: block;padding-bottom: 20rpx;}
 .score_m{font-size:24rpx;font-weight:500;color:rgba(49,49,52,1);padding-bottom: 29rpx;}
 .score_d{font-size:32rpx;font-weight:bold;color:rgba(49,49,52,1);position: absolute;}
+.score_d>text.this{padding-left: 17rpx;}

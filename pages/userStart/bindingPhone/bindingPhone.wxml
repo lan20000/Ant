@@ -4,12 +4,12 @@
     <text class="binding_title">温馨提示：</text>
     <text class="binding_txt">手机号码将是UNICORN识别您身份的重要凭证，请填写您常用的手机号码。</text>
     <view class="input_title flex-ali">
-      <image src=""></image>
+      <image src="./../../../assets/static/pic_phoneNumber.png" style="width:32rpx;height:40rpx;"></image>
       <text>手机</text>
     </view>
     <input type="Number" placeholder="请输入手机号码" placeholder-class="phone_pla"></input>
     <view class="input_title flex-ali">
-      <image src=""></image>
+      <image src="./../../../assets/static/pic_verificationCode.png" style="width:32rpx;height:40rpx;"></image>
       <text>验证码</text>
     </view>
     <view class="code_content flex-ali">

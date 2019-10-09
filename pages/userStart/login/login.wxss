@@ -1,5 +1,5 @@
 /* pages/login/login.wxss */
-.body{height:100vh;font-size: 50rpx;padding: 30rpx;font-family:PingFang SC;}
+.body{height:100vh;font-size: 50rpx;padding: 30rpx;font-family:PingFang SC;background-color: #fff;}
 button{background:rgba(50,51,68,1);border-radius:10rpx;padding:0rpx 0rpx;}
 .user{text-align: center;margin-top: 100rpx;position: relative;height: 100%;}
 .user image{width:160rpx;height:160rpx;border-radius: 20rpx;}

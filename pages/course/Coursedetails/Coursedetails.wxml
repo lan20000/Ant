@@ -58,7 +58,8 @@
       </view>
       <view class="video_list flex1">
         <text>GIMME ON UP</text>
-        <view class="flex">
+        <view class="flex-ali">
+          <image src="./../../../assets/static/ic_time.png" style="width:24rpx;height:24rpx;margin-right:16rpx;"></image>
           <text>35:56</text>
         </view>
       </view>
@@ -67,21 +68,16 @@
   <view class="progress">
     <text class="title">课程进度（3/4）</text>
     <view class="flex-ali">
-      <image src="" ></image>
+      <view class="line"></view>
+      <image src="./../../../assets/static/classDetail_ic_nor.png" class="icon" ></image>
       <text>GIMME ON UP第一节</text>
     </view>
     <view class="flex-ali">
-      <image src="" ></image>
-      <text>GIMME ON UP第一节</text>
-    </view>
-    <view class="flex-ali">
-      <image src="" ></image>
-      <text>GIMME ON UP第一节</text>
-    </view>
-    <view class="flex-ali">
-      <image src="" ></image>
-      <text>GIMME ON UP第一节</text>
-      <text class="progressbt flex-cen">本节学习</text>
+      <view class="line"></view>
+      <image src="./../../../assets/static/classDetail_ic_sel.png" class="this icon"></image>
+      <text class="this">GIMME ON UP第一节</text>
+      <image src="./../../../assets/static/classDetail_ic_arrowLeft.png" style="width:16rpx;height:21rpx;margin-left:20rpx;"></image>
+      <text class="progressbt flex-cen ">本节学习</text>
     </view>
   </view>
   <view style="height:94rpx;"></view>
