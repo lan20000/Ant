@@ -27,13 +27,13 @@
 	<view class="firInfo">
 		<view class="leftImg" style="background-image:url({{STATICIMG}}/test.jpg)"></view>
 		<view class="rightInfo">
-			<text>韩国舞蹈 Boyfriend </text>
+			<text class="tno">韩国舞蹈 Boyfriend </text>
 			<text>巴拉巴拉小魔仙 </text>
 			<text>粉丝  100  |  支持  265200 </text>
 		</view>
 	</view>
 	<view class="videoList">
-		<view class="videoItem" wx:for="{{10}}" bindtap="viedeoDel">
+		<view class="videoItem" wx:for="{{25}}" bindtap="viedeoDel">
 			<view class="topImg" style="background-image:url({{STATICIMG}}/test.jpg)">
 				<view class="tips">TOP 1</view>
 			</view>
