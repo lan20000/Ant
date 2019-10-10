@@ -1,22 +1,21 @@
-// pages/dujiaoxi/dujiaoxi.js
-const route = require("../../utils/tool/router.js");
-
+// pages/releaseWork/releaseWork.js
 const app = new getApp();
+const route = require("../../utils/tool/router.js");
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-		STATICIMG: app.globalData.STATICIMG,
-		more: false,//弹窗
+		ipttxt:"",
+		STATICIMG: app.globalData.STATICIMG
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-		console.log(this.data.STATICIMG);
+
 	},
 
 	/**
@@ -60,14 +59,9 @@ Page({
 	onReachBottom: function () {
 
 	},
-
-	/**
-	 * 用户点击右上角分享
-	 */
-	onShareAppMessage: function () {
-
-	},
-	viedeoDel() {
-		route.jump_nav({ url: "/pages/videoDel/videoDel" })
+	changeipt(e){
+		console.log(e.detail.value);
+		this.setData({ipttxt:e.detail.value})
 	}
+
 })

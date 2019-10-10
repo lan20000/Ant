@@ -1,3 +1,17 @@
+<view class="more" wx:if="{{more}}"></view>
+<view class="alert"  wx:if="{{more}}" style="background-image: url('./../../assets/static/bg_inviteScore.png');">
+  <text class="title">邀请评分</text>
+  <text class="content">为了更好的提升我们的课程和服务质量，UNICORN邀请您对结束课程进行匿名评分！</text>
+  <view class="bottom">
+    <view>
+    <text class="txt">陈朕老师 10月20日 20:00  【Breaking初级课程】</text>
+    </view>
+    <text class="Toobtain">评分成功可获得10积分！</text>
+    <navigator url="/pages/course/score/score" hover-class="navigator-hover" class="updata">
+      <button class="updata">去评分</button>
+    </navigator>
+  </view>
+</view>
 <view class="whole">
 	<view class="hander">
 		<text class="firtxt">每个人都有属于自己的主场</text>	
@@ -13,7 +27,7 @@
 	<view class="firInfo">
 		<view class="leftImg" style="background-image:url({{STATICIMG}}/test.jpg)"></view>
 		<view class="rightInfo">
-			<text>韩国舞蹈 Boyfriend </text>
+			<text class="tno">韩国舞蹈 Boyfriend </text>
 			<text>巴拉巴拉小魔仙 </text>
 			<text>粉丝  100  |  支持  265200 </text>
 		</view>

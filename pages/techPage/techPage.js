@@ -1,4 +1,4 @@
-// pages/dujiaoxi/dujiaoxi.js
+// pages/techPage/techPage.js
 const route = require("../../utils/tool/router.js");
 
 const app = new getApp();
@@ -9,14 +9,14 @@ Page({
 	 */
 	data: {
 		STATICIMG: app.globalData.STATICIMG,
-		more: false,//弹窗
+		currtab: 1
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-		console.log(this.data.STATICIMG);
+
 	},
 
 	/**
@@ -67,7 +67,9 @@ Page({
 	onShareAppMessage: function () {
 
 	},
-	viedeoDel() {
-		route.jump_nav({ url: "/pages/videoDel/videoDel" })
+	changeTab(e) {
+		let tab = e.currentTarget.dataset.tab;
+		this.setData({ currtab: tab })
+		console.log(e.currentTarget.dataset.tab);
 	}
 })

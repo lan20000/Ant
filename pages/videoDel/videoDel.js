@@ -1,5 +1,6 @@
 // pages/videoDel/videoDel.js
 const app = new getApp();
+const route = require("../../utils/tool/router.js");
 Page({
 
 	/**
@@ -63,5 +64,8 @@ Page({
 	 */
 	onShareAppMessage: function () {
 
+	},
+	homePage(){
+		route.jump_nav({ url:"/pages/usePage/usePage"})
 	}
 })

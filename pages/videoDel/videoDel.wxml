@@ -4,7 +4,7 @@
 		<video src="11"></video>
 	</view>
 	<view class="autherBox">
-		<view class="leftImg" style="background-image:url({{STATICIMG}}/test.jpg)"></view>
+		<view class="leftImg" style="background-image:url({{STATICIMG}}/test.jpg)" bindtap="homePage"></view>
 		<view class="rightInfo">
 			<view class="leftTxt">
 				<text class="auName nowrap">韩国舞蹈 Boyfriend </text>
@@ -16,4 +16,48 @@
 		</view>
 	</view>
 	<view class="line"></view>
+	<view class="setStyle">
+		<text>粉丝  (256)</text>	
+		<text>查看全部 ></text>
+	</view>
+	<scroll-view scroll-x="{{true}}">
+	<view class="setscroll">
+			<view class="setitems" wx:for="{{20}}">
+				<view class="useImg" style="background-image:url({{STATICIMG}}/test.jpg)"></view>
+				<text class="nowrap">先呵为敬</text>
+			</view>
+	</view>
+	</scroll-view>
+	<view class="setStyle">
+		<text>评论  (256)</text>	
+		<text></text>
+	</view>
+	<view class="remarkBox">
+		<view class="remarklist" wx:for="{{20}}">
+			<view class="leftImg2" style="background-image:url({{STATICIMG}}/test.jpg)">
+
+			</view>
+			<view class="rightInfo2">
+				<text>嘻嘻哈哈或</text>
+				<text>这跳的也太好了吧！这跳的也太好了吧！这跳的也太好了吧！这跳的也太好了吧！</text>
+				<text>2个小时前</text>
+			</view>
+		</view>
+	</view>
+	<view class="zhanwei"></view>
+	<view class="footBox">
+		<view>
+			<image class="iconimg" mode="widthFix" src="{{STATICIMG}}/ic_like_sel.png" wx:if="{{false}}"></image>
+			<image class="iconimg" mode="widthFix" src="{{STATICIMG}}/ic_like_nor.png"></image>
+			<text class="icontxt">支持（2793）</text>
+		</view>
+		<view>
+			<image class="iconimg" mode="widthFix" src="{{STATICIMG}}/ic_comment.png"></image>
+			<text class="icontxt">评论（2793）</text>
+		</view>
+		<view>
+			<image class="iconimg" mode="widthFix" src="{{STATICIMG}}/ic_share.png"></image>
+			<text class="icontxt">转发（2793）</text>
+		</view>
+	</view>
 </view>

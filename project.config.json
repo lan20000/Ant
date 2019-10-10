@@ -50,7 +50,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 16,
+			"current": 19,
 			"list": [
 				{
 					"id": 0,
@@ -168,6 +168,27 @@
 					"id": -1,
 					"name": "videoDel",
 					"pathName": "pages/videoDel/videoDel",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "usePage",
+					"pathName": "pages/usePage/usePage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "releaseWork",
+					"pathName": "pages/releaseWork/releaseWork",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "techPage",
+					"pathName": "pages/techPage/techPage",
 					"query": "",
 					"scene": null
 				}

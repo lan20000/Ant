@@ -218,3 +218,21 @@
 	font-weight:500;
 	color:rgba(148,151,163,1);
 }
+.tno{
+	width: auto !important;
+}
+.more{background:rgba(0,0,0,1);opacity:0.7;position: fixed;height: 100%;width: 100%;z-index: 9999;}
+.alert{position: absolute; left: 50%; top: 50%;transform: translate(-50%, -50%);width: 620rpx;height: 700rpx;z-index: 99999;background-size: 100% 100%;}
+.alert>text{display: block;}
+.alert .title{font-size:46rpx;font-family:PingFang SC;font-weight:bold;color:rgba(255,255,255,1);padding: 42rpx 30rpx 0rpx 30rpx;}
+.alert .content{font-size:24rpx;font-family:PingFang SC;font-weight:500;color:rgba(255,255,255,1);padding: 33rpx 30rpx;width: 62%;
+line-height:36rpx;}
+/*  */
+.bottom>view{border-bottom:2px dotted rgba(207,207,207,1);margin: 0rpx auto;width: 64%;}
+.alert .txt{font-family:PingFang SC;font-weight:bold;color:rgba(49,49,52,1);line-height:48rpx;padding-bottom: 30rpx;display: block;text-align: center;}
+.alert .Toobtain{font-size:24rpx;font-family:PingFang SC;font-weight:500;color:rgba(148,151,163,1);padding-top: 31rpx;padding-bottom: 50rpx;display: block;text-align: center;}
+.alert .updata{width:400rpx;height:76Rpx;background:rgba(50,51,68,1);border-radius:10rpx;display: block;margin: 0rpx auto;font-size:32rpx;
+font-family:PingFang SC;
+font-weight:bold;
+color:rgba(255,255,255,1);}
+.alert .bottom{position: absolute;bottom: 43rpx;width: 100%;}
