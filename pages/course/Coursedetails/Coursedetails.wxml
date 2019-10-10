@@ -1,0 +1,85 @@
+<!--pages/course/Coursedetails/Coursedetails.wxml-->
+<scroll-view>
+  <view class="video"></view>
+  <view class="coursetitle flex-ali">
+    <text>爵士舞基础课程</text>
+    <text class="icon">预约</text>
+  </view>
+  <view class="teacher_details">
+    <view class="teacher flex-ali">
+      <image src=""></image>
+      <text>逗逗老师</text>
+      <star class="flex1" is="{{true}}" starOption="{{starOption}}" style="text-align: right;"></star>
+      <text class="score">4分</text>
+    </view>
+    <text class="teacher_text">老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍</text>
+  </view>
+  <view class="list">
+    <view>
+      <view class="list_c flex">
+        <text class="title flex1">上课地点</text>
+        <text class="lasttext">华创旗舰店</text>
+        <image src=""></image>
+      </view>
+    </view>
+    <view>
+      <view class="list_c flex">
+        <text class="title flex1">上课时间</text>
+        <text class="lasttext">2019年9月2日 20:00</text>
+      </view>
+    </view>
+    <view>
+      <view class="list_c flex">
+        <text class="title flex1">课程费用</text>
+        <text class="lasttext">200U点</text>
+      </view>
+    </view>
+    <view>
+      <view class="list_c flex">
+        <text class="title flex1">查看预约码</text>
+        <image src=""></image>
+      </view>
+    </view>
+  </view>
+  <view class="Jane">
+    <text class="title">课程简介</text>
+    <text class="txt">
+    课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍
+    </text>
+    <view class="img_list">
+      <image></image>
+    </view>
+  </view>
+  <view class="video_c">
+    <text class="title">本节课程音乐/视频</text>
+    <view class="flex">
+      <view class="video_img" style="">
+
+      </view>
+      <view class="video_list flex1">
+        <text>GIMME ON UP</text>
+        <view class="flex-ali">
+          <image src="./../../../assets/static/ic_time.png" style="width:24rpx;height:24rpx;margin-right:16rpx;"></image>
+          <text>35:56</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="progress">
+    <text class="title">课程进度（3/4）</text>
+    <view class="flex-ali">
+      <view class="line"></view>
+      <image src="./../../../assets/static/classDetail_ic_nor.png" class="icon" ></image>
+      <text>GIMME ON UP第一节</text>
+    </view>
+    <view class="flex-ali">
+      <view class="line"></view>
+      <image src="./../../../assets/static/classDetail_ic_sel.png" class="this icon"></image>
+      <text class="this">GIMME ON UP第一节</text>
+      <image src="./../../../assets/static/classDetail_ic_arrowLeft.png" style="width:16rpx;height:21rpx;margin-left:20rpx;"></image>
+      <text class="progressbt flex-cen ">本节学习</text>
+    </view>
+  </view>
+  <view style="height:94rpx;"></view>
+</scroll-view>
+<button class="">取消预约</button>

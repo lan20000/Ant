@@ -1,0 +1,11 @@
+<!--pages/course/Somecode/Somecode.wxml-->
+<view class="content">
+  <view class="code_c">
+    <view class="code flex-cen-col">
+      <text>我的课程预约码</text>
+      <image src=""></image>
+      <text>扫描上方二维码开始上课</text>
+    </view>
+  </view>
+</view>
+<button>取消预约</button>

@@ -3,12 +3,12 @@
   <view class="user">
     <image src="http://flynew.oss-cn-hangzhou.aliyuncs.com/game/wechat/ly/lawyer/ti.png"></image>
     <text class="login_name">张</text>
-    <text class="login_sintxt">使用该微信12154154登录</text>
+    <text class="login_sintxt">使用该微信号绑定手机17608480841一键登录</text>
     <button>一键登录</button>
+    <text class="login_oth">使用其他号码登录</text>
   </view>
   <view class="Tips_content">
     <text class="">温馨提示：</text>
-
-    <text class="">使用一键登录</text>
+    <text class="">使用一键登录表示默认同意使用该手机号码注册unicorn账号，并同意《unicorn用户服务协议》。</text>
   </view>
 </view>
