@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/userStart/login/login",
     "pages/course/schedule/schedule",
     "pages/course/Coursedetails/Coursedetails",
     "pages/usercenter/index/index",
     "pages/course/scoresuccess/scoresuccess",
     "pages/userStart/bindingPhone/bindingPhone",
-    "pages/userStart/login/login",
     "pages/course/Somecode/Somecode",
     "pages/course/score/score",
     "pages/index/index"

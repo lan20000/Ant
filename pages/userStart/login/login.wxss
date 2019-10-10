@@ -2,7 +2,7 @@
 .body{height:100vh;font-size: 50rpx;padding: 30rpx;font-family:PingFang SC;background-color: #fff;}
 button{background:rgba(50,51,68,1);border-radius:10rpx;padding:0rpx 0rpx;}
 .user{text-align: center;margin-top: 100rpx;position: relative;height: 100%;}
-.user image{width:160rpx;height:160rpx;border-radius: 20rpx;}
+.user image{width:160rpx;height:160rpx;border-radius: 20rpx;box-shadow: 0px 10rpx 30rpx 0px rgba(125,128,169,0.11);}
 .user .nick-name{padding:20rpx 0;}
 .user button{width:100%;margin: 30rpx auto;color:rgba(255,255,255,1);}
 
