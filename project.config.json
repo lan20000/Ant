@@ -50,7 +50,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 17,
+			"current": 18,
 			"list": [
 				{
 					"id": 0,
@@ -175,6 +175,13 @@
 					"id": -1,
 					"name": "pages/userStart/bindingPhone/bindingPhone",
 					"pathName": "pages/userStart/bindingPhone/bindingPhone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/index/index",
+					"pathName": "pages/usercenter/index/index",
 					"scene": null
 				}
 			]

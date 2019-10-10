@@ -11,7 +11,7 @@ Component({
   properties: {
     tabbarList:{
       type:Array,
-      value:[{text:'首页', path:'/pages/index/index'},{text:'看车', path:'/pages/look_car/look_car'},{text:'商城', path:'/pages/shop_mall/shop_mall'},{text:'我的', path:'/pages/home/home'}]
+      value: [{ text: '首页', path: '/pages/index/index' }, { text: '看车', path: '' }, { text: '商城', path: '/pages/course/schedule/schedule' }, { text: '我的', path:'/pages/usercenter/index/index'}]
     },
     oData:{
       type:Object,
