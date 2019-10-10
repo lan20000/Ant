@@ -3,7 +3,6 @@
     "pages/userStart/login/login",
     "pages/course/score/score",
     "pages/course/scoresuccess/scoresuccess",
-    "pages/dujiaoxi/dujiaoxi",
     "pages/videoDel/videoDel",
     "pages/course/schedule/schedule",
     "pages/course/Coursedetails/Coursedetails",
@@ -21,27 +20,6 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": false
-  },
-  "tabBar": {
-    "color": "#000",
-    "selectedColor": "#038103",
-    "backgroundColor": "#fff",
-    "borderStyle": "black",
-    "position": "bottom",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "首页222",
-        "iconPath": "assets/images/tabBar/tabBar_01.png",
-        "selectedIconPath": "assets/images/tabBar/tabBar_01s.png"
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "我的",
-        "iconPath": "assets/images/tabBar/tabBar_02.png",
-        "selectedIconPath": "assets/images/tabBar/tabBar_02s.png"
-      }
-    ]
   },
   "sitemapLocation": "sitemap.json",
   "permission": {

@@ -1,7 +1,7 @@
 {
-  "navigationBarTitleText": "主页",
-  "disableScroll": true,
   "usingComponents": {
-    "controls": "/components/audiocontrols/controls"
-  }
+	  "qc-Tabbar": "/components/Tabbar/cmp"
+  },
+   "navigationBarTitleText": "独角戏",
+   "navigationBarBackgroundColor": "#323344"
 }
