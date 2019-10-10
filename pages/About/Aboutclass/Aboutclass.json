@@ -2,5 +2,5 @@
   "usingComponents": {
     "Tabbar": "/components/Tabbar/cmp"
   },
-  "navigationBarTitleText": "课表"
+  "navigationBarTitleText": "约课"
 }

@@ -12,7 +12,7 @@
 .meun_list>image{width: 50rpx;height: 50rpx;}
 .meun_list>text{padding-top: 33rpx;font-size:24rpx;font-family:PingFang SC;font-weight:500;color:rgba(116,116,125,1);}
 
-.set_list{margin-top: 20rpx;}
+.set_list{margin: 20rpx 0rpx 45rpx 0rpx;}
 .set_list>view>image{width:15rpx;height:24rpx;}
 .set_list>view{padding: 40rpx 30rpx;background:rgba(255,255,255,1);}
 

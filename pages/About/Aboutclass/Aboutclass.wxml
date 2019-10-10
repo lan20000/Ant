@@ -1,0 +1,82 @@
+<!--pages/Aboutclass/Aboutclass.wxml-->
+<scroll-view class="content">
+  <view class="top">
+    <view class="flex-ali tab_list">
+      <view class="flex1 flex-cen" data-type="0" bindtap="tabchoose">
+        <text class="tab {{ tabtype==0 ? 'tab-nav-item tab-active' : ''}}" >课程约课</text>
+      </view>
+      <view class="flex1 flex-cen" data-type="1" bindtap="tabchoose">
+        <text class="tab {{ tabtype==1 ? 'tab-nav-item tab-active' : ''}}" >教师约课</text>
+      </view>
+    </view>
+    <!--地图选择-->
+    <navigator wx:if="{{tabtype==0}}" url="/pages/About/Selectaddress/Selectaddress" hover-class="navigator-hover">
+      <view class="adds flex-ali">
+        <image src="./../../../assets/static/ic_location.png" style="width:35rpx;height:39rpx;"></image>
+        <view class="flex-col flex1">
+          <text>为您智能推荐：UNICORN华创中心旗舰店</text>
+          <text>开福区芙蓉中路华创国际广场2层2201</text>
+        </view>
+        <image src="./../../../assets/static/ic_arrowRight.png" style="width:15rpx;height:24rpx;"></image>
+      </view>
+    </navigator>
+    <!--老师选择-->
+    <navigator wx:if="{{tabtype==1}}" url="/pages/About/Chooseteacher/Chooseteacher" hover-class="navigator-hover">
+      <view class="teacher flex-ali  ">
+        <image class="" src="https://img2.woyaogexing.com/2019/10/07/f3a33d7a27a9427b9272e3a421bc62be!400x400.jpeg"></image>
+        <view class="flex-col flex1">
+          <view class="flex-ali">
+            <text class="name">老师</text>
+            <text class="price">200U</text>
+          </view>
+          <text class="type">芭蕾舞/爵士舞/街舞</text>
+        </view>
+        <image src="./../../../assets/static/ic_arrowRight.png" style="width:15rpx;height:24rpx;margin-right: 0rpx;"></image>
+      </view>
+    </navigator>
+    <view class="flex-ali " style="padding-bottom:29rpx;">
+      <view class="flex1 time_list flex-cen-col">
+        <text class="no ">今天</text>
+        <text class="no">约满</text>
+      </view>
+      <view class="flex1 time_list flex-cen-col">
+        <text class="this">今天</text>
+        <text class="this">约满</text>
+      </view>
+      <view class="flex1 time_list flex-cen-col">
+        <text class="">周五</text>
+        <text class="">8月25日</text>
+      </view>
+      <view class="flex1 time_list flex-cen-col">
+        <text class="">周五</text>
+        <text class="">8月25日</text>
+      </view>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="card flex" wx:for="(index,item) in 10">
+      <image src=""></image>
+      <view class="flex-col">
+        <text class="title">14:00-16:00 爵士舞基础课程</text>
+        <text class="name">老师：莎莎</text>
+        <text class="satuts">已约满</text>
+      </view>      
+      <navigator url="/pages/About/Aboutsuccess/Aboutsuccess" class="pre" hover-class="navigator-hover">
+        <button class="pre">预约</button>
+      </navigator>
+    </view>
+    <view class="card flex">
+      <image src=""></image>
+      <view class="flex-col">
+        <text class="title">14:00-16:00 爵士舞基础课程</text>
+        <text class="name">老师：莎莎</text>
+        <text class="satuts this">差 5 人约满</text>
+      </view>
+      <button class="pre">100U点预约</button>
+    </view>
+    <view class=" " style="height:400rpx;">
+      
+    </view>
+  </view>
+</scroll-view>
+<Tabbar></Tabbar>

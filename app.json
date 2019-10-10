@@ -1,54 +1,33 @@
 {
-	"pages": [
-		"pages/userStart/login/login",
-		"pages/dujiaoxi/dujiaoxi",
-		"pages/videoDel/videoDel",
-		"pages/course/schedule/schedule",
-		"pages/course/Coursedetails/Coursedetails",
-		"pages/usercenter/index/index",
-		"pages/course/scoresuccess/scoresuccess",
-		"pages/userStart/bindingPhone/bindingPhone",
-		"pages/course/Somecode/Somecode",
-		"pages/course/score/score",
-		"pages/index/index",
-		"pages/usePage/usePage",
-		"pages/releaseWork/releaseWork",
-		"pages/techPage/techPage"
-	],
-	"window": {
-		"navigationBarTitleText": "蚂蚁小程序",
-		"navigationBarBackgroundColor": "#fff",
-		"navigationBarTextStyle": "black",
-		"enablePullDownRefresh": false
-	},
-	"tabBar": {
-		"color": "#000",
-		"selectedColor": "#038103",
-		"backgroundColor": "#fff",
-		"borderStyle": "black",
-		"position": "bottom",
-		"list": [
-			{
-				"pagePath": "pages/index/index",
-				"text": "首页222",
-				"iconPath": "assets/images/tabBar/tabBar_01.png",
-				"selectedIconPath": "assets/images/tabBar/tabBar_01s.png"
-			},
-			{
-				"pagePath": "pages/index/index",
-				"text": "我的",
-				"iconPath": "assets/images/tabBar/tabBar_02.png",
-				"selectedIconPath": "assets/images/tabBar/tabBar_02s.png"
-			}
-		]
-	},
-	"sitemapLocation": "sitemap.json",
-	"permission": {
-		"scope.userLocation": {
-			"desc": "你的位置信息将用于小程序位置接口的效果展示"
-		}
-	},
-	"requiredBackgroundModes": [
-		"audio"
-	]
+  "pages": [
+    "pages/userStart/login/login",
+    "pages/course/score/score",
+    "pages/course/scoresuccess/scoresuccess",
+    "pages/videoDel/videoDel",
+    "pages/course/schedule/schedule",
+    "pages/course/Coursedetails/Coursedetails",
+    "pages/usercenter/index/index",
+    "pages/userStart/bindingPhone/bindingPhone",
+    "pages/course/Somecode/Somecode",
+    "pages/index/index",
+    "pages/About/Aboutclass/Aboutclass",
+    "pages/About/Selectaddress/Selectaddress",
+    "pages/About/Chooseteacher/Chooseteacher",
+    "pages/About/Aboutsuccess/Aboutsuccess"
+  ],
+  "window": {
+    "navigationBarTitleText": "蚂蚁小程序",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ]
 }

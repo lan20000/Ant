@@ -24,7 +24,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.7.7",
-	"appid": "wx594f126bc50f299f",
+	"appid": "wx28348ca0459c1e46",
 	"projectname": "%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%9D%E5%A7%8B%E6%A8%A1%E6%9D%BF%E7%9B%AE%E5%BD%95",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -50,7 +50,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 19,
+			"current": 26,
 			"list": [
 				{
 					"id": 0,
@@ -173,23 +173,71 @@
 				},
 				{
 					"id": -1,
-					"name": "usePage",
-					"pathName": "pages/usePage/usePage",
+					"name": "pages/userStart/bindingPhone/bindingPhone",
+					"pathName": "pages/userStart/bindingPhone/bindingPhone",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "releaseWork",
-					"pathName": "pages/releaseWork/releaseWork",
+					"name": "pages/usercenter/index/index",
+					"pathName": "pages/usercenter/index/index",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "techPage",
-					"pathName": "pages/techPage/techPage",
+					"name": "pages/Aboutclass/Aboutclass",
+					"pathName": "pages/Aboutclass/Aboutclass",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Aboutclass/Aboutclass",
+					"pathName": "pages/About/Aboutclass/Aboutclass",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Selectaddress/Selectaddress",
+					"pathName": "pages/About/Selectaddress/Selectaddress",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Aboutclass/Aboutclass",
+					"pathName": "pages/About/Aboutclass/Aboutclass",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Chooseteacher/Chooseteacher",
+					"pathName": "pages/About/Chooseteacher/Chooseteacher",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Aboutclass/Aboutclass",
+					"pathName": "pages/About/Aboutclass/Aboutclass",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Aboutsuccess/Aboutsuccess",
+					"pathName": "pages/About/Aboutsuccess/Aboutsuccess",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
 					"scene": null
 				}
 			]

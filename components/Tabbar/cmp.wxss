@@ -12,7 +12,7 @@
     position:fixed;
     bottom:0;
     left:0;
-    z-index:3;
+    z-index:999;
     /* box-sizing:border-box; */
     /* height: 100rpx; */
     padding-top: 16rpx;
@@ -29,9 +29,9 @@
     justify-content:flex-end;
     line-height:1em;
 }
-.tabbar .tabbar_item .icon{
-    font-size: 40rpx;
-    color: #828183;
+.tabbar .tabbar_item image{
+    /* font-size: 40rpx;
+    color: #828183; */
     margin-bottom: 14rpx;
 }
 .tabbar .tabbar_item.active .icon{
