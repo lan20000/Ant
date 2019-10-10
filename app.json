@@ -10,7 +10,10 @@
     "pages/usercenter/index/index",
     "pages/userStart/bindingPhone/bindingPhone",
     "pages/course/Somecode/Somecode",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/About/Aboutclass/Aboutclass",
+    "pages/About/Selectaddress/Selectaddress",
+    "pages/About/Chooseteacher/Chooseteacher"
   ],
   "window": {
     "navigationBarTitleText": "蚂蚁小程序",

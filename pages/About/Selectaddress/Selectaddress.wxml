@@ -1,0 +1,38 @@
+<!--pages/About/Selectaddress/Selectaddress.wxml-->
+<view class="top ">
+  <view class="flex-ali ">
+    <text class="city">长沙</text>
+    <image src="./../../../assets/static/ic_arrowDown.png" style="margin-left:20rpx;width:20rpx;height:12rpx;"></image>
+    <text class="line"></text>
+    <input type="text" class="flex1" placeholder-class="pla" placeholder="输入您的位置"></input>
+    <text class="sos">搜索</text>
+  </view>
+</view>
+<view class='view'>
+  <map longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" covers="{{covers}}" show-location>
+    <cover-view>
+    <!-- 经度：{{longitude}} -->
+    </cover-view>
+     <cover-view>
+    <!-- 纬度：{{latitude}} -->
+    </cover-view>
+    <cover-view>
+    <!-- 速度：{{speed}} -->
+    </cover-view>
+    <cover-view>
+    <!-- 精度：{{accuracy}} -->
+    </cover-view>
+  </map>
+</view>
+<view class="bottom">
+  <view class="bg">
+    <view class="footer_txt flex-ali">
+      <view class="round"></view>
+      <view class="flex-col">
+        <text>嘉明苑-北门</text>
+        <text>附近可约课门店为河西王府井店</text>
+      </view>
+    </view>
+    <view class="footer flex-cen">马上约课</view>
+  </view>
+</view>
