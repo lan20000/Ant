@@ -39,3 +39,4 @@ radio.checked text::after{display: inline-block;position: absolute;left:0;top:ca
   90%{-webkit-transform:scale(1.1);opacity:1;}
   100%{-webkit-transform:scale(1);opacity:1;}
 }
+.navigator-hover{ background-color: transparent;}

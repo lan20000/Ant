@@ -8,17 +8,19 @@
         <image src="./../../../assets/static/classSchedule_nor_pic_completed.png" style="width: 30rpx;height: 30rpx;"></image>
         <text class="">14:00</text>
       </view>
-      <view class="c_right">
-        <view class="score_m">8月22日</view>
-        <view class="score_c flex-ali">
-          <view class="score_img" style=""></view>
-          <view class="flex1">
-            <text class="title">14:00-16:00 芭蕾舞基础课程</text>
-            <text class="name">老师：逗逗</text>
-            <text class="name">已预约</text>
+      <navigator url="/pages/course/Coursedetails/Coursedetails" hover-class="navigator-hover">
+        <view class="c_right">
+          <view class="score_m">8月22日</view>
+          <view class="score_c flex-ali">
+            <view class="score_img" style=""></view>
+            <view class="flex1">
+              <text class="title">14:00-16:00 芭蕾舞基础课程</text>
+              <text class="name">老师：逗逗</text>
+              <text class="name">已预约</text>
+            </view>
           </view>
         </view>
-      </view>
+      </navigator>
     </view>
     <view class="m-top">
       <view class="b_left"></view>

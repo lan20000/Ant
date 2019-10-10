@@ -13,7 +13,8 @@
     "pages/index/index",
     "pages/About/Aboutclass/Aboutclass",
     "pages/About/Selectaddress/Selectaddress",
-    "pages/About/Chooseteacher/Chooseteacher"
+    "pages/About/Chooseteacher/Chooseteacher",
+    "pages/About/Aboutsuccess/Aboutsuccess"
   ],
   "window": {
     "navigationBarTitleText": "蚂蚁小程序",

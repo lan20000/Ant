@@ -10,18 +10,9 @@
       </view>
       <text class="type">芭蕾舞/爵士舞/街舞</text>
     </view>
-    <button class="button">预约</button>
-  </view>
-  <view class="teacher flex-ali ">
-    <image class=""></image>
-    <view class="flex-col flex1">
-      <view class="flex-ali">
-        <text class="name">老师</text>
-        <text class="price">200U</text>
-      </view>
-      <text class="type">芭蕾舞/爵士舞/街舞</text>
-    </view>
-    <button class="button">预约</button>
+    <navigator url="/pages/About/Aboutsuccess/Aboutsuccess" hover-class="navigator-hover">
+      <button class="button">预约</button>
+    </navigator>
   </view>
   <text class="shop_name">叮叮mall蚂蚁店</text>
   <view class="teacher flex-ali ">
