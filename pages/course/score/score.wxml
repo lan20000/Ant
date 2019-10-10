@@ -14,7 +14,7 @@
   <view class="Gradingtype">
     <text class="type_txt">请对陈朕老师的教学评分</text>
     <text class="describe_txt">教师授课态度、服务意识、专业技能是否满意？</text>
-    <star starOption="{{starOption}}" style="display: block;text-align: center;" ></star>
+    <star starOption="{{starOption}}" style="display: block;text-align: center;margin-top:39rpx;" ></star>
     <view class="flex">
       <textarea class="flex1" placeholder="可以在这里简单表达您的评价与建议（50字）" placeholder-class="textarea">
         
@@ -24,7 +24,7 @@
   <view class="Gradingtype">
     <text class="type_txt">请对陈朕老师的教学评分</text>
     <text class="describe_txt">教师授课态度、服务意识、专业技能是否满意？</text>
-    <star starOption="{{starOption}}" style="display: block;text-align: center;" ></star>
+    <star starOption="{{starOption}}" style="display: block;text-align: center;margin-top:39rpx;" ></star>
     <view class="flex">
       <textarea class="flex1" placeholder="可以在这里简单表达您的评价与建议（50字）" placeholder-class="textarea">
         
@@ -34,12 +34,14 @@
   <view class="Gradingtype">
     <text class="type_txt">请对陈朕老师的教学评分</text>
     <text class="describe_txt">教师授课态度、服务意识、专业技能是否满意？</text>
-    <star starOption="{{starOption}}" style="display: block;text-align: center;" ></star>
+    <star starOption="{{starOption}}" style="display: block;text-align: center;margin-top:39rpx;" ></star>
     <view class="flex">
       <textarea class="flex1" placeholder="可以在这里简单表达您的评价与建议（50字）" placeholder-class="textarea">
         
       </textarea>
     </view>
-    <button class="submit">提交评价</button>
+    <navigator url="/pages/course/scoresuccess/scoresuccess" hover-class="navigator-hover">
+      <button class="submit">提交评价</button>
+    </navigator>
   </view>
 </scroll-view>

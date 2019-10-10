@@ -8,7 +8,7 @@
       <text>手机</text>
     </view>
     <input type="Number" placeholder="请输入手机号码" placeholder-class="phone_pla"></input>
-    <view class="input_title flex-ali">
+    <view class="input_title flex-ali" style="margin-top:48rpx;">
       <image src="./../../../assets/static/pic_verificationCode.png" style="width:32rpx;height:40rpx;"></image>
       <text>验证码</text>
     </view>
@@ -17,7 +17,9 @@
         <!-- <view class="tab-active"></view> -->
       <button class="">获取验证码</button>
     </view>
-    <button class="login_bt">登录</button>
+    <navigator url="/pages/usercenter/index/index" hover-class="navigator-hover">
+      <button class="login_bt">登录</button>
+    </navigator>
   </view>
   <view class="Tips_content">
     <text class="">温馨提示：</text>

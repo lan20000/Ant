@@ -4,7 +4,11 @@
     <image src="http://flynew.oss-cn-hangzhou.aliyuncs.com/game/wechat/ly/lawyer/ti.png"></image>
     <text class="login_name">张</text>
     <text class="login_sintxt">使用该微信号绑定手机17608480841一键登录</text>
-    <button>一键登录</button>
+    
+    <navigator url="/pages/userStart/bindingPhone/bindingPhone" hover-class="navigator-hover">
+      <button>一键登录</button>
+    </navigator>
+
     <text class="login_oth">使用其他号码登录</text>
   </view>
   <view class="Tips_content">
