@@ -61,7 +61,9 @@
         <text class="name">老师：莎莎</text>
         <text class="satuts">已约满</text>
       </view>      
-      <button class="pre">100U点预约</button>
+      <navigator url="/pages/About/Aboutsuccess/Aboutsuccess" class="pre" hover-class="navigator-hover">
+        <button class="pre">预约</button>
+      </navigator>
     </view>
     <view class="card flex">
       <image src=""></image>
@@ -71,6 +73,9 @@
         <text class="satuts this">差 5 人约满</text>
       </view>
       <button class="pre">100U点预约</button>
+    </view>
+    <view class=" " style="height:400rpx;">
+      
     </view>
   </view>
 </scroll-view>
