@@ -15,7 +15,7 @@
     <view class="code_content flex-ali">
       <input type="Number" class="flex1" placeholder="请输入手机号码" placeholder-class="phone_pla"></input>
         <!-- <view class="tab-active"></view> -->
-      <button class="">获取验证码</button>
+      <button class="{{iscode ? 'code' : 'button'}}" bindtap="opencode" >{{ second==60 ? '获取验证码' : second+'s'}}</button>
     </view>
     <navigator url="/pages/usercenter/index/index" hover-class="navigator-hover">
       <button class="login_bt">登录</button>

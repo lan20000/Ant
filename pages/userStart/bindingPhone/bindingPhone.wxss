@@ -13,7 +13,9 @@ page{font-family:PingFang SC;background-color: #fff;}
 .input_title>text{font-size: 24rpx;padding-left: 27rpx;}
 /* .input_title:last-child{margin: 25rpx auto 0rpx auto;} */
 .code_content{position: relative;padding: 10rpx;}
-.code_content button{color: rgba(49, 49, 52, 1);border-radius: 33rpx;font-size:26rpx;border: 2rpx solid rgba(199,201,207,1);padding: 0rpx 10rpx;font-weight:bold;width:201rpx;height:66rpx;}
+.code_content .button{color: rgba(49, 49, 52, 1);border-radius: 33rpx;font-size:26rpx;font-weight:bold;}
+.code_content button{border-radius: 33rpx;border: 2rpx solid rgba(199,201,207,1);padding: 0rpx 10rpx;font-weight:bold;width:201rpx;height:66rpx;}
+
 .code_content button,.code_content input{font-size: 24rpx;}
 .tab-active {width: 1rpx;height: 100%;margin-right: 50rpx;border-right: 1px solid red;}
 .login_bt{color: #fff;margin: 122rpx auto;font-size: 32rpx;display: block;background:rgba(50,51,68,1);border-radius: 10rpx;}
@@ -21,3 +23,5 @@ page{font-family:PingFang SC;background-color: #fff;}
 .Tips_content{position: absolute;bottom: 168rpx;}
 .Tips_content text:first-child{font-weight:bold;color:rgba(148,151,163,1);font-size: 26rpx;display: block;padding-bottom: 30rpx;}
 .Tips_content text:last-child{color:rgba(148,151,163,1);font-size: 24rpx;padding-right: 60rpx;display: inline-block;}
+
+.code{font-size:26rpx;font-family:PingFang SC;font-weight:bold;color:rgba(199,201,207,1);}
