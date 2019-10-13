@@ -1,18 +1,33 @@
-// pages/login/login.js
+// pages/usercenter/newphone/newphone.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    iscode: false,
+    second: 60
   },
-  
+  opencode() {
+    var _this = this;
+    if (this.data.second != 60) {
+      return;
+    }
+    this.setData({ iscode: true });
+    let result = setInterval(() => {
+      _this.setData({ second: --this.data.second });
+      if (this.data.second < 0) {
+        clearInterval(result);
+        _this.setData({ iscode: false, second: 60 });
+        console.log(this.data.iscode)
+      }
+    }, 1000);
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(1111)
+
   },
 
   /**

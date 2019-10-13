@@ -1,0 +1,33 @@
+<!--pages/usercenter/myintegral/myintegral.wxml-->
+<scroll-view>
+  <view class="top_padding flex-cen-col">
+    <text class="num">100</text>
+    <text class="txt">剩余积分（分）</text>
+  </view>
+  <view class="flex-ali tab_list">
+    <view class="flex1 flex-cen" data-type="0" bindtap="tabchoose">
+      <text class="tab {{ tabtype==0 ? 'tab-nav-item tab-active' : ''}}">课程约课</text>
+    </view>
+    <view class="flex1 flex-cen" data-type="1" bindtap="tabchoose">
+      <text class="tab {{ tabtype==1 ? 'tab-nav-item tab-active' : ''}}">教师约课</text>
+    </view>
+  </view>
+  <view class="list flex-ali tab-nav-item tabbt" wx:for="{{5}}">
+    <view class="flex-col flex1">
+      <text class="name">新人赠送</text>
+      <text class="time">2019-10-04 19:04</text>
+    </view>
+    <text class="num">+1000</text>
+  </view>
+  <view class="list flex-ali " >
+    <view class="flex-col flex1">
+      <text class="name">新人赠送</text>
+      <text class="time">2019-10-04 19:04</text>
+    </view>
+    <text class="num">+1000</text>
+  </view>
+  <view class="list flex-ali " style="height: 50rpx;" >
+    
+  </view>
+  <button class="footer" wx:if="tabtype==1">兑换U点</button>
+</scroll-view>

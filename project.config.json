@@ -11,6 +11,7 @@
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
+		"nodeModules": true,
 		"autoAudits": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": false,
@@ -19,12 +20,16 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		},
-		"nodeModules": true
+		}
 	},
 	"compileType": "miniprogram",
+<<<<<<< HEAD
 	"libVersion": "2.7.7",
 	"appid": "wx594f126bc50f299f",
+=======
+	"libVersion": "2.8.3",
+	"appid": "wx28348ca0459c1e46",
+>>>>>>> d151e0575dd17ba5f4411032b423ce2fc00fbb09
 	"projectname": "%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%9D%E5%A7%8B%E6%A8%A1%E6%9D%BF%E7%9B%AE%E5%BD%95",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -47,6 +52,10 @@
 		},
 		"game": {
 			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
 			"list": []
 		},
 		"miniprogram": {
@@ -250,13 +259,19 @@
 				},
 				{
 					"id": -1,
+<<<<<<< HEAD
 					"name": "fill_info",
 					"pathName": "pages/fill_info/fill_info",
+=======
+					"name": "pages/userStart/login/login",
+					"pathName": "pages/usercenter/myintegral/myintegral",
+>>>>>>> d151e0575dd17ba5f4411032b423ce2fc00fbb09
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
+<<<<<<< HEAD
 					"name": "cardDel",
 					"pathName": "pages/cardDel/cardDel",
 					"query": "",
@@ -266,6 +281,10 @@
 					"id": -1,
 					"name": "top-up",
 					"pathName": "pages/top-up/top-up",
+=======
+					"name": "pages/usercenter/myintegral/myintegral",
+					"pathName": "pages/usercenter/myintegral/myintegral",
+>>>>>>> d151e0575dd17ba5f4411032b423ce2fc00fbb09
 					"scene": null
 				}
 			]
