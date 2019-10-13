@@ -1,6 +1,13 @@
 {
   "pages": [
-    
+    "pages/usercenter/Paymentverification/Paymentverification",
+    "pages/usercenter/Placeorder/Placeorder",
+    "pages/usercenter/Paysuccess/Paysuccess",
+    "pages/usercenter/successful/successful",
+    "pages/usercenter/insuccess/insuccess",
+    "pages/usercenter/newphone/newphone",
+    "pages/usercenter/Changephone/Changephone",
+    "pages/usercenter/myintegral/myintegral",
     "pages/userStart/login/login",
     "pages/course/score/score",
     "pages/course/scoresuccess/scoresuccess",
