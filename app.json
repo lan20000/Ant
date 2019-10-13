@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/userStart/login/login",
+    "pages/usercenter/Usingrecord/Usingrecord",
     "pages/usercenter/Paymentverification/Paymentverification",
     "pages/usercenter/Placeorder/Placeorder",
     "pages/usercenter/Paysuccess/Paysuccess",
@@ -8,7 +10,6 @@
     "pages/usercenter/newphone/newphone",
     "pages/usercenter/Changephone/Changephone",
     "pages/usercenter/myintegral/myintegral",
-    "pages/userStart/login/login",
     "pages/course/score/score",
     "pages/course/scoresuccess/scoresuccess",
     "pages/videoDel/videoDel",
