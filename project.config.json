@@ -25,7 +25,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.8.3",
 	"appid": "wx28348ca0459c1e46",
-	"projectname": "%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%9D%E5%A7%8B%E6%A8%A1%E6%9D%BF%E7%9B%AE%E5%BD%95",
+	"projectname": "蚂蚁小程序",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -54,7 +54,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 27,
+			"current": 30,
 			"list": [
 				{
 					"id": 0,
@@ -254,9 +254,26 @@
 				},
 				{
 					"id": -1,
+					"name": "fill_info",
+					"pathName": "pages/fill_info/fill_info",
+					"scene": null
+				},
+				{
+					"id": -1,
 					"name": "pages/userStart/login/login",
 					"pathName": "pages/usercenter/myintegral/myintegral",
-					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "cardDel",
+					"pathName": "pages/cardDel/cardDel",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "top-up",
+					"pathName": "pages/top-up/top-up",
 					"scene": null
 				},
 				{
