@@ -5,7 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tabtype:0//类型选择
+    tabtype:0,//类型选择
+    tab:0//
+  },
+  /**
+   * 星期选择
+   */
+  cut:function(e){
+    if (e.target.dataset.index==undefined){
+      return;
+    }
+    this.setData({ tab : e.target.dataset.index})
   },
   /**
    * 选择类型
