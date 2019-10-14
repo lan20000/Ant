@@ -7,7 +7,8 @@ Page({
   data: {
     indexnum:0,
     iscode: false,
-    second: 60
+    second: 60,
+    blank:0
   },
   opencode() {
     var _this = this;
@@ -43,6 +44,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if (options.blank){}
     this.opencode();
   },
 
