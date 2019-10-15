@@ -1,27 +1,14 @@
-// pages/userStart/bindingPhone/bindingPhone.js
+// pages/usercenter/myintegral/myintegral.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    iscode:false,
-    second:60
+    tabtype:0
   },
-  opencode() {
-    var _this = this;
-    if(this.data.second!=60){
-      return;
-    }
-    this.setData({ iscode: true});
-    let result = setInterval(() => {
-      _this.setData({ second: --this.data.second });
-      if (this.data.second < 0) {
-        clearInterval(result);
-        _this.setData({ iscode: false, second:60});
-        console.log(this.data.iscode)
-      }
-    }, 1000);
+  tabchoose(e) {
+    this.setData({ tabtype: e.currentTarget.dataset.type });
   },
   /**
    * 生命周期函数--监听页面加载

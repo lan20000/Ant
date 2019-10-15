@@ -1,0 +1,26 @@
+<!--pages/cardDel/cardDel.wxml-->
+<view class="whole">
+	<view class="handBox">
+		<view class="handimg" style="background-image:url({{STATICIMG}}/pic_card_golden.png)">
+			<view class="leftBox">
+				<view class="useInfo">
+					<view class="leftImg" style="background-image:url({{STATICIMG}}/test.jpg)"></view>
+					<view class="rightInfo nowrap">
+						<text class="txt1">哈哈哈哈</text>
+						<text class="txt2">18271346587</text>
+					</view>
+				</view>
+				<view class="handCen">
+					<text class="txt3">400</text>
+					<text class="txt4">剩余U点</text>
+				</view>
+			</view>
+			<view class="rightBox">
+				<view>
+					<text>充值记录</text>
+					<image mode="widthFix" src="{{STATICIMG}}/ic_arrowRight_golden.png"></image>
+				</view>
+			</view>
+		</view>	
+	</view>
+</view>

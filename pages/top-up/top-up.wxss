@@ -1,0 +1,103 @@
+/* pages/cardDel/cardDel.wxss */
+page{
+	background-color: white;
+}
+.whole{
+	padding-bottom: 100rpx;
+}
+.handBox{
+	width: 100vw;
+	padding: 14rpx 30rpx;
+	box-sizing: border-box;
+}
+.handimg{
+	width: 100%;
+	height: 290rpx;
+	background: center no-repeat;
+	background-size: cover;
+	display: flex;
+	padding: 30rpx;
+	box-sizing: border-box;
+	box-shadow:0px 20rpx 30rpx 0px rgba(75,123,246,0.3);
+	border-radius:10rpx;
+}
+.leftBox{
+	width: 65%;
+}
+.rightBox{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	/* padding-left:19rpx;
+	box-sizing: border-box;  */
+}
+.useInfo{
+	width: 100%;
+	display: flex;
+}
+.leftImg{
+	width:80rpx;
+	height: 80rpx;
+	border-radius:50%;
+	background: center no-repeat;
+	background-size: cover;
+}
+.rightInfo{
+	flex: 1;
+	padding-left: 19rpx;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.txt1{
+	font-size:28rpx;
+	font-family:PingFang SC;
+	font-weight:bold;
+	color:rgba(255,255,255,1);
+}
+.txt2{
+	font-size:24rpx;
+	font-family:PingFang SC;
+	font-weight:500;
+	color:rgba(255,255,255,1);
+	opacity:0.6;
+	margin-top: 17rpx;
+}
+.handCen{
+	margin-top: 40rpx;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.txt3{
+	font-size:60rpx;
+	font-family:PingFang SC;
+	font-weight:bold;
+	color:rgba(255,255,255,1);
+	line-height:50rpx;
+}
+.txt4{
+	font-size:24rpx;
+	font-family:PingFang SC;
+	font-weight:500;
+	color:rgba(255,255,255,1);
+	line-height:50rpx;
+	opacity:0.6;
+	margin-top: 10rpx;
+}
+.rightBox>view{
+	display: flex;
+	font-size:26rpx;
+	font-family:PingFang SC;
+	font-weight:500;
+	color:rgba(255,255,255,1);
+}
+.rightBox>view>text{
+	margin-right: 14rpx;
+}
+.rightBox>view>image{
+	width: 18rpx;
+	height: auto;
+}

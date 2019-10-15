@@ -1,4 +1,4 @@
-<!--pages/userStart/bindingPhone/bindingPhone.wxml-->
+<!--pages/usercenter/newphone/newphone.wxml-->
 <view class="container body ">
   <view class="user">
     <text class="binding_title">温馨提示：</text>
@@ -7,23 +7,19 @@
       <image src="./../../../assets/static/pic_phoneNumber.png" style="width:32rpx;height:40rpx;"></image>
       <text>手机</text>
     </view>
-    <input type="Number" placeholder="请输入手机号码" placeholder-class="phone_pla"></input>
+    <input type="Number" placeholder="请输入新手机号码" placeholder-class="phone_pla" style="border-bottom: rgba(235,235,235,1) solid 1px;"></input>
     <view class="input_title flex-ali" style="margin-top:48rpx;">
       <image src="./../../../assets/static/pic_verificationCode.png" style="width:32rpx;height:40rpx;"></image>
       <text>验证码</text>
     </view>
     <view class="code_content flex-ali">
-      <input type="Number" class="flex1" placeholder="请输入手机号码" placeholder-class="phone_pla"></input>
+      <input type="Number" class="flex1" placeholder="请输入您的验证码" placeholder-class="phone_pla"></input>
         <!-- <view class="tab-active"></view> -->
       <button class="{{iscode ? 'code' : 'button'}}" bindtap="opencode" >{{ second==60 ? '获取验证码' : second+'s'}}</button>
     </view>
-    <navigator url="/pages/usercenter/index/index" hover-class="navigator-hover">
-      <button class="login_bt">登录</button>
+    <navigator url="/pages/usercenter/insuccess/insuccess" hover-class="navigator-hover">
+      <button class="login_bt">完成</button>
     </navigator>
   </view>
-  <view class="Tips_content">
-    <text class="">温馨提示：</text>
 
-    <text class="">使用号码登录表示默认同意使用该手机号码注册unicorn账号，并同意《unicorn用户服务协议》。</text>
-  </view>
 </view>

@@ -11,6 +11,7 @@
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
+		"nodeModules": true,
 		"autoAudits": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": false,
@@ -19,13 +20,12 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		},
-		"nodeModules": true
+		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.7.7",
-	"appid": "wx594f126bc50f299f",
-	"projectname": "Ant",
+	"libVersion": "2.8.3",
+	"appid": "wx28348ca0459c1e46",
+	"projectname": "蚂蚁小程序",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -49,8 +49,12 @@
 			"currentL": -1,
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
-			"current": 27,
+			"current": 30,
 			"list": [
 				{
 					"id": 0,
@@ -243,9 +247,39 @@
 				},
 				{
 					"id": -1,
-					"name": "index",
-					"pathName": "pages/index/index",
+					"name": "pages/userStart/bindingPhone/bindingPhone",
+					"pathName": "pages/userStart/bindingPhone/bindingPhone",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "fill_info",
+					"pathName": "pages/fill_info/fill_info",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userStart/login/login",
+					"pathName": "pages/usercenter/myintegral/myintegral",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "cardDel",
+					"pathName": "pages/cardDel/cardDel",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "top-up",
+					"pathName": "pages/top-up/top-up",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/myintegral/myintegral",
+					"pathName": "pages/usercenter/myintegral/myintegral",
 					"scene": null
 				}
 			]

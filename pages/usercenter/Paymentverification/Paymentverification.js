@@ -1,33 +1,51 @@
-// pages/userStart/bindingPhone/bindingPhone.js
+// pages/usercenter/Paymentverification/Paymentverification.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    iscode:false,
-    second:60
+    indexnum:0,
+    iscode: false,
+    second: 60,
+    blank:0
   },
   opencode() {
     var _this = this;
-    if(this.data.second!=60){
+    if (this.data.second != 60) {
       return;
     }
-    this.setData({ iscode: true});
+    this.setData({ iscode: true });
     let result = setInterval(() => {
       _this.setData({ second: --this.data.second });
       if (this.data.second < 0) {
         clearInterval(result);
-        _this.setData({ iscode: false, second:60});
+        _this.setData({ iscode: false, second: 60 });
         console.log(this.data.iscode)
       }
     }, 1000);
+  },
+  inputon:function(e){
+    console.log(e.detail.value)
+    
+    if (e.target.dataset.index==4){
+      console.log('输入完成')
+    }
+    if (e.target.dataset.index == 0 && e.detail.value == ''){
+      return;
+    }
+    if (e.detail.value == '') {
+      this.setData({ indexnum: e.target.dataset.index - 1 });
+      return;
+    }
+    this.setData({ indexnum : e.target.dataset.index+1})
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    if (options.blank){}
+    this.opencode();
   },
 
   /**

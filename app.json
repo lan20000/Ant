@@ -1,7 +1,17 @@
 {
+
   "pages": [
-    
     "pages/userStart/login/login",
+    "pages/goods/confirmorder/confirmorder",
+    "pages/usercenter/Usingrecord/Usingrecord",
+    "pages/usercenter/Paymentverification/Paymentverification",
+    "pages/usercenter/Placeorder/Placeorder",
+    "pages/usercenter/Paysuccess/Paysuccess",
+    "pages/usercenter/successful/successful",
+    "pages/usercenter/insuccess/insuccess",
+    "pages/usercenter/newphone/newphone",
+    "pages/usercenter/Changephone/Changephone",
+    "pages/usercenter/myintegral/myintegral",
     "pages/course/score/score",
     "pages/course/scoresuccess/scoresuccess",
     "pages/videoDel/videoDel",
@@ -17,7 +27,10 @@
     "pages/About/Aboutsuccess/Aboutsuccess",
     "pages/usePage/usePage",
     "pages/releaseWork/releaseWork",
-    "pages/techPage/techPage"
+    "pages/techPage/techPage",
+    "pages/fill_info/fill_info",
+    "pages/cardDel/cardDel",
+    "pages/top-up/top-up"
   ],
   "window": {
     "navigationBarTitleText": "蚂蚁小程序",
@@ -34,4 +47,5 @@
   "requiredBackgroundModes": [
     "audio"
   ]
+
 }

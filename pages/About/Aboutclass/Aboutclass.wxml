@@ -35,21 +35,21 @@
       </view>
     </navigator>
     <view class="flex-ali " style="padding-bottom:29rpx;">
-      <view class="flex1 time_list flex-cen-col">
-        <text class="no ">今天</text>
-        <text class="no">约满</text>
+      <view class="flex1 time_list flex-cen-col" >
+        <text class="{{tab==0 ? 'this' : 'no'}}" bindtap="cut" data-index="0">今天</text>
+        <text class="{{tab==0 ? 'this' : 'no'}}" bindtap="cut" data-index="0">约满</text>
       </view>
       <view class="flex1 time_list flex-cen-col">
-        <text class="this">今天</text>
-        <text class="this">约满</text>
+        <text class="{{tab==1 ? 'this' : 'no'}}" bindtap="cut" data-index="1" >今天</text>
+        <text class="{{tab==1 ? 'this' : 'no'}}" bindtap="cut" data-index="1" >约满</text>
       </view>
       <view class="flex1 time_list flex-cen-col">
-        <text class="">周五</text>
-        <text class="">8月25日</text>
+        <text class="{{tab==2 ? 'this' : 'no'}}" bindtap="cut" data-index="2" >周五</text>
+        <text class="{{tab==2 ? 'this' : 'no'}}" bindtap="cut" data-index="2" >8月25日</text>
       </view>
       <view class="flex1 time_list flex-cen-col">
-        <text class="">周五</text>
-        <text class="">8月25日</text>
+        <text class="{{tab==3 ? 'this' : 'no'}}" bindtap="cut" data-index="3" >周五</text>
+        <text class="{{tab==3 ? 'this' : 'no'}}" bindtap="cut" data-index="3" >8月25日</text>
       </view>
     </view>
   </view>

@@ -40,3 +40,8 @@ radio.checked text::after{display: inline-block;position: absolute;left:0;top:ca
   100%{-webkit-transform:scale(1);opacity:1;}
 }
 .navigator-hover{ background-color: transparent;}
+
+text,view{font-family:PingFang SC;}
+.textoverflow{white-space: nowrap;display: block; text-overflow:ellipsis;overflow:hidden;}
+.txt_left{text-align: left;}
+.txt_right{text-align: right;}
