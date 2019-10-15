@@ -16,8 +16,8 @@
 	<view class="hander">
 		<text class="firtxt">每个人都有属于自己的主场</text>	
 		<view class="tabs">
-			<view class="active">学生</view>
-			<view>老师</view>
+			<view class="{{currtab==1?'active':''}}" bindtap="changeTab" data-tab="1">学生</view>
+			<view class="{{currtab==2?'active':''}}" bindtap="changeTab" data-tab="2">老师</view>
 		</view>
 		<view class="bgImg" style="background-image:url({{STATICIMG}}/test.jpg)"></view>
 	</view>
@@ -50,7 +50,7 @@
 	<view class="lookMore">
 		查看更多
 	</view>
-	<view class="bottomBox">
+	<!-- <view class="bottomBox">
 		<text class="tichTxt">教师风采</text>
 		<view class="tichList" >
 			<view wx:for="{{20}}">
@@ -61,6 +61,6 @@
 				</view>
 			</view>
 		</view>
-	</view>
+	</view> -->
 	<qc-Tabbar></qc-Tabbar>
 </view>

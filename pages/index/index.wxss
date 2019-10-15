@@ -29,6 +29,9 @@
 	text-align: center;
 	position: relative;
 }
+.tabs>.active{
+	color: #FFFFFF;
+}
 .tabs>.active::after{
 	content: "";
 	width: 48rpx;
@@ -169,6 +172,7 @@
 	font-weight:500;
 	color:rgba(169,169,169,1); 
 	border-radius: 10rpx;
+	margin-bottom: 50rpx;
 }
 .bottomBox{
 	width: 690rpx;
