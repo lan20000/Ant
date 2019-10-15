@@ -1,7 +1,6 @@
 {
 
   "pages": [
-    "pages/usercenter/couponlist/couponlist",
     "pages/userStart/login/login",
     "pages/goods/confirmorder/confirmorder",
     "pages/usercenter/Usingrecord/Usingrecord",
@@ -38,7 +37,8 @@
     "pages/homePage/homePage",
     "pages/videoList/videoList",
     "pages/memberShop/memberShop",
-    "pages/shopDel/shopDel"
+    "pages/shopDel/shopDel",
+    "pages/usercenter/couponlist/couponlist"
   ],
   "window": {
     "navigationBarTitleText": "蚂蚁小程序",
