@@ -54,7 +54,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 30,
+			"current": 33,
 			"list": [
 				{
 					"id": 0,
@@ -256,30 +256,41 @@
 					"id": -1,
 					"name": "fill_info",
 					"pathName": "pages/fill_info/fill_info",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "pages/userStart/login/login",
 					"pathName": "pages/usercenter/myintegral/myintegral",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "cardDel",
 					"pathName": "pages/cardDel/cardDel",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "top-up",
 					"pathName": "pages/top-up/top-up",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "pages/usercenter/myintegral/myintegral",
 					"pathName": "pages/usercenter/myintegral/myintegral",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/index/index",
+					"pathName": "pages/usercenter/index/index",
 					"scene": null
 				}
 			]

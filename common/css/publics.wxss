@@ -45,3 +45,4 @@ text,view{font-family:PingFang SC;}
 .textoverflow{white-space: nowrap;display: block; text-overflow:ellipsis;overflow:hidden;}
 .txt_left{text-align: left;}
 .txt_right{text-align: right;}
+.txt_center{text-align: center;}

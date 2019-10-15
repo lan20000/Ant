@@ -57,10 +57,10 @@
         <image src="./../../../assets/static/ic_call.png"></image>
         <text>呼叫顾问</text>
       </view>
-      <view class="meun_list flex-cen-col flex1">
-        <image src="./../../../assets/static/ic_credit.png"></image>
-        <text>我的积分</text>
-      </view>
+      <navigator url="/pages/usercenter/myintegral/myintegral" class="meun_list flex-cen`-col flex1" hover-class="navigator-hover">
+          <image src="./../../../assets/static/ic_credit.png"></image>
+          <text>我的积分</text>
+        </navigator>
       <view class="meun_list flex-cen-col flex1">
         <image src="./../../../assets/static/ic_invite.png"></image>
         <text>邀请好友</text>

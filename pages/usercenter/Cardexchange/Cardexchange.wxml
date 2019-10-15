@@ -1,0 +1,7 @@
+<!--pages/usercenter/Cardexchange/Cardexchange.wxml-->
+<text class="top">温馨提示：</text>
+<text class="top"> 卡劵兑换码为数字码，一经使用当即作废！</text>
+<view class="flex content">
+  <input type="text" class="flex1 flex-ali" placeholder-class="pla" placeholder="请输入兑换码"></input>
+  <button class="theme">兑换</button>
+</view>
