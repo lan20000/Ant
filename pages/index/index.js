@@ -9,7 +9,8 @@ Page({
 	 */
 	data: {
 		STATICIMG: app.globalData.STATICIMG,
-    more:false,//弹窗
+        more:false,//弹窗
+		currtab:1
 	},
 
 	/**
@@ -69,5 +70,10 @@ Page({
 	},
 	viedeoDel(){
 		route.jump_nav({ url: "/pages/videoDel/videoDel"})
+	},
+	changeTab(e){//切换tab
+		let tab = e.currentTarget.dataset.tab
+		this.setData({currtab:tab})
+		console.log(e);
 	}
 })

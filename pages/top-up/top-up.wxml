@@ -6,8 +6,8 @@
 				<view class="useInfo">
 					<view class="leftImg" style="background-image:url({{STATICIMG}}/test.jpg)"></view>
 					<view class="rightInfo nowrap">
-						<text class="txt1">哈哈哈哈</text>
-						<text class="txt2">18271346587</text>
+						<text class="txt0">哈哈哈哈</text>
+						<text class="txts">18271346587</text>
 					</view>
 				</view>
 				<view class="handCen">
@@ -22,5 +22,35 @@
 				</view>
 			</view>
 		</view>	
+	</view>
+	<view class="upList">
+		<view wx:for="{{5}}" class="{{currTab==index?'active':''}}" data-tab="{{index}}" bindtap="changeTab">
+			<text class="txt1">800U点</text>
+			<text class="txt2">RMB:800</text>
+		</view>
+	</view>
+	<view class="tips">首次充值赠送UNICORN专属新人好礼</view>
+	<view class="giftBox">
+		<view class="imglist">
+			<view class="giftBg" style="background-image:url({{STATICIMG}}/test.jpg)"></view>
+			<text class="giftName nowrap">Unicorn定制毛巾啥的积分</text>
+		</view>
+		<view class="addicon">+</view>
+		<view class="imglist">
+			<view class="giftBg" style="background-image:url({{STATICIMG}}/test.jpg)"></view>
+			<text class="giftName nowrap">Unicorn定制毛巾啥的积分</text>
+		</view>
+		<view class="addicon">+</view>
+		<view class="imglist">
+			<view class="giftBg" style="background-image:url({{STATICIMG}}/test.jpg)"></view>
+			<text class="giftName nowrap">Unicorn定制毛巾啥的积分</text>
+		</view>
+	</view>
+	<view class="buyBtn">购买</view>
+	<view class="footBox">
+		<text class="footTip">须知：</text>
+		<text class="contents">
+			购买U点之后可使用独角兽卡进行全场消费，包括课程预约、商品购买、参与活动等一切俱乐部内支付。
+        </text>
 	</view>
 </view>

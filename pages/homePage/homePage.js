@@ -1,7 +1,6 @@
-// pages/top-up/top-up.js
-const route = require("../../utils/tool/router.js");
-
+// pages/usePage/usePage.js
 const app = new getApp();
+const route = require("../../utils/tool/router.js");
 Page({
 
 	/**
@@ -9,7 +8,7 @@ Page({
 	 */
 	data: {
 		STATICIMG: app.globalData.STATICIMG,
-		currTab:0,
+		currtab: 1
 	},
 
 	/**
@@ -60,15 +59,16 @@ Page({
 	onReachBottom: function () {
 
 	},
-	changeTab(e){
-		let tab = e.currentTarget.dataset.tab;
-		this.setData({currTab:tab});
-		console.log(e);
-	}
+
 	/**
 	 * 用户点击右上角分享
 	 */
-	// onShareAppMessage: function () {
+	onShareAppMessage: function () {
 
-	// }
+	},
+	changeTab(e) {
+		let tab = e.currentTarget.dataset.tab;
+		this.setData({ currtab: tab })
+		console.log(e.currentTarget.dataset.tab);
+	}
 })
