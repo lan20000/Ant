@@ -1,6 +1,6 @@
 {
-
   "pages": [
+    "pages/usercenter/useragreement/useragreement",
     "pages/userStart/login/login",
     "pages/goods/confirmorder/confirmorder",
     "pages/usercenter/Usingrecord/Usingrecord",
