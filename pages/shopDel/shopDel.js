@@ -1,4 +1,4 @@
-// pages/top-up/top-up.js
+// pages/shopDel/shopDel.js
 const route = require("../../utils/tool/router.js");
 
 const app = new getApp();
@@ -9,7 +9,9 @@ Page({
 	 */
 	data: {
 		STATICIMG: app.globalData.STATICIMG,
-		currTab:0,
+		buyNum:1,
+		currSize:null,
+		popShow:false,
 	},
 
 	/**
@@ -60,10 +62,28 @@ Page({
 	onReachBottom: function () {
 
 	},
-	changeTab(e){
-		let tab = e.currentTarget.dataset.tab;
-		this.setData({currTab:tab});
+	closePop(){
+		this.setData({popShow:false})
+	},
+	openPop(){
+		this.setData({ popShow: true })
+	},
+	checkSize(e){
 		console.log(e);
+		let tab = e.currentTarget.dataset.size;
+		this.setData({ currSize:tab})
+	},
+	runNnm(e){
+		let type = e.currentTarget.dataset.type=="add"?true:false;
+		if(type){
+			this.setData({buyNum:++this.data.buyNum})
+		}else{
+			this.setData({ buyNum: this.data.buyNum>1?--this.data.buyNum:1})
+		}
+	},
+	nextStep(){
+		if(!this.data.currSize) return;
+		console.log(this.data.currSize,this.data.buyNum)
 	}
 	/**
 	 * 用户点击右上角分享
