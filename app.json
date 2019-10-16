@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/usercenter/useragreement/useragreement",
     "pages/userStart/login/login",
+    "pages/usercenter/useragreement/useragreement",
     "pages/goods/confirmorder/confirmorder",
     "pages/usercenter/Usingrecord/Usingrecord",
     "pages/usercenter/Paymentverification/Paymentverification",

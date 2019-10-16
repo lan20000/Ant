@@ -24,6 +24,6 @@
       </view>
       <text class="type">芭蕾舞/爵士舞/街舞</text>
     </view>
-    <button class="button this">约满</button>
+    <button class="button this theme">约满</button>
   </view>
 </scroll-view>

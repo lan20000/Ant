@@ -41,7 +41,7 @@
       </textarea>
     </view>
     <navigator url="/pages/course/scoresuccess/scoresuccess" hover-class="navigator-hover">
-      <button class="submit">提交评价</button>
+      <button class="submit theme">提交评价</button>
     </navigator>
   </view>
 </scroll-view>

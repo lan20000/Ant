@@ -8,3 +8,4 @@ page{background-color: #fff;}
 font-weight:500;
 color:rgba(50,51,68,1);
 line-height:36rpx;padding-top: 50rpx;display: block;}
+

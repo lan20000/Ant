@@ -6,4 +6,4 @@
 
 <text class="success_prompt">请您牢记新的手机号码 ~</text>
 <text class="success_prompt">Unicorn将使用新的手机号码识别您的身份</text>
-<button>好的，我知道了</button>
+<button class="theme">好的，我知道了</button>

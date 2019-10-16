@@ -6,5 +6,5 @@
 
 <text class="success_prompt">Unicorn将会在3个工作日内进行发货，  </text>
 <text class="success_prompt"> 请留意物流信息</text>
-<button class="button">好的，我知道了</button>
+<button class="button theme">好的，我知道了</button>
 <button class="no_filling">再去逛逛</button>

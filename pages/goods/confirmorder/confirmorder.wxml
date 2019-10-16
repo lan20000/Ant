@@ -41,6 +41,6 @@
     <text class="available">当前可用U点：5600</text>
   </view>
   <navigator url="/pages/usercenter/Paymentverification/Paymentverification" hover-class="navigator-hover">
-  <button class="flex-cen">提交订单</button>
+  <button class="flex-cen theme">提交订单</button>
   </navigator>
 </view>

@@ -7,7 +7,7 @@
       <text class="type">芭蕾舞/爵士舞/街舞</text>
       <view class="flex-ali" style="padding-top:32rpx;">
         <text class="type flex1" style="padding-top:0rpx;">已完成</text>
-        <text class="price">消耗200U点</text>
+        <text class="price theme_txt">消耗200U点</text>
       </view>
     </view>
   </view>

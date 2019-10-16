@@ -7,4 +7,4 @@
 <image src="./../../../assets/static/pic_.png"style="width:284rpx;height:226rpx;margin:0rpx auto;display: block;"></image>
 <text class="success_prompt">课程已经进入课表，要按时上课哦~</text>
 <text class="txt">请前往课表查看上课码</text>
-<button>好的，我知道了</button>
+<button class="theme">好的，我知道了</button>

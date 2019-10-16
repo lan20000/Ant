@@ -39,7 +39,7 @@ border-radius: 0rpx;padding: 10rpx 0rpx;}
     position: absolute;
     right: 18%;
     z-index: 4;
-    background:rgba(50,51,68,1);
+    background:rgba(227,227,227,1);
     border-radius:2px;
 }
 .tab-nav-item.tab-active:after {

@@ -3,7 +3,7 @@
   <view class="video"></view>
   <view class="coursetitle flex-ali">
     <text>爵士舞基础课程</text>
-    <text class="icon">预约</text>
+    <text class="icon theme">预约</text>
   </view>
   <view class="teacher_details">
     <view class="teacher flex-ali">
@@ -77,9 +77,9 @@
       <image src="./../../../assets/static/classDetail_ic_sel.png" class="this icon"></image>
       <text class="this">GIMME ON UP第一节</text>
       <image src="./../../../assets/static/classDetail_ic_arrowLeft.png" style="width:16rpx;height:21rpx;margin-left:20rpx;"></image>
-      <text class="progressbt flex-cen ">本节学习</text>
+      <text class="progressbt flex-cen pink">本节学习</text>
     </view>
   </view>
   <view style="height:94rpx;"></view>
 </scroll-view>
-<button class="">取消预约</button>
+<button class="theme">取消预约</button>
