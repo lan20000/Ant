@@ -54,7 +54,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 44,
+			"current": 47,
 			"list": [
 				{
 					"id": 0,
@@ -368,6 +368,27 @@
 					"id": -1,
 					"name": "pages/usercenter/editorAdd/editorAdd",
 					"pathName": "pages/usercenter/editorAdd/editorAdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/index/index",
+					"pathName": "pages/usercenter/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/Addressmanagement/Addressmanagement",
+					"pathName": "pages/usercenter/Addressmanagement/Addressmanagement",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/myorder/myorder",
+					"pathName": "pages/usercenter/myorder/myorder",
 					"scene": null
 				}
 			]

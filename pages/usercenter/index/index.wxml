@@ -83,10 +83,10 @@
         <image src="./../../../assets/static/ic_call.png"></image>
         <text>呼叫顾问</text>
       </view>
-      <navigator url="/pages/usercenter/myintegral/myintegral" class="meun_list flex-cen`-col flex1" hover-class="navigator-hover">
-        <image src="./../../../assets/static/ic_credit.png"></image>
+      <view class="meun_list flex-cen-col flex1">
+        <image src="./../../../assets/static/ic_credit.png" bindtap="blank" data-index="myintegral/myintegral" ></image>
         <text>我的积分</text>
-      </navigator>
+      </view>
       <view class="meun_list flex-cen-col flex1">
         <image src="./../../../assets/static/ic_invite.png"></image>
         <text>邀请好友</text>
@@ -97,7 +97,7 @@
       </view>
     </view>
   </view>
-   <!-- 老师菜单 -->
+  <!-- 老师菜单 -->
   <view class="meun meunm" wx:if="{{utype==3}}">
     <view class="flex-ali">
       <view class="meun_list flex-cen-col flex1">
@@ -120,27 +120,27 @@
     </view>
   </view>
   <view class="set_list">
-    <view class="flex-ali tab-nav-item tab-active">
+    <view class="flex-ali tab-nav-item tab-active" bindtap="blank" data-index="myorder/myorder" wx:if="{{utype!=3}}">
       <text class="flex1">我的订单</text>
       <image src="./../../../assets/static/ic_arrowRight.png"></image>
     </view>
-    <view class="flex-ali tab-nav-item tab-active">
+    <view class="flex-ali tab-nav-item tab-active" bindtap="blank" data-index="Addressmanagement/Addressmanagement" wx:if="{{utype!=3}}">
       <text class="flex1">地址管理</text>
       <image src="./../../../assets/static/ic_arrowRight.png"></image>
     </view>
-    <view class="flex-ali tab-nav-item tab-active">
+    <view class="flex-ali tab-nav-item tab-active" bindtap="blank" data-index="Changephone/Changephone">
       <text class="flex1">手机号码</text>
       <image src="./../../../assets/static/ic_arrowRight.png"></image>
     </view>
-    <view class="flex-ali tab-nav-item tab-active">
+    <view class="flex-ali tab-nav-item tab-active" bindtap="blank" data-index="Setup/Setup">
       <text class="flex1">个人设置</text>
       <image src="./../../../assets/static/ic_arrowRight.png"></image>
     </view>
-    <view class="flex-ali tab-nav-item tab-active">
+    <view class="flex-ali tab-nav-item tab-active" bindtap="blank" data-index="AboutUs/AboutUs">
       <text class="flex1">关于我们</text>
       <image src="./../../../assets/static/ic_arrowRight.png"></image>
     </view>
-    <view class="flex-ali ">
+    <view class="flex-ali " bindtap="blank" data-index="useragreement/useragreement">
       <text class="flex1">用户协议</text>
       <image src="./../../../assets/static/ic_arrowRight.png"></image>
     </view>

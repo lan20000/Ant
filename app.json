@@ -4,7 +4,7 @@
     "pages/usercenter/Finishclass/Finishclass",
     "pages/userStart/login/login",
     "pages/usercenter/editorAdd/editorAdd",
-    "pages/Setup/Setup",
+    "pages/usercenter/Setup/Setup",
     "pages/usercenter/Addressmanagement/Addressmanagement",
     "pages/usercenter/myorder/myorder",
     "pages/usercenter/useragreement/useragreement",
@@ -45,7 +45,8 @@
     "pages/shopDel/shopDel",
     "pages/usercenter/couponlist/couponlist",
     "pages/usercenter/orderdetails/orderdetails",
-    "pages/usercenter/logistics/logistics"
+    "pages/usercenter/logistics/logistics",
+    "pages/usercenter/newAdd/newAdd"
   ],
   "window": {
     "navigationBarTitleText": "蚂蚁小程序",

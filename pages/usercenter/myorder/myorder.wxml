@@ -5,7 +5,7 @@
       <text class="{{indexo==0 ? 'tab-nav-item tab-active' : ''}}" bindtap="cut" data-index="0">待付款</text>
     </view>
     <view class="flex1 list txt_center">
-      <text class="{{indexo==1 ? 'tab-nav-item tab-active' : ''}}"  bindtap="cut" data-index="1">待发货</text>
+      <text class="{{indexo==1 ? 'tab-nav-item tab-active' : ''}}" bindtap="cut" data-index="1">待发货</text>
     </view>
     <view class="flex1 list txt_center">
       <text class="{{indexo==2 ? 'tab-nav-item tab-active' : ''}}" bindtap="cut" data-index="2">待收货</text>
@@ -27,8 +27,10 @@
     <view class="">
       <text class="txt_right sig">共1件商品   小计：672U点</text>
       <view class="flex-end">
-        <button class="logistics flex-cen">查看物流</button>
-        <button class="confirm flex-cen theme_txt theme_border">查看物流</button>
+        <navigator url="/pages/usercenter/logistics/logistics" hover-class="navigator-hover">
+          <button class="logistics flex-cen">查看物流</button>
+        </navigator>
+        <button class="confirm flex-cen theme_txt theme_border">确认收货</button>
       </view>
     </view>
   </view>

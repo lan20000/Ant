@@ -1,23 +1,13 @@
-// pages/usercenter/index/index.js
+// pages/usercenter/newAdd/newAdd.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    utype:2,//用户类型
 
   },
-  blank(e){
-    console.log(e)
-    if (!e.currentTarget.dataset.index){
-      return;
-    }
-    wx.navigateTo({
-      url: './../' + e.currentTarget.dataset.index
-    })
 
-  },
   /**
    * 生命周期函数--监听页面加载
    */

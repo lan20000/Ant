@@ -1,3 +1,4 @@
+<!--pages/usercenter/newAdd/newAdd.wxml-->
 <!--pages/usercenter/editorAdd/editorAdd.wxml-->
 <view class="list flex-ali">
   <text class="title" space="nbsp">姓       名</text>
@@ -22,6 +23,4 @@
 <navigator open-type="navigateBack" hover-class="navigator-hover">
   <button class="theme save">保存</button>
 </navigator>
-<navigator open-type="navigateBack" hover-class="navigator-hover">
-  <button class="delete">删除</button>
-</navigator>
+<!-- <button class="delete">删除</button> -->

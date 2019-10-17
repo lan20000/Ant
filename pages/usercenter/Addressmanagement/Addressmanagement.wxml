@@ -28,4 +28,7 @@
       </navigator>
     </view>
   </view>
+  <navigator url="/pages/usercenter/newAdd/newAdd" hover-class="navigator-hover">
+    <button class="new_add">新增收货地址</button>
+  </navigator>
 </scroll-view>

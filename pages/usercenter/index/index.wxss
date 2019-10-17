@@ -16,7 +16,9 @@
 .set_list{margin: 20rpx 0rpx 45rpx 0rpx;}
 .set_list>view>image{width:15rpx;height:24rpx;}
 .set_list>view{padding: 40rpx 30rpx;background:rgba(255,255,255,1);}
-
+.set_list text{font-size:30rpx;
+font-weight:500;
+color:rgba(49,49,52,1);}
 
 /* tab-nav-item tab-active */
 .tab-nav-item{position: relative;}

@@ -11,3 +11,5 @@ font-weight:500;color:rgba(255,255,255,1);margin-right: 31rpx;}
 font-weight:bold;color:rgba(255,255,255,1);}
 .list .add{display: block;font-size:24rpx;font-weight:500;color:rgba(49,49,52,1);padding-top: 24rpx;}
 .editor{font-size:24rpx;font-weight:500;color:rgba(49,49,52,1);margin: 0rpx 39rpx;}
+
+.new_add{background:rgba(0,74,149,1);border-radius: 0rpx;font-size:30rpx;font-weight:bold;color:rgba(255,255,255,1);position: fixed;bottom: 0rpx;width: 100%;}
