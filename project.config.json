@@ -54,7 +54,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 41,
+			"current": 44,
 			"list": [
 				{
 					"id": 0,
@@ -347,6 +347,27 @@
 					"id": -1,
 					"name": "pages/course/Coursedetails/Coursedetails",
 					"pathName": "pages/course/Coursedetails/Coursedetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/orderdetails/orderdetails",
+					"pathName": "pages/usercenter/orderdetails/orderdetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/logistics/logistics",
+					"pathName": "pages/usercenter/logistics/logistics",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/editorAdd/editorAdd",
+					"pathName": "pages/usercenter/editorAdd/editorAdd",
 					"scene": null
 				}
 			]

@@ -2,7 +2,8 @@
 
 <myheader title="" btnIcon="home" is="{{false}}" bind:headerBack="headerBack"></myheader>
 <view class="body_content">
-  <view class="bodys">
+  <!-- 学生 -->
+  <view class="bodys" wx:if="{{utype!=3}}">
     <view class="header" style="background-image: url({{ utype==2 ? './../../../assets/static/pic_card_golden.png' : './../../../assets/static/pic_card_gray.png'}});">
       <view class="header_top ">
         <view class="flex">
@@ -32,7 +33,32 @@
       <text class="header_title" wx:if="{{utype==0}}">使用手机号码登录unicorn即可成为会员</text>
     </view>
   </view>
-  <view class="meun">
+  <!-- 老师 -->
+  <view class="bodys" wx:if="{{utype==3}}">
+    <view class="header">
+      <view class="header_top ">
+        <view class="flex">
+          <view class="flex1 flex-col">
+            <text class="login ">陈朕老师</text>
+            <text class="teacher_time">2019年12月1日加入UNICORN</text>
+          </view>
+          <image src="https://img2.woyaogexing.com/2019/10/08/0002034dd4724353964d1df29d625e5a!400x400.jpeg"></image>
+        </view>
+      </view>
+      <view class="teacher_c flex-ali">
+        <view class="flex1 flex-cen-col" style="border-right:rgba(95,96,113,1) solid 1px;">
+          <text class="num">111</text>
+          <text class="txt">本月完成课时</text>
+        </view>
+        <view class="flex1 flex-cen-col">
+          <text class="num">111</text>
+          <text class="txt">本年完成课时</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 菜单 -->
+  <view class="meun" wx:if="{{utype!=3}}">
     <view class="flex-ali">
       <view class="meun_list flex-cen-col flex1">
         <image src="./../../../assets/static/ic_myHmoepage.png"></image>
@@ -58,9 +84,9 @@
         <text>呼叫顾问</text>
       </view>
       <navigator url="/pages/usercenter/myintegral/myintegral" class="meun_list flex-cen`-col flex1" hover-class="navigator-hover">
-          <image src="./../../../assets/static/ic_credit.png"></image>
-          <text>我的积分</text>
-        </navigator>
+        <image src="./../../../assets/static/ic_credit.png"></image>
+        <text>我的积分</text>
+      </navigator>
       <view class="meun_list flex-cen-col flex1">
         <image src="./../../../assets/static/ic_invite.png"></image>
         <text>邀请好友</text>
@@ -69,6 +95,28 @@
         <!-- <image src="./../../../assets/static/ic_cardChange.png"></image>
         <text>卡券兑换</text> -->
       </view>
+    </view>
+  </view>
+   <!-- 老师菜单 -->
+  <view class="meun meunm" wx:if="{{utype==3}}">
+    <view class="flex-ali">
+      <view class="meun_list flex-cen-col flex1">
+        <image src="./../../../assets/static/ic_myHmoepage.png"></image>
+        <text>我的主页</text>
+      </view>
+      <view class="meun_list flex-cen-col flex1">
+        <image src="./../../../assets/static/ic_videoDatebase.png"></image>
+        <text>视频库</text>
+      </view>
+      <view class="meun_list flex-cen-col flex1">
+        <image src="./../../../assets/static/ic_videoDatebase.png"></image>
+        <text>教师库</text>
+      </view>
+      <view class="meun_list flex-cen-col flex1">
+        <image src="./../../../assets/static/ic_invite.png"></image>
+        <text>邀请好友</text>
+      </view>
+
     </view>
   </view>
   <view class="set_list">

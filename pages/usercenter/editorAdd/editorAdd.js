@@ -1,14 +1,15 @@
-// pages/usercenter/index/index.js
+// pages/usercenter/editorAdd/editorAdd.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    utype:3,//用户类型
-
+    selected:false,//选中
   },
-
+  select(){
+    this.data.selected ? this.setData({ selected : false}) : this.setData({selected : true});
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,6 +1,12 @@
 {
   "pages": [
+    "pages/usercenter/index/index",
+    "pages/usercenter/Finishclass/Finishclass",
     "pages/userStart/login/login",
+    "pages/usercenter/editorAdd/editorAdd",
+    "pages/Setup/Setup",
+    "pages/usercenter/Addressmanagement/Addressmanagement",
+    "pages/usercenter/myorder/myorder",
     "pages/usercenter/useragreement/useragreement",
     "pages/goods/confirmorder/confirmorder",
     "pages/usercenter/Usingrecord/Usingrecord",
@@ -17,7 +23,6 @@
     "pages/videoDel/videoDel",
     "pages/course/schedule/schedule",
     "pages/course/Coursedetails/Coursedetails",
-    "pages/usercenter/index/index",
     "pages/userStart/bindingPhone/bindingPhone",
     "pages/course/Somecode/Somecode",
     "pages/index/index",
@@ -38,7 +43,9 @@
     "pages/videoList/videoList",
     "pages/memberShop/memberShop",
     "pages/shopDel/shopDel",
-    "pages/usercenter/couponlist/couponlist"
+    "pages/usercenter/couponlist/couponlist",
+    "pages/usercenter/orderdetails/orderdetails",
+    "pages/usercenter/logistics/logistics"
   ],
   "window": {
     "navigationBarTitleText": "蚂蚁小程序",

@@ -6,6 +6,7 @@
 .header_top>view>image{width: 120rpx;height: 120rpx;border-radius: 50%;}
 .header_title{font-size:30rpx;margin-top:143rpx;font-family:PingFang SC;font-weight:bold;color:rgba(255,255,255,1);display: inline-block
 ;}
+.meunm>view:first-child{margin-bottom: 0rpx !important;}
 
 .meun{background:rgba(255,255,255,1);padding: 47rpx 0rpx;}
 .meun>view:first-child{margin-bottom: 52rpx;}
@@ -46,3 +47,8 @@
 
 .card_type{font-size:30rpx;font-family:PingFang SC;font-weight:bold;color:rgba(255,255,255,1);padding-top: 33rpx;}
 .time_end{font-size:24rpx;font-family:PingFang SC;font-weight:500;color:rgba(255,255,255,1);padding-top: 17rpx;}
+
+.teacher_time{font-size:24rpx;padding-top: 30rpx;font-weight:500;color:rgba(255,255,255,1);}
+.teacher_c{margin-top: 92rpx;}
+.teacher_c .num{font-size:48rpx;font-weight:bold;color:rgba(255,163,152,1);}
+.teacher_c .txt{font-size:22rpx;font-weight:500;color:rgba(255,255,255,1);padding-top: 30rpx;}

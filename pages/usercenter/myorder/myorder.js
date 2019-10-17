@@ -1,14 +1,18 @@
-// pages/usercenter/index/index.js
+// pages/usercenter/myorder/myorder.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    utype:3,//用户类型
-
+    indexo:0,//下标
   },
-
+  cut(e){
+    if (!e.target.dataset.index){
+      return;
+    }
+    this.setData({ indexo : e.target.dataset.index})
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,11 +1,10 @@
-// pages/usercenter/index/index.js
+// pages/usercenter/Finishclass/Finishclass.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    utype:3,//用户类型
 
   },
 
