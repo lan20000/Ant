@@ -54,7 +54,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 47,
+			"current": 50,
 			"list": [
 				{
 					"id": 0,
@@ -389,6 +389,27 @@
 					"id": -1,
 					"name": "pages/usercenter/myorder/myorder",
 					"pathName": "pages/usercenter/myorder/myorder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/myintegral/myintegral",
+					"pathName": "pages/usercenter/myintegral/myintegral",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/Cardexchange/Cardexchange",
+					"pathName": "pages/usercenter/Cardexchange/Cardexchange",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/Cardexchange/Cardexchange",
+					"pathName": "pages/usercenter/Cardexchange/Cardexchange",
 					"scene": null
 				}
 			]

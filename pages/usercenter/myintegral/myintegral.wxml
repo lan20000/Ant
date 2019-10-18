@@ -19,15 +19,17 @@
     </view>
     <text class="num">+1000</text>
   </view>
-  <view class="list flex-ali " >
+  <view class="list flex-ali ">
     <view class="flex-col flex1">
       <text class="name">新人赠送</text>
       <text class="time">2019-10-04 19:04</text>
     </view>
     <text class="num">+1000</text>
   </view>
-  <view class="list flex-ali " style="height: 50rpx;" >
-    
+  <view class="list flex-ali " style="height: 50rpx;">
+
   </view>
-  <button class="footer theme" wx:if="{{tabtype==1}}">兑换U点</button>
+  <navigator url="/pages/usercenter/Cardexchange/Cardexchange" hover-class="navigator-hover">
+    <button class="footer theme" wx:if="{{tabtype==1}}">兑换U点</button>
+  </navigator>
 </scroll-view>
