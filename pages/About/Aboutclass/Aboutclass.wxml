@@ -3,10 +3,10 @@
   <view class="top">
     <view class="flex-ali tab_list">
       <view class="flex1 flex-cen" data-type="0" bindtap="tabchoose">
-        <text class="tab {{ tabtype==0 ? 'tab-nav-item tab-active' : ''}}" >课程约课</text>
+        <text class="tab {{ tabtype==0 ? 'tab-nav-item tab-active' : ''}}">课程约课</text>
       </view>
       <view class="flex1 flex-cen" data-type="1" bindtap="tabchoose">
-        <text class="tab {{ tabtype==1 ? 'tab-nav-item tab-active' : ''}}" >教师约课</text>
+        <text class="tab {{ tabtype==1 ? 'tab-nav-item tab-active' : ''}}">教师约课</text>
       </view>
     </view>
     <!--地图选择-->
@@ -35,47 +35,48 @@
       </view>
     </navigator>
     <view class="flex-ali " style="padding-bottom:29rpx;">
-      <view class="flex1 time_list flex-cen-col" >
-        <text class="{{tab==0 ? 'this' : 'no'}}" bindtap="cut" data-index="0">今天</text>
-        <text class="{{tab==0 ? 'this' : 'no'}}" bindtap="cut" data-index="0">约满</text>
+      <view class="flex1 time_list flex-cen-col {{tab==0 ? 'tab-item tab-active ' : ''}}">
+        <text class="{{tab==0 ? 'this theme_txt' : 'no'}}" bindtap="cut" data-index="0">今天</text>
+        <text class="{{tab==0 ? 'this theme_txt' : 'no'}}" bindtap="cut" data-index="0">约满</text>
       </view>
-      <view class="flex1 time_list flex-cen-col">
-        <text class="{{tab==1 ? 'this' : 'no'}}" bindtap="cut" data-index="1" >今天</text>
-        <text class="{{tab==1 ? 'this' : 'no'}}" bindtap="cut" data-index="1" >约满</text>
+      <view class="flex1 time_list flex-cen-col {{tab==1 ? 'tab-item tab-active ' : ''}}">
+        <text class="{{tab==1 ? 'this theme_txt' : 'no'}}" bindtap="cut" data-index="1">今天</text>
+        <text class="{{tab==1 ? 'this theme_txt' : 'no'}}" bindtap="cut" data-index="1">约满</text>
       </view>
-      <view class="flex1 time_list flex-cen-col">
-        <text class="{{tab==2 ? 'this' : 'no'}}" bindtap="cut" data-index="2" >周五</text>
-        <text class="{{tab==2 ? 'this' : 'no'}}" bindtap="cut" data-index="2" >8月25日</text>
+      <view class="flex1 time_list flex-cen-col {{tab==2 ? 'tab-item tab-active ' : ''}}">
+        <text class="{{tab==2 ? 'this theme_txt' : 'no'}}" bindtap="cut" data-index="2">周五</text>
+        <text class="{{tab==2 ? 'this theme_txt' : 'no'}}" bindtap="cut" data-index="2">8月25日</text>
       </view>
-      <view class="flex1 time_list flex-cen-col">
-        <text class="{{tab==3 ? 'this' : 'no'}}" bindtap="cut" data-index="3" >周五</text>
-        <text class="{{tab==3 ? 'this' : 'no'}}" bindtap="cut" data-index="3" >8月25日</text>
+      <view class="flex1 time_list flex-cen-col {{tab==3 ? 'tab-item tab-active ' : ''}}">
+        <text class="{{tab==3 ? 'this theme_txt' : 'no'}}" bindtap="cut" data-index="3">周五</text>
+        <text class="{{tab==3 ? 'this theme_txt' : 'no'}}" bindtap="cut" data-index="3">8月25日</text>
       </view>
     </view>
   </view>
   <view class="bottom">
+    <view class="card flex">
+      <image src=""></image>
+      <view class="flex-col">
+        <text class="title">14:00-16:00 爵士舞基础课程</text>
+        <text class="name">老师：莎莎</text>
+        <text class="satuts this theme_txt">差 5 人约满</text>
+      </view>
+      <button class="pre theme">100U点预约</button>
+    </view>
     <view class="card flex" wx:for="(index,item) in 10">
       <image src=""></image>
       <view class="flex-col">
         <text class="title">14:00-16:00 爵士舞基础课程</text>
         <text class="name">老师：莎莎</text>
         <text class="satuts">已约满</text>
-      </view>      
+      </view>
       <navigator url="/pages/About/Aboutsuccess/Aboutsuccess" class="pre" hover-class="navigator-hover">
         <button class="pre">预约</button>
       </navigator>
     </view>
-    <view class="card flex">
-      <image src=""></image>
-      <view class="flex-col">
-        <text class="title">14:00-16:00 爵士舞基础课程</text>
-        <text class="name">老师：莎莎</text>
-        <text class="satuts this">差 5 人约满</text>
-      </view>
-      <button class="pre">100U点预约</button>
-    </view>
+
     <view class=" " style="height:400rpx;">
-      
+
     </view>
   </view>
 </scroll-view>

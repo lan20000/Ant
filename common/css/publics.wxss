@@ -14,6 +14,7 @@ button::after{border:none;}
 .flex-ali{display: flex;align-items: center;}
 .flex-col{display: flex;flex-direction: column;}
 .flex-row{display: flex;flex-direction: row-reverse;}
+.flex-end{display: flex;justify-content: flex-end;}
 .flex-wrap{flex-wrap: wrap;}
 .flex1{flex:1;}
 .posa{position: absolute;width:100%;height:100%;left:0;top:0;}
@@ -45,3 +46,4 @@ text,view{font-family:PingFang SC;}
 .textoverflow{white-space: nowrap;display: block; text-overflow:ellipsis;overflow:hidden;}
 .txt_left{text-align: left;}
 .txt_right{text-align: right;}
+.txt_center{text-align: center;}

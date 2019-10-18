@@ -18,7 +18,7 @@
       <button class="{{iscode ? 'code' : 'button'}}" bindtap="opencode" >{{ second==60 ? '获取验证码' : second+'s'}}</button>
     </view>
     <navigator url="/pages/usercenter/index/index" hover-class="navigator-hover">
-      <button class="login_bt">登录</button>
+      <button class="login_bt theme">登录</button>
     </navigator>
   </view>
   <view class="Tips_content">

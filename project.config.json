@@ -24,7 +24,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.8.3",
-	"appid": "wx28348ca0459c1e46",
+	"appid": "wx9cb717d8151d8486",
 	"projectname": "蚂蚁小程序",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -289,36 +289,57 @@
 				},
 				{
 					"id": -1,
-					"name": "usePage",
-					"pathName": "pages/usePage/usePage",
+					"name": "pages/usercenter/index/index",
+					"pathName": "pages/usercenter/index/index",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "homePage",
-					"pathName": "pages/homePage/homePage",
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "videoList",
-					"pathName": "pages/videoList/videoList",
+					"name": "pages/About/Aboutclass/Aboutclass",
+					"pathName": "pages/About/Aboutclass/Aboutclass",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "memberShop",
-					"pathName": "pages/memberShop/memberShop",
+					"name": "pages/About/Selectaddress/Selectaddress",
+					"pathName": "pages/About/Selectaddress/Selectaddress",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": 37,
-					"name": "shopDel",
-					"pathName": "pages/shopDel/shopDel",
+					"id": -1,
+					"name": "pages/About/Aboutclass/Aboutclass",
+					"pathName": "pages/About/Aboutclass/Aboutclass",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Chooseteacher/Chooseteacher",
+					"pathName": "pages/About/Chooseteacher/Chooseteacher",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Aboutsuccess/Aboutsuccess",
+					"pathName": "pages/About/Aboutsuccess/Aboutsuccess",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/course/Coursedetails/Coursedetails",
+					"pathName": "pages/course/Coursedetails/Coursedetails",
 					"query": "",
 					"scene": null
 				},

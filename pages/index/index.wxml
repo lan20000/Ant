@@ -8,7 +8,7 @@
     </view>
     <text class="Toobtain">评分成功可获得10积分！</text>
     <navigator url="/pages/course/score/score" hover-class="navigator-hover" class="updata">
-      <button class="updata">去评分</button>
+      <button class="updata theme">去评分</button>
     </navigator>
   </view>
 </view>

@@ -33,6 +33,6 @@
         <text>附近可约课门店为河西王府井店</text>
       </view>
     </view>
-    <view class="footer flex-cen">马上约课</view>
+    <view class="footer flex-cen theme" >马上约课</view>
   </view>
 </view>

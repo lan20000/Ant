@@ -4,4 +4,4 @@
   <text>评价成功</text>
 </view>
 <text class="success_prompt">感谢您的评价，已赠送10个积分到 您的账户，请查收！</text>
-<button>好的，我知道了</button>
+<button class="theme">好的，我知道了</button>
