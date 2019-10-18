@@ -11,7 +11,7 @@
 				<text class="auname2 nowrap">巴拉巴拉小魔仙</text>
 			</view>
 			<view>
-				<view class="focus">关注</view>
+				<view class="focus theme">关注</view>
 			</view>			
 		</view>
 	</view>

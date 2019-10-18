@@ -36,7 +36,7 @@
 	content: "";
 	width: 48rpx;
 	height: 4rpx;
-	background-color: #D8B27B;
+	background-color: #FFA398;
 	position: absolute;
 	bottom: -17rpx;
 	left: 50%;

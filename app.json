@@ -33,7 +33,9 @@
 		"pages/homePage/homePage",
 		"pages/videoList/videoList",
 		"pages/memberShop/memberShop",
-		"pages/shopDel/shopDel"
+		"pages/shopDel/shopDel",
+		"pages/attendClass/attendClass",
+		"pages/classEnd/classEnd"
 	],
 	"window": {
 		"navigationBarTitleText": "蚂蚁小程序",
