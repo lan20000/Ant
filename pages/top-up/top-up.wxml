@@ -46,7 +46,7 @@
 			<text class="giftName nowrap">Unicorn定制毛巾啥的积分</text>
 		</view>
 	</view>
-	<view class="buyBtn">购买</view>
+	<view class="buyBtn theme">购买</view>
 	<view class="footBox">
 		<text class="footTip">须知：</text>
 		<text class="contents">

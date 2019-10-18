@@ -71,14 +71,14 @@
 	font-size:30rpx;
 	font-family:PingFang SC;
 	font-weight:bold;
-	color:rgba(50,51,68,1);
+	color:#004A95;
 	position: relative;
 }
 .tabs>.active::after{
 	content: "";
 	width: 60rpx;
 	height: 4rpx;
-	background-color: black;
+	background-color: #004A95;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);

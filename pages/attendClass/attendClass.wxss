@@ -207,3 +207,58 @@
 	color:rgba(148,151,163,1);
 	margin-top: 19rpx;
 }
+.siginPop{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popDel{
+	width:560rpx;
+	height:540rpx;
+	background:rgba(255,255,255,1);
+	border-radius:10rpx;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 62rpx;
+	box-sizing: border-box;
+}
+.s_img{
+	width: 142rpx;
+	height: 142rpx !important;
+	border-radius:50%; 
+}
+.s_txt1{
+	font-size:36rpx;
+	font-family:PingFang SC;
+	font-weight:bold;
+	color:rgba(49,49,52,1);
+	margin-top: 40rpx;
+}
+.s_txt2{
+	font-size:24rpx;
+	font-family:PingFang SC;
+	font-weight:500;
+	color:rgba(148,151,163,1);
+	margin-top: 20rpx;
+}
+.s_txt3{
+	width:400rpx;
+	height:76rpx;
+	background:rgba(0,74,149,1);
+	border-radius:10rpx;
+	font-size:32rpx;
+	font-family:PingFang SC;
+	font-weight:bold;
+	color:rgba(255,255,255,1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 79rpx;
+}

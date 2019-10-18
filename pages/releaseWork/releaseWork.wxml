@@ -10,7 +10,7 @@
 			<text class="addtxt">添加视频</text>
 		</view>
 	</view>
-	<view class="upPhoto">上传</view>
+	<view class="upPhoto theme">上传</view>
 	<view class="footTip">
 		<text>温馨提示：</text>
 		<text>发布视频到独角戏，让更多人看到你的风采，邀请好友点赞获得U点奖励！</text>

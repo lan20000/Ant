@@ -37,7 +37,7 @@ page{
 	font-size:30rpx;
 	font-family:PingFang SC;
 	font-weight:500;
-	color:rgba(216,178,123,1);
+	color:#313134;
 	border-right: 1rpx solid rgba(235,235,235,1);
 }
 .setfont{

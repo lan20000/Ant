@@ -34,7 +34,7 @@
 			<text class="txt5">￥299U点</text>
 			<text class="txt6">当前可用U点：5600</text>
 		</view>
-		<view class="rightBtn" bindtap="openPop">立即购买</view>
+		<view class="rightBtn theme" bindtap="openPop">立即购买</view>
 	</view>
 	<!-- 选择规格弹窗 -->
 	<view class="checkPop" bindtap="closePop" wx:if="{{popShow}}">

@@ -132,10 +132,10 @@ page{
 	font-family:PingFang-SC-Medium;
 }
 .upList>.active{
-	border:2rpx solid rgba(216,178,123,1) 
+	border:2rpx solid #004A95 
 }
 .active>.txt1{
-	color: rgba(216,178,123,1);
+	color: #004A95
 }
 .tips{
 	font-size:24rpx;

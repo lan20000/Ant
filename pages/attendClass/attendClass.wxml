@@ -38,5 +38,14 @@
 			<view class="rightInfo">缺勤</view>
 		</view>
 	</view>
+	<!-- 学员签到弹窗 -->
+	<view class="siginPop theme" wx:if="{{false}}">
+		<view class="popDel">
+			<image mode="widthFix" src="{{STATICIMG}}/test.jpg" class="s_img"></image>
+			<text class="s_txt1">学员名字</text>
+			<text class="s_txt2">已学习4个课时</text>
+			<view class="s_txt3">确定签到</view>
+		</view>
+	</view>
 	<qc-Tabbar></qc-Tabbar>
 </view>

@@ -36,7 +36,7 @@
 		</view>
 	</view>
 	<view class="zhanwei"></view>
-	<view class="footBtn">
+	<view class="footBtn theme">
 		<view>
 			<view class="fbimg" style="background-image:url({{STATICIMG}}/test.jpg)"></view>
 			<text class="fbtxt">发布独角戏</text>

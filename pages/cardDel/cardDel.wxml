@@ -67,5 +67,5 @@
 			<view class="setmar">完成学习</view> 
 		</view>
 	</view>
-	<view class="footBox">购买U点立即约课</view>
+	<view class="footBox theme">购买U点立即约课</view>
 </view>
