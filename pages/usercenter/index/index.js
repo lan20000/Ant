@@ -1,11 +1,12 @@
 // pages/usercenter/index/index.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    utype:2,//用户类型
+    utype:2,//用户类型 1非VIP 2vip 3老师
     useris:null
   },
   blank(e){
@@ -23,7 +24,7 @@ Page({
    */
   onLoad: function (options) {
     //是否为老师
-    var app = getApp();
+    
     this.setData({ useris : app.globalData.footertab})
     console.log(app.globalData.footertab)
   },

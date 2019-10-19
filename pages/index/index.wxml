@@ -62,5 +62,5 @@
 			</view>
 		</view>
 	</view> -->
-	<qc-Tabbar></qc-Tabbar>
+	<qc-Tabbar useris="{{useris}}"></qc-Tabbar>
 </view>

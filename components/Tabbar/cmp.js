@@ -9,9 +9,27 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    useris:{
+      type: Boolean,
+      value:true,
+      observers: {
+        'useris': function (newVal, oldVal, changedPath) {
+          console.log(newVal)
+          console.log(111111)
+        }
+      }
+    },
     tabbarList:{
       type:Array,
-      value: [{ text: '首页', path: '/pages/index/index' }, { text: '看车', path: '/pages/About/Aboutclass/Aboutclass' }, { text: '商城', path: '/pages/course/schedule/schedule' }, { text: '我的', path:'/pages/usercenter/index/index'}]
+      value: [{ text: '首页', path: '/pages/index/index' }, { text: '看车', path: '/pages/About/Aboutclass/Aboutclass' }, { text: '商城', path: '/pages/course/schedule/schedule' }, { text: '我的', path:'/pages/usercenter/index/index'}],
+      observers: {
+        'tabbarList': function (subfield) {
+          console.log('41444')
+          // 使用 setData 设置 this.data.some.subfield 时触发
+          // （除此以外，使用 setData 设置 this.data.some 也会触发）
+          subfield === this.data.some.subfield
+        }
+      }
     },
     oData:{
       type:Object,

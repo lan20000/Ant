@@ -8,6 +8,7 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
+    useris:true,
 		STATICIMG: app.globalData.STATICIMG,
         more:false,//弹窗
 		currtab:1
@@ -17,6 +18,7 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
+    // this.setData({ useris: app.globalData.footertab })
 		console.log(this.data.STATICIMG);
 	},
 

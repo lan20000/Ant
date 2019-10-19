@@ -5,7 +5,7 @@
         <view class="tabbar_item {{currentIndex == 0 ? 'active' : ''}}" data-index="0" bindtap="switchBtn">
             <!-- <view class="icon iconfont {{currentIndex == 0 ? 'icon-shouye' : 'icon-shouyexianxing'}}"></view> -->
             <image src="./../../assets/iconfont/{{currentIndex == 0 ? 'tab_unicorn_sel' : 'tab_unicorn_nor'}}.png" style="width:41rpx;height:40rpx;"></image>
-            <text>独角兽</text>
+            <text>独角兽{{useris}}</text>
         </view>
         <view class="tabbar_item {{currentIndex == 1 ? 'active' : ''}}" data-index="1" bindtap="switchBtn">
             <!-- <view class="icon iconfont {{currentIndex == 1 ? 'icon-kanche' : 'icon-kanchexianxing'}}"></view> -->

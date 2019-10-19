@@ -54,7 +54,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 49,
+			"current": 51,
 			"list": [
 				{
 					"id": 0,
@@ -403,6 +403,20 @@
 					"id": -1,
 					"name": "shopDel",
 					"pathName": "pages/shopDel/shopDel",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/techPage/techPage",
+					"pathName": "pages/usercenter/Paymentverification/Paymentverification",
 					"scene": null
 				}
 			]
