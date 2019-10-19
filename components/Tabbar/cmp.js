@@ -10,13 +10,18 @@ Component({
    */
   properties: {
     useris:{
-      type: Boolean,
-      value:true,
-      observers: {
-        'useris': function (newVal, oldVal, changedPath) {
-          console.log(newVal)
-          console.log(111111)
+      type: Boolean, // 类型（必填），目前接受的类型包括：String, Number, Boolean, Object, Array, null（表示任意类型）
+      value: '', // 属性初始值（可选），如果未指定则会根据类型选择一个
+      observer: function (newVal, oldVal, changedPath) {
+        console.log(newVal, oldVal, changedPath);
+        if (newVal){
+          
+          this.setData({ tabbarList: [{ text: '独角兽', path: '/pages/index/index', icon: 'tab_home_' }, { text: '约课', path: '/pages/About/Aboutclass/Aboutclass', icon: 'tab_appointCourse_' }, { text: '课表', path: '/pages/course/schedule/schedule', icon: 'tab_classSchedule_' }, { text: '我的', path: '/pages/usercenter/index/index', icon: 'tab_myCenter_' }] });
+        }else{
+          this.setData({ tabbarList: [{ text: '独角兽', path: '/pages/index/index', icon: 'tab_unicorn_' }, { text: '约课', path: '/pages/About/Aboutclass/Aboutclass', icon: 'tab_appointCourse_' }, { text: '课表', path: '/pages/course/schedule/schedule', icon: 'tab_classSchedule_' }, { text: '我的', path: '/pages/usercenter/index/index', icon: 'tab_myCenter_' }] });
         }
+        // 属性被改变时执行的函数（可选），也可以写成在methods段中定义的方法名字符串, 如：'_propertyChange'
+        // 通常 newVal 就是新设置的数据， oldVal 是旧数据
       }
     },
     tabbarList:{
@@ -98,6 +103,7 @@ Component({
 
     switchBtn(e){
       let index = e.currentTarget.dataset.index;
+      console.log(index)
       let url = this.properties.tabbarList[index].path;
       
       if( index == this.data.currentIndex )return;

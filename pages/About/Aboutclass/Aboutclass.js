@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    useris: true,
     tabtype:0,//类型选择
     tab:0//
   },
@@ -28,6 +29,7 @@ Page({
    */
   onLoad: function (options) {
 
+    this.setData({ useris: app.globalData.footertab });
   },
 
   /**

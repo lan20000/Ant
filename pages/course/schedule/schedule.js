@@ -1,11 +1,12 @@
 // pages/course/schedule/schedule.js
+const app = new getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    useris: true
   },
 
   /**
@@ -13,6 +14,7 @@ Page({
    */
   onLoad: function (options) {
 
+    this.setData({ useris: app.globalData.footertab });
   },
 
   /**

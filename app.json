@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/techPage/techPage",
     "pages/index/index",
+    "pages/techPage/techPage",
+    
     "pages/videoDel/videoDel",
     "pages/releaseWork/releaseWork",
     "pages/fill_info/fill_info",

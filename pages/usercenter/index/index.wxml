@@ -146,4 +146,4 @@
     </view>
   </view>
 </view>
-<Tabbar user="{{useris}}" ></Tabbar>
+<Tabbar useris="{{useris}}" ></Tabbar>
