@@ -6,7 +6,7 @@ Page({
    */
   data: {
     utype:2,//用户类型
-
+    useris:null
   },
   blank(e){
     console.log(e)
@@ -22,7 +22,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    //是否为老师
+    var app = getApp();
+    this.setData({ useris : app.globalData.footertab})
+    console.log(app.globalData.footertab)
   },
 
   /**

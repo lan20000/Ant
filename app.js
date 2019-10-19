@@ -40,6 +40,7 @@ App({
     })
   },
   globalData: {
+    footertab:false,// false学生
     loginNum: 0,//登录失败重新登录次数
 	STATICIMG:"https://game.flyh5.cn/resources/game/wechat/yls/djx"
   }
