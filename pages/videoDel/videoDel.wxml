@@ -46,16 +46,17 @@
 	</view>
 	<view class="zhanwei"></view>
 	<view class="footBox">
-		<view>
-			<image class="iconimg" mode="widthFix" src="{{STATICIMG}}/ic_like_sel.png" wx:if="{{false}}"></image>
-			<image class="iconimg" mode="widthFix" src="{{STATICIMG}}/ic_like_nor.png"></image>
+		<view bindtap="getLike">
+			<image class="iconimg" mode="widthFix" src="{{STATICIMG}}/ic_like_sel.png" wx:if="{{isLike}}"></image>
+			<image class="iconimg" mode="widthFix" src="{{STATICIMG}}/ic_like_nor.png" wx:if="{{!isLike}}"></image>
 			<text class="icontxt">支持（2793）</text>
 		</view>
-		<view>
+		<view bindtap="goRemark">
 			<image class="iconimg" mode="widthFix" src="{{STATICIMG}}/ic_comment.png"></image>
 			<text class="icontxt">评论（2793）</text>
 		</view>
-		<view>
+		<view class="setRetrun">
+			<button class="share" open-type="share"></button>
 			<image class="iconimg" mode="widthFix" src="{{STATICIMG}}/ic_share.png"></image>
 			<text class="icontxt">转发（2793）</text>
 		</view>

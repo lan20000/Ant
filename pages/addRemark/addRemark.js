@@ -1,6 +1,7 @@
-// pages/videoDel/videoDel.js
-const app = new getApp();
-const route = require("../../utils/tool/router.js");
+// pages/addRemark/addRemark.js
+const app = getApp();//获取应用实例
+
+const route = require('../../utils/tool/router.js');
 Page({
 
 	/**
@@ -8,14 +9,15 @@ Page({
 	 */
 	data: {
 		STATICIMG: app.globalData.STATICIMG,
-		isLike:false
+		remarkContent:'',
+		rid:''
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-
+		this.setData({rid:options.rid})	
 	},
 
 	/**
@@ -66,13 +68,5 @@ Page({
 	onShareAppMessage: function () {
 
 	},
-	homePage(){
-		route.jump_nav({ url:"/pages/usePage/usePage"})
-	},
-	getLike(){
-		this.setData({ isLike:!this.data.isLike})
-	},
-	goRemark(){
-		route.jump_nav({ url: "/pages/addRemark/addRemark"})
-	}
+	
 })
