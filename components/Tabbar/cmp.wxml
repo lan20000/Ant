@@ -4,7 +4,7 @@
     <view class="tabbar {{ isIponeX ? 'iPhone' : '' }}">
         <view wx:for="{{tabbarList}}" data-item="item" wx:for-index="idx" class="tabbar_item {{currentIndex == idx ? 'active' : ''}}" data-index="{{idx}}" bindtap="switchBtn">
             <image src="./../../assets/iconfont/{{currentIndex == idx ? item.icon+'sel' : item.icon+'nor'}}.png" style="width:41rpx;height:40rpx;"></image>
-            <text>独角兽</text>
+            <text>{{item.text}}</text>
         </view>
     </view>
 </view>
