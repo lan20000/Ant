@@ -8,6 +8,7 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
+    useris: true,
 		STATICIMG: app.globalData.STATICIMG,
 	},
 
@@ -16,6 +17,7 @@ Page({
 	 */
 	onLoad: function (options) {
 
+    this.setData({ useris: app.globalData.footertab })
 	},
 
 	/**

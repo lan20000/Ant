@@ -1,4 +1,5 @@
 // pages/Aboutclass/Aboutclass.js
+const app = new getApp();
 Page({
 
   /**

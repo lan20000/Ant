@@ -15,8 +15,7 @@ Component({
       observer: function (newVal, oldVal, changedPath) {
         console.log(newVal, oldVal, changedPath);
         if (newVal){
-          
-          this.setData({ tabbarList: [{ text: '独角兽', path: '/pages/index/index', icon: 'tab_home_' }, { text: '约课', path: '/pages/About/Aboutclass/Aboutclass', icon: 'tab_appointCourse_' }, { text: '课表', path: '/pages/course/schedule/schedule', icon: 'tab_classSchedule_' }, { text: '我的', path: '/pages/usercenter/index/index', icon: 'tab_myCenter_' }] });
+          this.setData({ tabbarList: [{ text: '独角兽', path: '/pages/index/index', icon: 'tab_home_' }, { text: '上课', path: '/pages/classEnd/classEnd', icon: 'tab_appointCourse_' }, { text: '课表', path: '/pages/course/schedule/schedule', icon: 'tab_classSchedule_' }, { text: '我的', path: '/pages/usercenter/index/index', icon: 'tab_myCenter_' }] });
         }else{
           this.setData({ tabbarList: [{ text: '独角兽', path: '/pages/index/index', icon: 'tab_unicorn_' }, { text: '约课', path: '/pages/About/Aboutclass/Aboutclass', icon: 'tab_appointCourse_' }, { text: '课表', path: '/pages/course/schedule/schedule', icon: 'tab_classSchedule_' }, { text: '我的', path: '/pages/usercenter/index/index', icon: 'tab_myCenter_' }] });
         }
@@ -26,7 +25,7 @@ Component({
     },
     tabbarList:{
       type:Array,
-      value: [{ text: '首页', path: '/pages/index/index' }, { text: '看车', path: '/pages/About/Aboutclass/Aboutclass' }, { text: '商城', path: '/pages/course/schedule/schedule' }, { text: '我的', path:'/pages/usercenter/index/index'}],
+      value: [],
       observers: {
         'tabbarList': function (subfield) {
           console.log('41444')
@@ -109,6 +108,8 @@ Component({
       if( index == this.data.currentIndex )return;
 
       this.setData({currentIndex:index})
+
+      console.log('currentIndex',this.data.currentIndex)
 
       router.jump_rel({
         url,

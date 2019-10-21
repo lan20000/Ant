@@ -54,7 +54,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 51,
+			"current": 52,
 			"list": [
 				{
 					"id": 0,
@@ -417,6 +417,13 @@
 					"id": -1,
 					"name": "pages/techPage/techPage",
 					"pathName": "pages/usercenter/Paymentverification/Paymentverification",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/Setup/Setup",
+					"pathName": "pages/usercenter/Setup/Setup",
 					"scene": null
 				}
 			]
