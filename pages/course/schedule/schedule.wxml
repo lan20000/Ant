@@ -42,4 +42,4 @@
     </view>
   </view>
 </scroll-view>
-<Tabbar useris="{{useris}}"></Tabbar>
+<Tabbar usertype="{{useris}}" oData="{{[]}}" ></Tabbar>

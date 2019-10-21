@@ -4,7 +4,7 @@ button{background:rgba(50,51,68,1);border-radius:10rpx;padding:0rpx 0rpx;}
 .user{text-align: center;margin-top: 100rpx;position: relative;height: 100%;}
 .user image{width:160rpx;height:160rpx;border-radius: 20rpx;box-shadow: 0px 10rpx 30rpx 0px rgba(125,128,169,0.11);}
 .user .nick-name{padding:20rpx 0;}
-.user button{width:100%;margin: 30rpx auto;color:rgba(255,255,255,1);}
+.user button{padding: 6rpx 0rpx;width:100%;margin: 30rpx auto;color:rgba(255,255,255,1);}
 
 .login_name{font-size:32rpx;font-weight:bold;padding-top: 40rpx;color:rgba(49,49,52,1);display: block;}
 .login_sintxt{color:rgba(148,151,163,1);padding-top: 59rpx;font-size: 30rpx;display: block;}

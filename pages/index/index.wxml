@@ -62,5 +62,5 @@
 			</view>
 		</view>
 	</view> -->
-	<qc-Tabbar useris="{{useris}}"></qc-Tabbar>
+	<qc-Tabbar usertype="{{useris}}" oData="{{[]}}" ></qc-Tabbar>
 </view>

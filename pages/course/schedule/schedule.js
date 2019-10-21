@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    useris: true
+    useris: null
   },
 
   /**
@@ -14,7 +14,7 @@ Page({
    */
   onLoad: function (options) {
 
-    this.setData({ useris: app.globalData.footertab });
+
   },
 
   /**
@@ -28,7 +28,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({ useris: app.globalData.footertab });
   },
 
   /**
