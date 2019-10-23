@@ -13,7 +13,7 @@
     "pages/shopDel/shopDel",
     "pages/attendClass/attendClass",
     "pages/classEnd/classEnd",
-	"pages/addRemark/addRemark",
+	  "pages/addRemark/addRemark",
     "pages/About/Aboutclass/Aboutclass",
     "pages/About/Aboutsuccess/Aboutsuccess",
     "pages/About/Chooseteacher/Chooseteacher",

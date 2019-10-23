@@ -5,9 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    getphone:false,//获取手机号码
   },
-  
+  /**
+   * 获取手机号
+   */
+  getPhoneNumber: function (e) {
+    console.log(e.detail.errMsg)
+    console.log(e.detail.iv)
+    console.log(e.detail.encryptedData)
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -3,7 +3,7 @@
 .bodys{background: rgba(50, 51, 68, 1);}
 .header{margin: 0rpx 30rpx;height:338rpx;border-radius:20rpx 20rpx 0px 0px;padding: 38rpx;background-size: 100% 100%;}
 .header_top .login{font-size:52rpx;font-family:PingFang SC;font-weight:bold;color:rgba(255,255,255,1);}
-.header_top>view>image{width: 120rpx;height: 120rpx;border-radius: 50%;}
+.header_top>view>.user_head{width: 120rpx;height: 120rpx;border-radius: 50%;overflow: hidden;}
 .header_title{font-size:30rpx;margin-top:143rpx;font-family:PingFang SC;font-weight:bold;color:rgba(255,255,255,1);display: inline-block
 ;}
 .meunm>view:first-child{margin-bottom: 0rpx !important;}

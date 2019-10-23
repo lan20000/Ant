@@ -1,15 +1,16 @@
 <!--pages/login/login.wxml-->
+<getPhoneNumber wx:if="{{getphone}}"></getPhoneNumber>
 <view class="container body ">
   <view class="user">
-    <image src="http://flynew.oss-cn-hangzhou.aliyuncs.com/game/wechat/ly/lawyer/ti.png"></image>
-    <text class="login_name">张</text>
+    <view class="user_head">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <open-data class="login_name" type="userNickName"></open-data>
     <text class="login_sintxt">使用该微信号绑定手机17608480841一键登录</text>
-    
-    <navigator url="/pages/userStart/bindingPhone/bindingPhone" hover-class="navigator-hover">
-      <button class="theme">一键登录</button>
+    <button class="theme" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" >一键登录</button>
+    <navigator url="/pages/userStart/bindingPhone/bindingPhone" hover-class="navigator-hover" class="login_oth">
+      使用其他号码登录
     </navigator>
-
-    <text class="login_oth ">使用其他号码登录</text>
   </view>
   <view class="Tips_content">
     <text class="">温馨提示：</text>

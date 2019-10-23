@@ -54,7 +54,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 52,
+			"current": 62,
 			"list": [
 				{
 					"id": 0,
@@ -424,6 +424,76 @@
 					"id": -1,
 					"name": "pages/usercenter/Setup/Setup",
 					"pathName": "pages/usercenter/Setup/Setup",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/index/index",
+					"pathName": "pages/usercenter/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userStart/login/login",
+					"pathName": "pages/userStart/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userStart/login/login",
+					"pathName": "pages/userStart/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userStart/bindingPhone/bindingPhone",
+					"pathName": "pages/userStart/bindingPhone/bindingPhone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/index/index",
+					"pathName": "pages/usercenter/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/myintegral/myintegral",
+					"pathName": "pages/usercenter/myintegral/myintegral",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userStart/bindingPhone/bindingPhone",
+					"pathName": "pages/userStart/bindingPhone/bindingPhone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/index/index",
+					"pathName": "pages/usercenter/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/myintegral/myintegral",
+					"pathName": "pages/usercenter/myintegral/myintegral",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/Usingrecord/Usingrecord",
+					"pathName": "pages/usercenter/Usingrecord/Usingrecord",
 					"scene": null
 				}
 			]
