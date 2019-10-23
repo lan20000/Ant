@@ -7,13 +7,13 @@
       <image src="./../../../assets/static/pic_phoneNumber.png" style="width:32rpx;height:40rpx;"></image>
       <text>手机</text>
     </view>
-    <input type="Number" placeholder="请输入手机号码" maxlength="11" data-value="phone" bindinput="oninput" placeholder-class="phone_pla"></input>
+    <input type="number" placeholder="请输入手机号码" maxlength="11" data-value="phone" bindinput="oninput" placeholder-class="phone_pla"></input>
     <view class="input_title flex-ali" style="margin-top:48rpx;">
       <image src="./../../../assets/static/pic_verificationCode.png" style="width:32rpx;height:40rpx;"></image>
       <text>验证码</text>
     </view>
     <view class="code_content flex-ali">
-      <input type="Number" class="flex1" placeholder="请输入验证码" data-value="code" bindinput="oninput" placeholder-class="phone_pla"></input>
+      <input type="number" class="flex1" placeholder="请输入验证码" data-value="code" bindinput="oninput" placeholder-class="phone_pla"></input>
         <!-- <view class="tab-active"></view> -->
       <button class="{{iscode ? 'code' : 'button'}}" bindtap="opencode" >{{ second==60 ? '获取验证码' : second+'s'}}</button>
     </view>

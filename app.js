@@ -11,7 +11,7 @@ App({
     // backgroundAudio.backMusic(this, 'https://game.flyh5.cn/resources/game/wechat/szq/ftxiyouji/images/music.mp3')
     //静默登录
     // this.silentLogin()
-    
+    console.log('--------------------------执行')
     //检测是否登录
     this.getulogin();
   },

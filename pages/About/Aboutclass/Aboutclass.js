@@ -127,6 +127,7 @@ Page({
    */
   onLoad: function () {
     let _this = this;
+    console.log(app.globalData)
     if (app.globalData.ulogin) {
       this.getPosition()
     }

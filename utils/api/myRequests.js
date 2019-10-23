@@ -35,10 +35,6 @@ const getintegral = (data, url = 'Login/getintegral') => { return myRequest(data
 // 获取积分列表
 const uDetail = (data, url = 'User/GetUserDetail') => { return myRequest(data, url, 'get') }
 
-
-
-
-
 /**
  * 约课
  */
@@ -54,8 +50,11 @@ const getCourse = (data, url = 'Course/GetCoursePlanByStore') => { return myRequ
  */
 //我的课程列表
 const mycourse = (data, url = 'Course/MyCourseList') => { return myRequest(data, url, 'get') }
-//我的课程列表
+//课程详情
 const mycuresDetail = (data, url = 'Course/GetCourseDetail') => { return myRequest(data, url, 'get') }
+//评价课程
+const evalcourse = (data, url = 'Course/ReviewCourse') => { return myRequest(data, url, 'get') }
+
 
 
 module.exports = {
@@ -69,5 +68,6 @@ module.exports = {
   storeTime,
   mycourse,
   mycuresDetail,
-  uDetail
+  uDetail,
+  evalcourse
 }
