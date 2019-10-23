@@ -7,7 +7,8 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		STATICIMG: app.globalData.STATICIMG
+		STATICIMG: app.globalData.STATICIMG,
+		isLike:false
 	},
 
 	/**
@@ -67,5 +68,11 @@ Page({
 	},
 	homePage(){
 		route.jump_nav({ url:"/pages/usePage/usePage"})
+	},
+	getLike(){
+		this.setData({ isLike:!this.data.isLike})
+	},
+	goRemark(){
+		route.jump_nav({ url: "/pages/addRemark/addRemark"})
 	}
 })

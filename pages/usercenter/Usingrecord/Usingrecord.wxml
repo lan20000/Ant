@@ -1,6 +1,6 @@
 <!--pages/usercenter/Usingrecord/Usingrecord.wxml-->
-<scroll-view>
-  <view class="teacher flex-ali ">
+<scroll-view scroll-y="true" bindscrolltolower="more()">
+  <view class="teacher flex-ali"  >
     <image class="" src="https://img2.woyaogexing.com/2019/10/07/f3a33d7a27a9427b9272e3a421bc62be!400x400.jpeg"></image>
     <view class="flex-col flex1">
       <text class="name">老师</text>

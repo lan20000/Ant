@@ -1,24 +1,87 @@
 // pages/userStart/bindingPhone/bindingPhone.js
+const api = require('../../../utils/api/myRequests.js');
+const tool = require('../../../utils/publics/tool.js');
+
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    iscode:false,
-    second:60
+    iscode: false,
+    second: 60,
+    phone: null,
+    code: null,
+    ucode:null
+  },
+  login(){
+    if(this.data.code==null){
+      tool.alert('请先获取验证码');
+      return;
+    }
+    if (this.data.ucode == null) {
+      tool.alert('请输入验证码');
+      return;
+    }
+    if (this.data.ucode != this.data.code) {
+      tool.alert('验证码错误');
+      return;
+    }
+    api.getOpenid({
+      phone: this.data.phone,
+      verifyCode: this.data.ucode
+    }).then((res) => {
+      console.log()
+      if (res.data.Code == 200) {
+        wx.setStorageSync('userdata', res.data.Data);
+        res.data.Data.identity == 1 ? app.globalData.footertab = true : app.globalData.footertab = false;
+        wx.redirectTo({
+          url: './../../usercenter/index/index'
+        });
+      } else {
+        tool.alert('注册失败');
+      }
+    })
+
+  },
+  getphonecode() {
+    // Getcode
+    api.Getcode({
+      phone: this.data.phone,
+    }).then((res) => {
+      console.log(res)
+      if (res.data.Code == 200) {
+        this.setData({ code: res.data.Data.verifyCode });
+      } else {
+        tool.alert('获取失败');
+      }
+    })
+  },
+  oninput(e) {
+    if (e.target.dataset.value=='code'){
+      this.setData({ ucode: e.detail.value});
+      return;
+    }
+    this.setData({ phone: e.detail.value });
   },
   opencode() {
     var _this = this;
-    if(this.data.second!=60){
+    if (this.data.second != 60) {
       return;
     }
-    this.setData({ iscode: true});
+    if (this.data.phone == null || this.data.phone.length != 11) {
+      console.log(this.data.phone)
+      tool.alert('请输入手机号码');
+      return;
+    }
+    this.getphonecode();
+    this.setData({ iscode: true });
     let result = setInterval(() => {
       _this.setData({ second: --this.data.second });
       if (this.data.second < 0) {
         clearInterval(result);
-        _this.setData({ iscode: false, second:60});
+        _this.setData({ iscode: false, second: 60 });
         console.log(this.data.iscode)
       }
     }, 1000);

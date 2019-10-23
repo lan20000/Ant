@@ -1,28 +1,51 @@
 // pages/usercenter/index/index.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    utype:2,//用户类型
-
+    userdata: null,
+    ulogin:false,//是否登录
+    utype:1,//用户类型 1非VIP 2vip 3老师
+    useris:null//
+    
   },
   blank(e){
-    console.log(e)
     if (!e.currentTarget.dataset.index){
       return;
     }
+    if (e.currentTarget.dataset.index.indexOf('top-up') > -1) {
+      wx.navigateTo({
+        url: './../../' + e.currentTarget.dataset.index
+      });
+      return;
+    }
+    if (e.currentTarget.dataset.index.indexOf('userStart')>-1){
+      wx.navigateTo({
+        url: './../..'+e.currentTarget.dataset.index
+      });
+      return;
+    }
+    console.log(e.currentTarget.dataset.index.indexOf('page') > -1);
     wx.navigateTo({
       url: './../' + e.currentTarget.dataset.index
-    })
-
+    });
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    //是否为老师
+    this.setData({ useris: app.globalData.footertab, ulogin: app.globalData.ulogin, userdata: app.globalData.udata})
+    console.log(app.globalData.footertab);
+    //判断是否开通了会员
+    if (this.data.useris){
+      this.setData({ utype : 3})
+    } else if (this.data.userdata.isVip){
+      this.setData({ utype: 2 })
+    }
   },
 
   /**

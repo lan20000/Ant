@@ -12,7 +12,7 @@ const alert = (str, duration = 1500, icon = "none", callback) => {
   })
 }
 //loading提示框
-const loading = (str = '加载中', mask = false) => {
+const loading = (str = '加载中', mask = true) => {
   wx.showLoading({
     title: str,
     mask: mask

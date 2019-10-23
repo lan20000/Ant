@@ -2,25 +2,9 @@
 <view class="setheight"></view>
 <view class="footer {{ isIponeX ? 'iPhone' : '' }}">
     <view class="tabbar {{ isIponeX ? 'iPhone' : '' }}">
-        <view class="tabbar_item {{currentIndex == 0 ? 'active' : ''}}" data-index="0" bindtap="switchBtn">
-            <!-- <view class="icon iconfont {{currentIndex == 0 ? 'icon-shouye' : 'icon-shouyexianxing'}}"></view> -->
-            <image src="./../../assets/iconfont/{{currentIndex == 0 ? 'tab_unicorn_sel' : 'tab_unicorn_nor'}}.png" style="width:41rpx;height:40rpx;"></image>
-            <text>独角兽</text>
-        </view>
-        <view class="tabbar_item {{currentIndex == 1 ? 'active' : ''}}" data-index="1" bindtap="switchBtn">
-            <!-- <view class="icon iconfont {{currentIndex == 1 ? 'icon-kanche' : 'icon-kanchexianxing'}}"></view> -->
-             <image src="./../../assets/iconfont/{{currentIndex == 1 ? 'tab_appointCourse_sel' : 'tab_appointCourse_nor'}}.png" style="width:39rpx;height:38rpx;"></image>
-            <text>约课</text>
-        </view>
-        <view class="tabbar_item {{currentIndex == 2 ? 'active' : ''}}" data-index="2" bindtap="switchBtn">
-            <!-- <view class="icon iconfont {{currentIndex == 2 ? 'icon-shangcheng1' : 'icon-shangchengxianxing'}}"></view> -->
-             <image src="./../../assets/iconfont/{{currentIndex == 2 ? 'tab_classSchedule_sel' : 'tab_classSchedule_nor'}}.png" style="width:35rpx;height:38rpx;"></image>
-            <text>课表</text>
-        </view>
-        <view class="tabbar_item {{currentIndex == 3 ? 'active' : ''}}" data-index="3" bindtap="switchBtn">
-            <!-- <view class="icon iconfont {{currentIndex == 3 ? 'icon-wode1' : 'icon-wodexianxing'}}"></view> -->
-             <image src="./../../assets/iconfont/{{currentIndex == 3 ? 'tab_myCenter_sel' : 'tab_myCenter_nor'}}.png" style="width:41rpx;height:40rpx;"></image>
-            <text>我的</text>
+        <view wx:for="{{tabbarList}}" data-item="item" wx:for-index="idx" class="tabbar_item {{currentIndex == idx ? 'active' : ''}}" data-index="{{idx}}" bindtap="switchBtn">
+            <image src="./../../assets/iconfont/{{currentIndex == idx ? item.icon+'sel' : item.icon+'nor'}}.png" style="width:41rpx;height:40rpx;"></image>
+            <text>{{item.text}}</text>
         </view>
     </view>
 </view>

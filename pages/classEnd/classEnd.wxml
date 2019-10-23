@@ -14,5 +14,5 @@
 			<view class="rightInfo nowrap">12人预约</view>
 		</view>
 	</view>
-	<qc-Tabbar></qc-Tabbar>
+	<qc-Tabbar usertype="{{useris}}" oData="{{[]}}" ></qc-Tabbar>
 </view>

@@ -8,26 +8,30 @@
       <view class="header_top ">
         <view class="flex">
           <view class="flex1 flex-col">
-            <text class="login ">点击登录</text>
+            <text class="login" bindtap="blank" data-index="/userStart/login/login">{{ulogin ? userdata.userNickname : '点击登录'}}</text>
             <text class="card_type" wx:if="{{utype==2}}">独角兽卡</text>
-            <text class="time_end" wx:if="{{utype==2}}">独角兽卡</text>
+            <text class="time_end" wx:if="{{utype==2}}"></text>
           </view>
-          <image src="https://img2.woyaogexing.com/2019/10/08/0002034dd4724353964d1df29d625e5a!400x400.jpeg"></image>
+          <image class="user_head" src="{{userdata.userAvatar}}" wx:if="ulogin"></image>
+          <view class="user_head" wx:if="{{!ulogin}}">
+            <open-data type="userAvatarUrl"></open-data>
+          </view>
         </view>
       </view>
       <!-- 未购买 -->
       <view class="flex-ali no_pay" wx:if="{{utype==1}}">
         <text class="flex1">您尚未购买独角兽卡</text>
-        <button class="no_paybt flex-cen">点击购买</button>
+        <button class="no_paybt flex-cen" bindtap="blank" data-index="/userStart/login/login" >立即购买</button>
       </view>
       <!-- 已购买 -->
       <view class="flex-ali yes_pay" wx:if="{{utype==2}}">
         <view class="flex1">
-          <text class="yes_pay_num">200</text>
+          <text class="yes_pay_num">{{userdata.token}}</text>
           <text class="yes_pay_unit">U点</text>
           <image src="./../../../assets/static/ic_arrowRight_golden.png" style="width:15rpx;height:24rpx;"></image>
         </view>
-        <button class="no_paybt flex-cen">充值</button>
+        <!--  -->
+        <button class="no_paybt flex-cen" bindtap="blank" data-index="top-up/top-up" >充值</button>
       </view>
       <!--未注册-->
       <text class="header_title" wx:if="{{utype==0}}">使用手机号码登录unicorn即可成为会员</text>
@@ -39,8 +43,8 @@
       <view class="header_top ">
         <view class="flex">
           <view class="flex1 flex-col">
-            <text class="login ">陈朕老师</text>
-            <text class="teacher_time">2019年12月1日加入UNICORN</text>
+            <text class="login ">{{userdata.userNickname}}</text>
+            <text class="teacher_time">{{userdata.yearClassHour}}年{{userdata.monthClassHour}}月{{userdata.userCreateTime}}日加入UNICORN</text>
           </view>
           <image src="https://img2.woyaogexing.com/2019/10/08/0002034dd4724353964d1df29d625e5a!400x400.jpeg"></image>
         </view>
@@ -84,7 +88,7 @@
         <text>呼叫顾问</text>
       </view>
       <view class="meun_list flex-cen-col flex1">
-        <image src="./../../../assets/static/ic_credit.png" bindtap="blank" data-index="myintegral/myintegral" ></image>
+        <image src="./../../../assets/static/ic_credit.png" bindtap="blank" data-index="myintegral/myintegral"></image>
         <text>我的积分</text>
       </view>
       <view class="meun_list flex-cen-col flex1">
@@ -146,4 +150,4 @@
     </view>
   </view>
 </view>
-<Tabbar></Tabbar>
+<Tabbar usertype="{{useris}}"></Tabbar>

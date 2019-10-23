@@ -1,17 +1,19 @@
 // pages/course/schedule/schedule.js
+const app = new getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    useris: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
 
   },
 
@@ -26,7 +28,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({ useris: app.globalData.footertab });
   },
 
   /**

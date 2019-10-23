@@ -8,29 +8,31 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
+    useris:false,
 		STATICIMG: app.globalData.STATICIMG,
-        more:false,//弹窗
+    more:false,//弹窗
 		currtab:1
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
-	onLoad: function (options) {
-		console.log(this.data.STATICIMG);
+  onLoad: function (options) {
 	},
 
 	/**
 	 * 生命周期函数--监听页面初次渲染完成
 	 */
 	onReady: function () {
-
 	},
 
 	/**
 	 * 生命周期函数--监听页面显示
 	 */
-	onShow: function () {
+  onShow: function () {
+
+    this.setData({ useris: app.globalData.footertab });
+    console.log(this.data.useris)
 
 	},
 
