@@ -1,20 +1,41 @@
 // pages/course/schedule/schedule.js
 const app = new getApp();
+const api = require('../../../utils/api/myRequests.js');
+const tool = require('../../../utils/publics/tool.js');
+// mycourse
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    useris: null
+    useris: null,
+    listdata:[]
   },
-
+  getlist() {
+    if (app.globalData.udata.userId == null) {
+      tool.alert('参数缺失');
+      return;
+    }
+    tool.loading();
+    let _this = this;
+    api.mycourse({
+      userId: app.globalData.udata.userId
+    }).then((res) => {
+      tool.loading_h();
+      console.log(res)
+      if (res.data.Code == 200) {
+        _this.setData({ listdata: res.data.Data })
+      } else {
+        tool.alert('获取列表失败');
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-
+    this.getlist();
   },
 
   /**

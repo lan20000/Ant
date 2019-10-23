@@ -2,36 +2,36 @@
 <scroll-view>
   <view class="video"></view>
   <view class="coursetitle flex-ali">
-    <text>爵士舞基础课程</text>
+    <text>{{coursedata.courseTitle}}课程</text>
     <text class="icon theme">预约</text>
   </view>
   <view class="teacher_details">
     <view class="teacher flex-ali">
-      <image src=""></image>
-      <text>逗逗老师</text>
+      <image src="{{coursedata.teacherAvatar}}"></image>
+      <text>{{coursedata.teacherName}}老师</text>
       <star class="flex1" is="{{true}}" starOption="{{starOption}}" style="text-align: right;"></star>
-      <text class="score">4分</text>
+      <text class="score">{{coursedata.teacherScore}}分</text>
     </view>
-    <text class="teacher_text">老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍老师介绍</text>
+    <text class="teacher_text">{{coursedata.teacherDesc}}{{coursedata.teacherSpecial}}</text>
   </view>
   <view class="list">
     <view>
       <view class="list_c flex">
         <text class="title flex1">上课地点</text>
-        <text class="lasttext">华创旗舰店</text>
+        <text class="lasttext">{{coursedata.storeName}}</text>
         <image src=""></image>
       </view>
     </view>
     <view>
       <view class="list_c flex">
         <text class="title flex1">上课时间</text>
-        <text class="lasttext">2019年9月2日 20:00</text>
+        <text class="lasttext">{{coursedata.courseTime}}</text>
       </view>
     </view>
     <view>
       <view class="list_c flex">
         <text class="title flex1">课程费用</text>
-        <text class="lasttext">200U点</text>
+        <text class="lasttext">{{coursedata.coursePrice}}U点</text>
       </view>
     </view>
     <view>
@@ -44,7 +44,7 @@
   <view class="Jane">
     <text class="title">课程简介</text>
     <text class="txt">
-    课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍课程介绍
+    {{coursedata.storeName}}
     </text>
     <view class="img_list">
       <image></image>
@@ -59,8 +59,8 @@
       <view class="video_list flex1">
         <text>GIMME ON UP</text>
         <view class="flex-ali">
-          <image src="./../../../assets/static/ic_time.png" style="width:24rpx;height:24rpx;margin-right:16rpx;"></image>
-          <text>35:56</text>
+          <image src="{{coursedata.courseImage}}" style="width:24rpx;height:24rpx;margin-right:16rpx;"></image>
+          <text>{{coursedata.courseImage}}</text>
         </view>
       </view>
     </view>

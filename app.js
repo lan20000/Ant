@@ -6,25 +6,30 @@ import tool from './utils/publics/tool.js'
 App({
   onLaunch(opation) {
     //腾讯统计
-    auth.statistics(500689212)
+    // auth.statistics(500689212)
     //背景音乐
     // backgroundAudio.backMusic(this, 'https://game.flyh5.cn/resources/game/wechat/szq/ftxiyouji/images/music.mp3')
     //静默登录
     // this.silentLogin()
-    console.log('-----------------------', this.globalData.footertab)
-    console.log('是否登录', this.globalData.ulogin);
+    
     //检测是否登录
     this.getulogin();
   },
   getulogin() {
-    console.log('value', value)
     try {
       var value = wx.getStorageSync('userdata');
-      // console.log(value)
+      console.log(value)
       value ? this.globalData.ulogin = true : this.globalData.ulogin = false;
+      if (!this.globalData.ulogin) {
+        console.log('是否登录', this.globalData.ulogin);
+        wx.redirectTo({
+          url: "pages/userStart/login/login"
+        })
+      }
       value ? this.globalData.udata = value : '';
+      this.globalData.udata.userId = 1;
     } catch (e) {
-      console, log('错误')
+      console.log('错误')
     }
   },
   silentLogin() {
