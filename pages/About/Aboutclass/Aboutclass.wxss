@@ -68,7 +68,7 @@
 .teacher .this{background:rgba(216,178,123,1);}
 
 .pay_content{position: fixed;width: 100%;height: 100%;z-index: 9999;display: flex;justify-content: center;align-items: center;}
-.choose .title{font-size:32rpx;font-weight:bold;color:rgba(49,49,52,1);text-align: center;padding-bottom: 40rpx;display: block;}
+.choose .title{font-size:32rpx;font-weight:bold;color:rgba(49,49,52,1);text-align: center;display: block;}
 .choose{width: 100%;background:rgba(255,255,255,1);border-radius:10rpx;margin: 0rpx 75rpx;padding: 40rpx;}
 .choose .this{border:2rpx solid rgba(15,83,184,1);}
 .cards{background:rgba(255,255,255,1);border:2rpx solid rgba(177,179,188,1);padding: 20rpx;margin-bottom: 20rpx;}
@@ -80,10 +80,20 @@ color:rgba(15,83,184,1);}
 .cards_content>text:last-child{font-size:22rpx;padding-top: 19rpx;
 font-weight:500;
 color:rgba(15,83,184,1);}
-.cards .hot{width:80rpx;
+.cards .hot{padding: 0rpx 15rpx;
 height:40rpx;
 background:rgba(255,163,152,1);
 border-radius:6rpx;font-size:22rpx;
 font-weight:bold;
 color:rgba(255,255,255,1);}
 .choose .use{background:rgba(0,74,149,1);border-radius:10rpx;width:200rpx;height:72rpx;margin: 0rpx auto;font-size:32rpx;font-weight:bold;color:rgba(255,255,255,1);}
+
+.balance{font-size:48rpx;font-weight:bold;color:rgba(49,49,52,1);display: block;padding-bottom: 49rpx;margin-bottom: 49rpx;text-align: center;border-bottom:1px solid rgba(235,235,235,1);padding-top: 63rpx;}
+.onpay{border:2rpx solid rgba(177,179,188,1);}
+.onpay text{color:rgba(177,179,188,1) !important;}
+.onpay .hot{background:rgba(148,151,163,1);color:rgba(255,255,255,1) !important;}
+
+.top-up{height:72rpx;width:200rpx;background:rgba(0,74,149,1);border-radius:10rpx;font-size:32rpx;
+margin: 60rpx auto 0rpx auto;
+font-weight:bold;
+color:rgba(255,255,255,1);}

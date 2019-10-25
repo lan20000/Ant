@@ -54,7 +54,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 72,
+			"current": 74,
 			"list": [
 				{
 					"id": 0,
@@ -564,6 +564,27 @@
 					"id": -1,
 					"name": "pages/course/score/score",
 					"pathName": "pages/course/score/score",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Aboutclass/Aboutclass",
+					"pathName": "pages/About/Aboutclass/Aboutclass",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Chooseteacher/Chooseteacher",
+					"pathName": "pages/About/Chooseteacher/Chooseteacher",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/course/Coursedetails/Coursedetails",
+					"pathName": "pages/course/Coursedetails/Coursedetails",
 					"scene": null
 				}
 			]

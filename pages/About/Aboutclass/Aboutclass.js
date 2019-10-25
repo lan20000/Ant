@@ -27,15 +27,68 @@ Page({
     latitude: null,
     longitude: null,
     uid: 1,
-    storedata:[],
-    storeadd:null,
-    storet:[],
-    payalert:false
+    storedata: [],
+    storeadd: null,
+    storet: [],
+    payalert: false,
+    paymeet: 0,
+    paydata: null,//支付对象
+    teacherdata:null,//教师
+    udata: null
+  },
+  /**
+   * 教师约课
+   */
+  teacherabout(){
+    console.log(app.globalData.udata.userId)
+    tool.loading("正在加载中")
+    let _this = this;
+    api.teachercourse({
+      storeId: this.data.storeadd[0].storeId
+    }).then((res) => {
+      console.log(res)
+      tool.loading_h();
+      if (res.data.Code == 200) {
+        
+        _this.setData({ teacherdata: res.data.Data });
+        console.log(_this.data.teacherdata);
+        console.log(_this.data.teacherdata[0].teachers)
+      } else {
+        tool.alert('获取店铺列表失败');
+      }
+    });
+  },
+  /**
+   * 支付
+   */
+  pay(e) {
+    this.close();
+    //U点是否充足
+    this.setData({ paydata: e.target.dataset.index, udata: app.globalData.udata });
+    if (app.globalData.udata.isVip) {
+      this.setData({ paymeet: 1 });
+      //支付是否足够
+      console.log(this.data.paydata)
+      if (this.data.paydata.coursePrice <= app.globalData.udata.token) {
+        this.setData({ paymeet: 2 });
+        return;
+      }
+      this.setData({ paymeet: 3 });
+      return;
+    }
+
+    //U点足够
+  },
+  /**
+   * 
+   */
+  close() {
+    this.data.payalert ? this.setData({ payalert: false }) : this.setData({ payalert: true });
   },
   /**
    * 获取时间列表
    */
-  storeTime(){
+  storeTime() {
     console.log(this.data.storeadd)
     if (this.data.storeadd[0].storeId == null) {
       tool.alert('参数缺失');
@@ -57,8 +110,8 @@ Page({
   /**
    * 门店课程日期筛选
    */
-  timeCourse(){
-    if (this.data.storeadd[0].storeId == null ) {
+  timeCourse() {
+    if (this.data.storeadd[0].storeId == null) {
       tool.alert('参数缺失');
       return;
     }
@@ -115,6 +168,9 @@ Page({
    */
   tabchoose(e) {
     this.setData({ tabtype: e.currentTarget.dataset.type });
+    if (e.currentTarget.dataset.type==1){
+      this.teacherabout();
+    }
   },
   //loading框
   isShowLoading() {

@@ -19,6 +19,10 @@ const myRequest = (data, url, type = 'post') => {
 const getOpenid = (data, url = 'Login/Login') => { return myRequest(data, url) }
 //手机号解密
 const getPhoneNumber = (data, url = '/api/Oauth/decryptedPhone') => { return myRequest(data, url) }
+//解密手机号
+const decryptnumber = (data, url = 'Login/GetPhoneNumber') => { return myRequest(data, url) }
+
+
 
 
 /**
@@ -54,6 +58,10 @@ const mycourse = (data, url = 'Course/MyCourseList') => { return myRequest(data,
 const mycuresDetail = (data, url = 'Course/GetCourseDetail') => { return myRequest(data, url, 'get') }
 //评价课程
 const evalcourse = (data, url = 'Course/ReviewCourse') => { return myRequest(data, url, 'get') }
+//教师课程
+const teachercourse = (data, url = 'Course/GetRecommendTeachers') => { return myRequest(data, url, 'get') }
+
+
 
 
 
@@ -69,5 +77,7 @@ module.exports = {
   mycourse,
   mycuresDetail,
   uDetail,
-  evalcourse
+  evalcourse,
+  teachercourse,
+  decryptnumber
 }

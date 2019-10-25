@@ -32,22 +32,23 @@ App({
       console.log('错误')
     }
   },
-  silentLogin() {
+  silentLogin(aesIv, edata) {
     if (wx.getStorageSync("userId")) return
     tool.loading("")
     //静默登录
     auth.login().then(res => {
-      console.log(res)
       return res
     }).then(res => {
-      console.log(res)
-      // return api.getOpenid({ code: res.code })
+      return api.decryptnumber({ aesIv: aesIv, EncryptedData: edata, Code: res.code})
     }).then(res => {
       console.log("请求后端登录接口返回-->", res)
       if (res.data.code === 1) {
         let { data } = res.data
         if (!wx.getStorageSync("userInfo")) wx.setStorageSync("userInfo", {})
         wx.setStorageSync("userId", data.data)
+        // getphonecode
+
+
         tool.loading_h()
         tool.alert("静默登录成功")
       } else {

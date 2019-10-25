@@ -34,12 +34,14 @@
         <text class="lasttext">{{coursedata.coursePrice}}U点</text>
       </view>
     </view>
-    <view>
-      <view class="list_c flex">
-        <text class="title flex1">查看预约码</text>
-        <image src=""></image>
+    <navigator url="./../Somecode/Somecode?id={{coursedata.courseId}}" hover-class="other-navigator-hover">
+      <view>
+        <view class="list_c flex">
+          <text class="title flex1">查看预约码</text>
+          <image src=""></image>
+        </view>
       </view>
-    </view>
+    </navigator>
   </view>
   <view class="Jane">
     <text class="title">课程简介</text>
@@ -69,7 +71,7 @@
     <text class="title">课程进度（3/4）</text>
     <view class="flex-ali">
       <view class="line"></view>
-      <image src="./../../../assets/static/classDetail_ic_nor.png" class="icon" ></image>
+      <image src="./../../../assets/static/classDetail_ic_nor.png" class="icon"></image>
       <text>GIMME ON UP第一节</text>
     </view>
     <view class="flex-ali">
