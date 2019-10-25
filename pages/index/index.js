@@ -1,6 +1,7 @@
 // pages/dujiaoxi/dujiaoxi.js
 const route = require("../../utils/tool/router.js");
 
+const request_01 = require("../../utils/api/request_01.js");
 const app = new getApp();
 Page({
 
@@ -18,6 +19,7 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
   onLoad: function (options) {
+	  this.getVideo();
 	},
 
 	/**
@@ -31,8 +33,8 @@ Page({
 	 */
   onShow: function () {
 
-    this.setData({ useris: app.globalData.footertab });
-    console.log(this.data.useris)
+		this.setData({ useris: app.globalData.footertab });
+		console.log(this.data.useris)
 
 	},
 
@@ -77,5 +79,14 @@ Page({
 		let tab = e.currentTarget.dataset.tab
 		this.setData({currtab:tab})
 		console.log(e);
+	},
+	getVideo(){
+		let dat = {
+			userId:1,
+			isTecher:false
+		}
+		request_01.videoList(dat).then((res)=>{
+			console.log(res.data)
+		})
 	}
 })
