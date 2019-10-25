@@ -585,6 +585,13 @@
 					"id": -1,
 					"name": "pages/course/Coursedetails/Coursedetails",
 					"pathName": "pages/course/Coursedetails/Coursedetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/course/Somecode/Somecode",
+					"pathName": "pages/course/Somecode/Somecode",
 					"scene": null
 				}
 			]

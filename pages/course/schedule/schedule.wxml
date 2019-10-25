@@ -11,7 +11,7 @@
       <view class="c_right this" >
         <view class="score_m ">{{tools.formatTime(item.startTime,'ms','3')}}</view>
         <navigator url="./../Coursedetails/Coursedetails?id={{item.courseId}}" open-type="redirect" hover-class="other-navigator-hover" class="score_c flex-ali">
-          <view class="score_img" style=""></view>
+          <view class="score_img" style="background-image: url({{item.courseImage}});"></view>
           <view class="flex1">
             <text class="title">{{tools.time(item.startTime)}} - {{tools.time(item.endTime)}} {{item.courseName}}课程</text>
             <text class="name">老师：{{item.teacherName}}</text>

@@ -1,66 +1,60 @@
 // pages/course/Somecode/Somecode.js
+var QRCode = require('../../../utils/weapp-qrcode.js')
+var qrcode;
+
+const W = wx.getSystemInfoSync().windowWidth;
+const rate = 750.0 / W;
+
+// 300rpx 在6s上为 150px
+const code_w = 300 / rate;
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    text: 'https://github.com/tomfriwel/weapp-qrcode',
+    image: '',
+    code_w: code_w
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
+    qrcode = new QRCode('canvas', {
+      // usingIn: this,
+      text: "https://github.com/tomfriwel/weapp-qrcode",
+      image: './bg.jpg',
+      width: code_w,
+      height: code_w,
+      colorDark: "#1CA4FC",
+      colorLight: "white",
+      correctLevel: QRCode.CorrectLevel.H,
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  confirmHandler: function (e) {
+    var value = e.detail.value
+    qrcode.makeCode(value)
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  inputHandler: function (e) {
+    var value = e.detail.value
+    this.setData({
+      text: value
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  tapHandler: function () {
+    // 传入字符串生成qrcode
+    qrcode.makeCode(this.data.text)
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  // 长按保存
+  save: function () {
+    console.log('save')
+    wx.showActionSheet({
+      itemList: ['保存图片'],
+      success: function (res) {
+        console.log(res.tapIndex)
+        if (res.tapIndex == 0) {
+          qrcode.exportImage(function (path) {
+            wx.saveImageToPhotosAlbum({
+              filePath: path,
+            })
+          })
+        }
+      }
+    })
   }
 })
