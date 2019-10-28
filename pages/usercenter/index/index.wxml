@@ -21,7 +21,7 @@
       <!-- 未购买 -->
       <view class="flex-ali no_pay" wx:if="{{utype==1}}">
         <text class="flex1">您尚未购买独角兽卡</text>
-        <button class="no_paybt flex-cen" bindtap="blank" data-index="/userStart/login/login" >立即购买</button>
+        <button class="no_paybt flex-cen" bindtap="blank" data-index="/fill_info/fill_info" >立即购买</button>
       </view>
       <!-- 已购买 -->
       <view class="flex-ali yes_pay" wx:if="{{utype==2}}">

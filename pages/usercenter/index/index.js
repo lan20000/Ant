@@ -50,6 +50,12 @@ Page({
       });
       return;
     }
+    if (e.currentTarget.dataset.index.indexOf('fill_info') > -1) {
+      wx.navigateTo({
+        url: './../..' + e.currentTarget.dataset.index
+      });
+      return;
+    }
     console.log(e.currentTarget.dataset.index.indexOf('page') > -1);
     wx.navigateTo({
       url: './../' + e.currentTarget.dataset.index
