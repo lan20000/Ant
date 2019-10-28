@@ -1,4 +1,8 @@
 // pages/login/login.js
+const api = require('../../../utils/api/myRequests.js');
+const tool = require('../../../utils/publics/tool.js');
+
+const app = new getApp();
 Page({
 
   /**
@@ -11,11 +15,9 @@ Page({
    * 获取手机号
    */
   getPhoneNumber: function (e) {
-    console.log(e.detail.errMsg)
-    console.log(e.detail.iv)
-    console.log(e.detail.encryptedData)
-    
+    app.silentLogin(e.detail.iv, e.detail.encryptedData);
   },
+  
   /**
    * 生命周期函数--监听页面加载
    */

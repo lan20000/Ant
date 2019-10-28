@@ -6,43 +6,49 @@ import tool from './utils/publics/tool.js'
 App({
   onLaunch(opation) {
     //腾讯统计
-    auth.statistics(500689212)
+    // auth.statistics(500689212)
     //背景音乐
     // backgroundAudio.backMusic(this, 'https://game.flyh5.cn/resources/game/wechat/szq/ftxiyouji/images/music.mp3')
     //静默登录
     // this.silentLogin()
-    console.log('-----------------------', this.globalData.footertab)
-    console.log('是否登录', this.globalData.ulogin);
+    console.log('--------------------------执行')
     //检测是否登录
     this.getulogin();
   },
   getulogin() {
-    console.log('value', value)
     try {
       var value = wx.getStorageSync('userdata');
-      // console.log(value)
+      console.log(value)
       value ? this.globalData.ulogin = true : this.globalData.ulogin = false;
+      if (!this.globalData.ulogin) {
+        console.log('是否登录', this.globalData.ulogin);
+        wx.redirectTo({
+          url: "pages/userStart/login/login"
+        })
+      }
       value ? this.globalData.udata = value : '';
+      this.globalData.udata.userId = 1;
     } catch (e) {
-      console, log('错误')
+      console.log('错误')
     }
   },
-  silentLogin() {
+  silentLogin(aesIv, edata) {
     if (wx.getStorageSync("userId")) return
     tool.loading("")
     //静默登录
     auth.login().then(res => {
-      console.log(res)
       return res
     }).then(res => {
-      console.log(res)
-      // return api.getOpenid({ code: res.code })
+      return api.decryptnumber({ aesIv: aesIv, EncryptedData: edata, Code: res.code})
     }).then(res => {
       console.log("请求后端登录接口返回-->", res)
       if (res.data.code === 1) {
         let { data } = res.data
         if (!wx.getStorageSync("userInfo")) wx.setStorageSync("userInfo", {})
         wx.setStorageSync("userId", data.data)
+        // getphonecode
+
+
         tool.loading_h()
         tool.alert("静默登录成功")
       } else {

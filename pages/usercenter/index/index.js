@@ -1,5 +1,7 @@
 // pages/usercenter/index/index.js
 var app = getApp();
+const api = require('../../../utils/api/myRequests.js');
+const tool = require('../../../utils/publics/tool.js');
 Page({
 
   /**
@@ -11,6 +13,23 @@ Page({
     utype:1,//用户类型 1非VIP 2vip 3老师
     useris:null//
     
+  },
+  getdata(){
+    
+    tool.loading();
+    let _this = this;
+    api.uDetail({
+      userId: app.globalData.udata.userId
+    }).then((res) => {
+      tool.loading_h();
+      console.log(res)
+      if (res.data.Code == 200) {
+        app.globalData.udata = res.data.Data;
+        _this.setData({ userdata : res.data.Data })
+      } else {
+        tool.alert('获取个人信息失败');
+      }
+    })
   },
   blank(e){
     if (!e.currentTarget.dataset.index){
@@ -37,15 +56,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //是否为老师
-    this.setData({ useris: app.globalData.footertab, ulogin: app.globalData.ulogin, userdata: app.globalData.udata})
-    console.log(app.globalData.footertab);
-    //判断是否开通了会员
-    if (this.data.useris){
-      this.setData({ utype : 3})
-    } else if (this.data.userdata.isVip){
-      this.setData({ utype: 2 })
-    }
+    this.getdata();
   },
 
   /**
@@ -59,7 +70,17 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    //是否为老师
+    this.setData({ useris: app.globalData.footertab, ulogin: app.globalData.ulogin })
+    // console.log(app.globalData.footertab);
+    console.log(app.globalData)
+    // console.log(this.)
+    //判断是否开通了会员
+    if (this.data.useris) {
+      this.setData({ utype: 3 })
+    } else if (app.globalData.udata.isVip) {
+      this.setData({ utype: 2 })
+    }
   },
 
   /**

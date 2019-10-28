@@ -5,7 +5,12 @@
   width: 100%;
   height: 100%;
 }
-
+.canvas {
+    margin: 220rpx auto;
+    /* width: 150px;
+    height: 150px; */
+    /* border: 1px solid black; */
+}
 .code_c {
   position: absolute;
   left: 50%;

@@ -14,34 +14,34 @@
   <view class="Gradingtype">
     <text class="type_txt">请对陈朕老师的教学评分</text>
     <text class="describe_txt">教师授课态度、服务意识、专业技能是否满意？</text>
-    <star starOption="{{starOption}}" style="display: block;text-align: center;margin-top:39rpx;" ></star>
+    <star starOption="{{starOption}}" data-type="teacherScore" bindcurStar="curStar" style="display: block;text-align: center;margin-top:39rpx;" ></star>
     <view class="flex">
-      <textarea class="flex1" placeholder="可以在这里简单表达您的评价与建议（50字）" placeholder-class="textarea">
+      <textarea class="flex1" bindinput="oninput" data-index="teacherContent" placeholder="可以在这里简单表达您的评价与建议（50字）"  maxlength="50" placeholder-class="textarea">
         
       </textarea>
     </view>
   </view>
   <view class="Gradingtype">
-    <text class="type_txt">请对陈朕老师的教学评分</text>
-    <text class="describe_txt">教师授课态度、服务意识、专业技能是否满意？</text>
-    <star starOption="{{starOption}}" style="display: block;text-align: center;margin-top:39rpx;" ></star>
+    <text class="type_txt">请对【Breaking初级课程】内容设置评分</text>
+    <text class="describe_txt">课程的内容编排是否合理？</text>
+    <star starOption="{{starOption}}" data-type="courseScore" bindcurStar="curStar" style="display: block;text-align: center;margin-top:39rpx;" ></star>
     <view class="flex">
-      <textarea class="flex1" placeholder="可以在这里简单表达您的评价与建议（50字）" placeholder-class="textarea">
+      <textarea class="flex1" bindinput="oninput" data-index="courseContent" placeholder="可以在这里简单表达您的评价与建议（50字）"  maxlength="50" placeholder-class="textarea">
         
       </textarea>
     </view>
   </view>
   <view class="Gradingtype">
-    <text class="type_txt">请对陈朕老师的教学评分</text>
-    <text class="describe_txt">教师授课态度、服务意识、专业技能是否满意？</text>
-    <star starOption="{{starOption}}" style="display: block;text-align: center;margin-top:39rpx;" ></star>
+    <text class="type_txt">请对现场工作人员今天的服务进行评分</text>
+    <text class="describe_txt">现场工作人员是否微笑服务、耐心讲解、热情给予帮助？</text>
+    <star starOption="{{starOption}}" data-type="serviceScore" bindcurStar="curStar" style="display: block;text-align: center;margin-top:39rpx;" ></star>
     <view class="flex">
-      <textarea class="flex1" placeholder="可以在这里简单表达您的评价与建议（50字）" placeholder-class="textarea">
+      <textarea class="flex1"  bindinput="oninput" data-index="serviceContent" placeholder="可以在这里简单表达您的评价与建议（50字）" maxlength="50" placeholder-class="textarea">
         
       </textarea>
     </view>
-    <navigator url="/pages/course/scoresuccess/scoresuccess" hover-class="navigator-hover">
-      <button class="submit theme">提交评价</button>
-    </navigator>
+    <!-- <navigator url="/pages/course/scoresuccess/scoresuccess" hover-class="navigator-hover"> -->
+      <button class="submit theme" bindtap="submit">提交评价</button>
+    <!-- </navigator> -->
   </view>
 </scroll-view>

@@ -1,18 +1,36 @@
 // pages/About/Chooseteacher/Chooseteacher.js
+import tool from '../../../utils/publics/tool.js'
+const api = require('../../../utils/api/myRequests.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    listdata:[],
+  },
+  getlist(id) {
+    // console.log(app.globalData.udata.userId)
+    tool.loading("正在加载中")
+    let _this = this;
+    api.teachercourse({
+      storeId: id
+    }).then((res) => {
+      console.log(res)
+      tool.loading_h();
+      if (res.data.Code == 200) {
+        _this.setData({ listdata: res.data.Data });
+      } else {
+        tool.alert('获取店铺列表失败');
+      }
+    });
 
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getlist(options.storeid);
   },
 
   /**

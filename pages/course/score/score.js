@@ -9,14 +9,33 @@ Page({
       type: 5,//几颗星
       width: 40,//星星大小
       spacing: 16,//星星间距
-      score: 2//默认分数
+      score: 0//默认分数
+    },
+    formdata:{
+      teacherScore:null,
+      teacherContent:null,
+      courseScore:null,
+      courseContent:null,
+      serviceScore:null,
+      serviceContent:null
     }
+  },
+  submit(){
+    console.log(this.data.formdata)
+  },
+  /**
+   * 输入数据
+   */
+  oninput(e){
+    this.data.formdata[e.currentTarget.dataset.index] = e.detail.value;
+    this.setData({ formdata: this.data.formdata });
   },
   /**
    * 星星回调事件
    */
   curStar(e){
-    console.log(e)
+    this.data.formdata[e.currentTarget.dataset.type] = e.detail.star;
+    this.setData({ formdata: this.data.formdata});
   },
   /**
    * 生命周期函数--监听页面加载

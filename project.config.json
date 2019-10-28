@@ -54,7 +54,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 62,
+			"current": 74,
 			"list": [
 				{
 					"id": 0,
@@ -498,17 +498,100 @@
 					"scene": null
 				},
 				{
-					"id": 63,
-					"name": "successful",
-					"pathName": "pages/usercenter/successful/successful",
+					"id": -1,
+					"name": "pages/About/Aboutclass/Aboutclass",
+					"pathName": "pages/About/Aboutclass/Aboutclass",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "top_record",
-					"pathName": "pages/top_record/top_record",
+					"name": "pages/About/Aboutclass/Aboutclass",
+					"pathName": "pages/About/Aboutclass/Aboutclass",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Aboutclass/Aboutclass",
+					"pathName": "pages/About/Aboutclass/Aboutclass",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Aboutclass/Aboutclass",
+					"pathName": "pages/About/Aboutclass/Aboutclass",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Aboutclass/Aboutclass",
+					"pathName": "pages/About/Aboutclass/Aboutclass",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Aboutclass/Aboutclass",
+					"pathName": "pages/About/Aboutclass/Aboutclass",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Aboutclass/Aboutclass",
+					"pathName": "pages/About/Aboutclass/Aboutclass",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Aboutclass/Aboutclass",
+					"pathName": "pages/About/Aboutclass/Aboutclass",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/course/schedule/schedule",
+					"pathName": "pages/course/schedule/schedule",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/course/score/score",
+					"pathName": "pages/course/score/score",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Aboutclass/Aboutclass",
+					"pathName": "pages/About/Aboutclass/Aboutclass",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Chooseteacher/Chooseteacher",
+					"pathName": "pages/About/Chooseteacher/Chooseteacher",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/course/Coursedetails/Coursedetails",
+					"pathName": "pages/course/Coursedetails/Coursedetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/course/Somecode/Somecode",
+					"pathName": "pages/course/Somecode/Somecode",
 					"scene": null
 				}
 			]
