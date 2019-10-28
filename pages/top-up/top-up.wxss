@@ -18,6 +18,7 @@ page{
 	display: flex;
 	padding: 30rpx;
 	box-sizing: border-box;
+	background:linear-gradient(90deg,rgba(72,126,242,1) 0%,rgba(92,87,227,1) 100%);
 	box-shadow:0px 20rpx 30rpx 0px rgba(75,123,246,0.3);
 	border-radius:10rpx;
 }
@@ -130,6 +131,7 @@ page{
 	color: #9497A3;
 	font-size:24rpx;
 	font-family:PingFang-SC-Medium;
+	margin-top: 15rpx;
 }
 .upList>.active{
 	border:2rpx solid #004A95 
@@ -183,6 +185,7 @@ page{
 	font-weight:500;
 	color:rgba(49,49,52,1);
 	margin-top: 10rpx;
+	text-align: center;
 }
 .buyBtn{
 	width:690rpx;
@@ -217,4 +220,10 @@ page{
 	font-weight:bold;
 	color:rgba(148,151,163,1);
 	line-height: 40rpx;
+}
+.setstyle{
+	display: flex;
+}
+.giftBox>.setstyle:last-child>view:last-child{
+	display: none;
 }

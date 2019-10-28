@@ -3,6 +3,8 @@
 const route = require("../../utils/tool/router.js");
 import WxValidate from '../../utils/plugins/wx-validate/WxValidate.js';
 const tool = require('../../utils/publics/tool.js');
+const api = require('../../utils/api/myRequests.js');
+const request_01 = require('../../utils/api/request_01.js');
 const App = new getApp();
 Page({
   data: {
@@ -13,11 +15,13 @@ Page({
     sex: 3,
     STATICIMG: App.globalData.STATICIMG,
     date: '0000-00-00',
-    region: ['广东省', '广州市', '海珠区'],
-    arrayStore: ["门店1", "门店2", "门店3", "门店4", "门店5"],
+    region: ['xxx', 'xxx', 'xxx'],
+    arrayStore: ["选择门店", "门店2", "门店3", "门店4", "门店5"],
     currstroe: 0,
-    danceType: ["舞种1", "舞种2", "舞种3", "舞种4", "舞种5"],
-    currDance: 0
+    danceType: ["选择课程", "舞种2", "舞种3", "舞种4", "舞种5"],
+    currDance: 0,
+	phone:null,
+	second: 60,
   },
   onLoad() {
     this.initValidate();
@@ -26,10 +30,10 @@ Page({
   showModal(error) {
     tool.alert(error.msg);
   },
-  submitForm(e) {
+  submitForm(e) { // 提交立即办卡
     const params = e.detail.value
-
-    console.log(params)
+	  tool.jump_nav("/pages/usercenter/successful/successful")
+    // console.log(params)
 
     // 传入表单数据，调用验证方法
     if (!this.WxValidate.checkForm(params)) {
@@ -37,7 +41,34 @@ Page({
       this.showModal(error)
       return false
     }
-
+	let dat = {
+		userId:1,
+		userName: params.userName,
+		userCardId: params.idcard,
+		sex:params.sex,
+		birthday: params.brith,
+		address: params.address.toString() + params.deladdress,
+		storeName: params.mendian > 0 ? arrayStore[params.mendian]:null,
+		danceType: params.kecheng > 0 ? danceType[params.kecheng]:null,
+	}
+	  if (params.brith =="0000-00-00"){
+		  wx.showToast({
+			  icon:'none',
+			  title: '请填写出生年月',
+		  })
+		  return;
+	  }	
+	  if (params.address.toString().indexOf("xxx")>-1) {
+		  wx.showToast({
+			  icon: 'none',
+			  title: '请填写地址',
+		  })
+		  return;
+	  }
+	  console.log(dat);
+	  request_01.kaika(dat).then((res)=>{
+		  console.log(res);
+	  })
     this.showModal({
       msg: '提交成功',
     })
@@ -45,65 +76,74 @@ Page({
   initValidate() {
     // 验证字段的规则
     const rules = {
-      userName: {
-        required: true,
-      },
+		tel: {
+			required: true,
+			tel: true
+		},
+		code:{
+			required: true,
+		},
+       userName: {
+        required: true
+       },
+		idcard: {
+			required: true,
+			idcard: '请输入正确的身份证号码',
+		},
+		sex:{
+			required: true
+		},
+		brith:{
+			required:true	
+		},
+		address:{
+			required:true
+		},
+		deladdress:{
+			required: true
+		}
     }
 
     // 验证字段的提示信息，若不传则调用默认的信息
     const messages = {
+		code:{
+			required:"请填写验证码"
+		},
+		tel: {
+			required: '请输入手机号',
+			tel: '请输入正确的手机号',
+		},
+		code:{
+			required: '请填写验证码',	
+		},
       userName: {
+        required: '请填写姓名',
+      },
+	  sex: {
         required: '请选择性别',
-      },
-      assistance: {
-        required: '请勾选1-2个敲码助手',
-      },
-      email: {
-        required: '请输入邮箱',
-        email: '请输入正确的邮箱',
-      },
-      tel: {
-        required: '请输入手机号',
-        tel: '请输入正确的手机号',
       },
       idcard: {
         required: '请输入身份证号码',
         idcard: '请输入正确的身份证号码',
       },
-      password: {
-        required: '请输入新密码',
-        minlength: '密码长度不少于6位',
-        maxlength: '密码长度不多于15位',
-      },
-      confirmPassword: {
-        required: '请输入确认密码',
-        minlength: '密码长度不少于6位',
-        maxlength: '密码长度不多于15位',
-        equalTo: '确认密码和新密码保持一致',
-      },
-      countryIndex: {
-        required: '请选择国家/地区',
-      },
-      slider: {
-        required: '请选择年龄',
-        min: '年龄不小于18',
-        max: '年龄不大于60',
-      },
-      agree: {
-        required: '请同意我们的声明',
-      },
-      textarea: {
-        required: '请输入文本',
-        contains: '请输入文本（必须含有自愿两字）',
-      },
+		brith: {
+			required: '请填写生日',
+		},
+		address: {
+			required: '请填写地址',
+		},
+		deladdress: {
+			required: '请填写详细地址',
+		}
     }
 
     // 创建实例对象
     this.WxValidate = new WxValidate(rules, messages)
 
     // 自定义验证规则
-    this.WxValidate.addMethod('assistance', (value, param) => {
-      return this.WxValidate.optional(value) || (value.length >= 1 && value.length <= 2)
+    this.WxValidate.addMethod('brith', (value, param) => {
+		console.log(this.WxValidate.optional(value))
+		return this.WxValidate.optional(value) || (value =="0000-00-00")
     }, '请勾选1-2个敲码助手')
   },
  
@@ -136,7 +176,46 @@ Page({
     this.setData({
       currDance: e.detail.value
     })
-  }
+  },
+	getValue(e){
+		// console.log(e);
+		this.setData({phone:e.detail.value});
+	},
+	opencode() {
+		var _this = this;
+		if (this.data.second != 60) {
+			return;
+		}
+		console.log(this.data.phone)
+		if (this.data.phone ==null || this.data.phone.toString().length!= 11) {
+			console.log(this.data.phone)
+			tool.alert('请正确填写手机号码');
+			return;
+		}
+		this.getphonecode();
+		this.setData({ iscode: true });
+		let result = setInterval(() => {
+			_this.setData({ second: --this.data.second });
+			if (this.data.second < 0) {
+				clearInterval(result);
+				_this.setData({ iscode: false, second: 60 });
+				console.log(this.data.iscode)
+			}
+		}, 1000);
+	},
+	getphonecode() {
+		// Getcode
+		api.Getcode({
+			phone: this.data.phone,
+		}).then((res) => {
+			console.log(res)
+			if (res.data.Code == 200) {
+				this.setData({ code: res.data.Data.verifyCode });
+			} else {
+				tool.alert('获取失败');
+			}
+		})
+	},
 })
 
 

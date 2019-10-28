@@ -1,0 +1,12 @@
+<view class="whole">
+	<view class="topList">
+		<view class="left">
+			<text class="txt1">在线充值</text>
+			<text class="txt2">2019-10-04 19:04</text>
+		</view>
+		<view class="right">
+			<text class="txt1">299U点</text>
+			<text class="txt2">成功</text>
+		</view>	
+	</view>
+</view>

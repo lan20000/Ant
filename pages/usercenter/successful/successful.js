@@ -1,4 +1,5 @@
 // pages/usercenter/successful/successful.js
+const tool = require("../../../utils/publics/tool.js");
 Page({
 
   /**
@@ -60,7 +61,10 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+//   onShareAppMessage: function () {
 
-  }
+//   }
+	buyUdot(){
+		tool.jump_nav("/pages/top-up/top-up")
+	}
 })

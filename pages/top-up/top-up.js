@@ -1,6 +1,7 @@
 // pages/top-up/top-up.js
 const route = require("../../utils/tool/router.js");
-
+const request_01 = require("../../utils/api/request_01.js");
+const tool = require("../../utils/publics/tool.js");
 const app = new getApp();
 Page({
 
@@ -9,14 +10,19 @@ Page({
 	 */
 	data: {
 		STATICIMG: app.globalData.STATICIMG,
-		currTab:0,
+		currTab:null,
+		upData:[],
+		giftList:[],
+		pid:null,
+		price:null,
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-
+		this.getUDdots();
+		this.getGifts();
 	},
 
 	/**
@@ -62,8 +68,46 @@ Page({
 	},
 	changeTab(e){
 		let tab = e.currentTarget.dataset.tab;
-		this.setData({currTab:tab});
+		let price = e.currentTarget.dataset.price;
+		this.setData({ currTab: tab, pid: e.currentTarget.dataset.pid, price: price});
 		console.log(e);
+	},
+	getUDdots(){//获取u点充值列表
+		request_01.getUDdots().then((res)=>{
+			// console.log(res.data.code)
+			if(res.data.Code==200){
+				console.log(1)
+				this.setData({upData:res.data.Data});
+			}
+		})
+	},
+	getGifts(){//获取首充好礼
+		request_01.getGifts().then((res)=>{
+			console.log(res.data);
+			if(res.data.Code==200){
+				this.setData({giftList:res.data.Data});
+			}
+		})
+	},
+	uprecod(){
+		tool.jump_nav("/pages/top_record/top_record")
+	},
+	getPay(){
+		if (this.data.price==0&&this.data.price){
+			let dat = {
+				tokenId: this.data.pid,
+				type: 1
+			}
+			request_01.getPay(dat).then((res) => {
+				console.log(res.data);
+			})
+		}else if(this.data.price>0){
+			console.log("微信支付")
+			tool.jump_nav("/pages/usercenter/Paysuccess/Paysuccess")
+		}else{
+			tool.alert("请选择面值")	
+		}
+		
 	}
 	/**
 	 * 用户点击右上角分享

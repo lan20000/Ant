@@ -113,3 +113,9 @@ page{
 	font-weight:bold;
 	color:rgba(255,255,255,1);
 }
+._txt1{
+	font-size:30rpx !important;
+	font-family:PingFang SC;
+	font-weight:500 !important;
+	color:rgba(49,49,52,1) !important;
+}

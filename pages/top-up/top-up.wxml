@@ -1,7 +1,7 @@
 <!--pages/cardDel/cardDel.wxml-->
 <view class="whole">
 	<view class="handBox">
-		<view class="handimg" style="background-image:url({{STATICIMG}}/pic_card_golden.png)">
+		<view class="handimg">
 			<view class="leftBox">
 				<view class="useInfo">
 					<view class="leftImg" style="background-image:url({{STATICIMG}}/test.jpg)"></view>
@@ -16,7 +16,7 @@
 				</view>
 			</view>
 			<view class="rightBox">
-				<view>
+				<view bindtap="uprecod">
 					<text>充值记录</text>
 					<image mode="widthFix" src="{{STATICIMG}}/ic_arrowRight_golden.png"></image>
 				</view>
@@ -24,14 +24,23 @@
 		</view>	
 	</view>
 	<view class="upList">
-		<view wx:for="{{5}}" class="{{currTab==index?'active':''}}" data-tab="{{index}}" bindtap="changeTab">
-			<text class="txt1">800U点</text>
-			<text class="txt2">RMB:800</text>
+		<view wx:for="{{upData}}" data-price="{{item.price}}" data-pid="{{item.tokenId}}" wx:key="item" class="{{currTab==index?'active':''}}" data-tab="{{index}}" bindtap="changeTab">
+			<text class="txt1">{{item.token}}U点</text>
+			<text class="txt2">RMB:{{item.price}}</text>
 		</view>
 	</view>
 	<view class="tips">首次充值赠送UNICORN专属新人好礼</view>
 	<view class="giftBox">
-		<view class="imglist">
+		<view wx:for="{{giftList}}" class="setstyle" wx:key="item">
+			<view class="imglist"> 
+				<view class="giftBg" style="background-image:url({{item.image}})"></view>
+				<text class="giftName nowrap">{{item.title}}</text>
+			</view>
+			<view class="addicon">+</view>		
+		</view>
+
+		
+		<!-- <view class="imglist">
 			<view class="giftBg" style="background-image:url({{STATICIMG}}/test.jpg)"></view>
 			<text class="giftName nowrap">Unicorn定制毛巾啥的积分</text>
 		</view>
@@ -39,14 +48,9 @@
 		<view class="imglist">
 			<view class="giftBg" style="background-image:url({{STATICIMG}}/test.jpg)"></view>
 			<text class="giftName nowrap">Unicorn定制毛巾啥的积分</text>
-		</view>
-		<view class="addicon">+</view>
-		<view class="imglist">
-			<view class="giftBg" style="background-image:url({{STATICIMG}}/test.jpg)"></view>
-			<text class="giftName nowrap">Unicorn定制毛巾啥的积分</text>
-		</view>
+		</view> -->
 	</view>
-	<view class="buyBtn theme">购买</view>
+	<view class="buyBtn theme" bindtap="getPay">购买</view>
 	<view class="footBox">
 		<text class="footTip">须知：</text>
 		<text class="contents">

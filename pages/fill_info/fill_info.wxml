@@ -8,35 +8,35 @@
     <view class="rowIpt">
       <view class="lables">手机号码</view>
       <view class="ipts">
-        <input type="tel" placeholder="请输入手机号码" placeholder-class="setfont"></input>
+        <input type="tel" class="_txt1" name="tel" bindinput="getValue" value="{{ form.tel }}" placeholder="请输入手机号码" placeholder-class="setfont"></input>
       </view>
     </view>
     <view class="rowIpt">
       <view class="lables">验证码</view>
       <view class="ipts">
-        <input type="tel" placeholder="请输入验证码" placeholder-class="setfont" class="codeIpt"></input>
-        <view class="getcode">获取验证码</view>
+        <input type="tel" name="code" placeholder="请输入验证码" placeholder-class="setfont" class="codeIpt _txt1"></input>
+        <view class="getcode {{iscode ? 'code' : 'button'}}" bindtap="opencode">{{ second==60 ? '获取验证码' : second+'s'}}</view>
       </view>
     </view>
     <view class="tips">持卡人信息（请正确填写，以保证会员福利能准确送达）</view>
     <view class="rowIpt">
       <view class="lables">持卡人</view>
       <view class="ipts">
-        <input type="text" placeholder="请输入真实姓名" name="userName" value="{{ form.userName }}" placeholder-class="setfont"></input>
+        <input type="text" class="_txt1" placeholder="请输入真实姓名" name="userName" value="{{ form.userName }}" placeholder-class="setfont"></input>
       </view>
     </view>
     <view class="rowIpt">
       <view class="lables">身份证</view>
       <view class="ipts">
-        <input type="text" placeholder="请输入真实的身份证信息" placeholder-class="setfont"></input>
+        <input type="text" class="_txt1" name="idcard" value="{{form.idcard}}" placeholder="请输入真实的身份证信息" placeholder-class="setfont"></input>
       </view>
     </view>
     <view class="rowIpt">
       <view class="lables">性别</view>
       <view class="ipts">
-        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <picker bindchange="bindPickerChange" value="{{index}}" name="sex" range="{{array}}">
           <view class="picker">
-            <text wx:if="{{sex<3}}" class="txt4">{{array[sex]}}</text>
+            <text wx:if="{{sex<3}}" class="txt4 _txt1">{{array[sex]}}</text>
             <text wx:if="{{sex==3}}" class="txt4">选择持卡人性别</text>
           </view>
         </picker>
@@ -46,9 +46,9 @@
     <view class="rowIpt">
       <view class="lables">生日</view>
       <view class="ipts">
-        <picker mode="date" value="{{date}}" start="2015-09-01" end="2027-09-01" bindchange="bindDateChange">
+        <picker mode="date" name="brith" value="{{date}}" start="2015-09-01" end="2027-09-01" bindchange="bindDateChange">
           <view class="picker">
-            <text class="txt4">{{date}}</text>
+            <text class="txt4 _txt1">{{date}}</text>
             <!-- <text wx:if="{{sex==3}}" class="txt4">选择持卡人性别</text> -->
           </view>
         </picker>
@@ -59,9 +59,9 @@
     <view class="rowIpt">
       <view class="lables">地址</view>
       <view class="ipts">
-        <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" name="address">
           <view class="picker">
-            <text class="txt4">{{region[0]}}，{{region[1]}}，{{region[2]}}</text>
+            <text class="txt4 _txt1">{{region[0]}}，{{region[1]}}，{{region[2]}}</text>
           </view>
         </picker>
         <view class="icons" style="background-image:url({{STATICIMG}}/ic_arrowDown.png)"></view>
@@ -70,16 +70,16 @@
     <view class="rowIpt">
       <view class="lables">详细地址</view>
       <view class="ipts">
-        <input type="text" placeholder="详细地址" placeholder-class="setfont"></input>
+        <input type="text" class="_txt1" name="deladdress" placeholder="详细地址" placeholder-class="setfont"></input>
       </view>
     </view>
     <view class="tips">偏好选择（选填）</view>
     <view class="rowIpt">
       <view class="lables">门店</view>
       <view class="ipts">
-        <picker bindchange="bindstroeChange" value="{{index}}" range="{{arrayStore}}">
+        <picker bindchange="bindstroeChange" name="mendian" value="{{index}}" range="{{arrayStore}}">
           <view class="picker">
-            <text class="txt4">{{arrayStore[currstroe]}}</text>
+            <text class="txt4 _txt1">{{arrayStore[currstroe]}}</text>
             <!-- <text wx:if="{{sex==3}}" class="txt4">选择持卡人性别</text> -->
           </view>
         </picker>
@@ -87,11 +87,11 @@
       </view>
     </view>
     <view class="rowIpt">
-      <view class="lables">舞种</view>
+      <view class="lables">课程</view>
       <view class="ipts">
-        <picker bindchange="binddanceChange" value="{{index}}" range="{{danceType}}">
+        <picker bindchange="binddanceChange" name="kecheng" value="{{index}}" range="{{danceType}}">
           <view class="picker">
-            <text class="txt4">{{danceType[currDance]}}</text>
+            <text class="txt4 _txt1">{{danceType[currDance]}}</text>
             <!-- <text wx:if="{{sex==3}}" class="txt4">选择持卡人性别</text> -->
           </view>
         </picker>

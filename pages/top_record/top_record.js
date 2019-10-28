@@ -1,23 +1,19 @@
-// pages/attendClass/attendClass.js
-const route = require("../../utils/tool/router.js");
-
-const app = new getApp();
+// pages/top_record/top_record.js
+const request_01 = require("../../utils/api/request_01.js");
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-		STATICIMG: app.globalData.STATICIMG,
-		currTab:2,
-		useris:false
+
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-
+		this.getDotrecord();
 	},
 
 	/**
@@ -31,7 +27,7 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
-		this.setData({ useris: app.globalData.footertab });
+
 	},
 
 	/**
@@ -68,10 +64,12 @@ Page({
 	// onShareAppMessage: function () {
 
 	// }
-	changeTabs(e){
-		
-		let tab = e.currentTarget.dataset.tab;
-		this.setData({ currTab:tab})
-		console.log(tab);
+	getDotrecord(){
+		let dat = {
+			type:1
+		}
+		request_01.getDotrecord(dat).then((res)=>{
+			console.log(res.data);
+		})
 	}
 })

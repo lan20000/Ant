@@ -54,7 +54,7 @@ Component({
     //数据初始化
     initData(){
       if (this.data.useris) {
-        this.setData({ tabbarList: [{ text: '独角兽', path: '/pages/index/index', icon: 'tab_home_' }, { text: '上课', path: '/pages/classEnd/classEnd', icon: 'tab_appointCourse_' }, { text: '课表', path: '/pages/course/schedule/schedule', icon: 'tab_classSchedule_' }, { text: '我的', path: '/pages/usercenter/index/index', icon: 'tab_myCenter_' }] });
+		  this.setData({ tabbarList: [{ text: '独角兽', path: '/pages/index/index', icon: 'tab_home_' }, { text: '上课', path: '/pages/attendClass/attendClass', icon: 'tab_appointCourse_' }, { text: '课表', path: '/pages/course/schedule/schedule', icon: 'tab_classSchedule_' }, { text: '我的', path: '/pages/usercenter/index/index', icon: 'tab_myCenter_' }] });
       } else {
         this.setData({ tabbarList: [{ text: '独角兽', path: '/pages/index/index', icon: 'tab_unicorn_' }, { text: '约课', path: '/pages/About/Aboutclass/Aboutclass', icon: 'tab_appointCourse_' }, { text: '课表', path: '/pages/course/schedule/schedule', icon: 'tab_classSchedule_' }, { text: '我的', path: '/pages/usercenter/index/index', icon: 'tab_myCenter_' }] });
       }

@@ -47,5 +47,5 @@
 			<view class="s_txt3">确定签到</view>
 		</view>
 	</view>
-	<qc-Tabbar></qc-Tabbar>
+	<qc-Tabbar usertype="{{useris}}" oData="{{[]}}" ></qc-Tabbar>
 </view>
