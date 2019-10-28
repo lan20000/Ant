@@ -46,16 +46,19 @@
             <text class="login ">{{userdata.userNickname}}</text>
             <text class="teacher_time">{{userdata.yearClassHour}}年{{userdata.monthClassHour}}月{{userdata.userCreateTime}}日加入UNICORN</text>
           </view>
-          <image src="https://img2.woyaogexing.com/2019/10/08/0002034dd4724353964d1df29d625e5a!400x400.jpeg"></image>
+          <view class="user_head" >
+            <open-data type="userAvatarUrl"></open-data>
+          </view>
+          <!-- <image src="https://img2.woyaogexing.com/2019/10/08/0002034dd4724353964d1df29d625e5a!400x400.jpeg"></image> -->
         </view>
       </view>
       <view class="teacher_c flex-ali">
         <view class="flex1 flex-cen-col" style="border-right:rgba(95,96,113,1) solid 1px;">
-          <text class="num">111</text>
+          <text class="num">{{userdata.monthClassHour}}</text>
           <text class="txt">本月完成课时</text>
         </view>
         <view class="flex1 flex-cen-col">
-          <text class="num">111</text>
+          <text class="num">{{userdata.yearClassHour}}</text>
           <text class="txt">本年完成课时</text>
         </view>
       </view>

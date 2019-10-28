@@ -1,10 +1,17 @@
 import $ from './request.js'
 const SERVICE = "http://119.23.75.89/"
+var tokenKey = null;
+wx.getStorage({
+  key: 'userdata',
+  success(res) {
+    tokenKey = res.data.tokenKey;
+  }
+});
 const myRequest = (data, url, type = 'post') => {
   let _url = `${SERVICE}${url}`
   console.log("_url", _url)
   return new Promise((resolve, reject) => {
-    $[`${type}P`](_url, data).then(res => {
+    $[`${type}P`](_url, data, tokenKey).then(res => {
       resolve(res)
     }).catch(err => {
       reject(err)
@@ -20,7 +27,7 @@ const getOpenid = (data, url = 'Login/Login') => { return myRequest(data, url) }
 //手机号解密
 const getPhoneNumber = (data, url = '/api/Oauth/decryptedPhone') => { return myRequest(data, url) }
 //解密手机号
-const decryptnumber = (data, url = 'Login/GetPhoneNumber') => { return myRequest(data, url) }
+const decryptnumber = (data, url = 'Login/GetPhoneNumber') => { return myRequest(data, url, 'get') }
 
 
 
@@ -35,7 +42,7 @@ const Getcode = (data, url = 'Login/GetPhoneCode') => { return myRequest(data, u
  * 个人中心
  */
 // 获取积分列表
-const getintegral = (data, url = 'Login/getintegral') => { return myRequest(data, url, 'get') }
+const getintegral = (data, url = '') => { return myRequest(data, url, 'get') }
 // 获取积分列表
 const uDetail = (data, url = 'User/GetUserDetail') => { return myRequest(data, url, 'get') }
 

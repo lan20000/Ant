@@ -592,6 +592,13 @@
 					"id": -1,
 					"name": "pages/course/Somecode/Somecode",
 					"pathName": "pages/course/Somecode/Somecode",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/index/index",
+					"pathName": "pages/usercenter/index/index",
 					"scene": null
 				}
 			]

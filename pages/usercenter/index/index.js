@@ -15,7 +15,10 @@ Page({
     
   },
   getdata(){
-    
+    if (app.globalData.udata.userId==null){
+      tool.alert('参数丢失');
+      return;
+    }
     tool.loading();
     let _this = this;
     api.uDetail({
@@ -56,7 +59,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getdata();
+    if (app.globalData.ulogin){
+      this.getdata();
+    }
   },
 
   /**

@@ -1,7 +1,7 @@
 // pages/usercenter/myintegral/myintegral.js
 const api = require('../../../utils/api/myRequests.js');
 const tool = require('../../../utils/publics/tool.js');
-
+var app = getApp();
 Page({
 
   /**
@@ -14,6 +14,7 @@ Page({
   },
   tabchoose(e) {
     this.setData({ tabtype: e.currentTarget.dataset.type });
+    this.getinteral();
   },
   more(){
     
@@ -22,14 +23,14 @@ Page({
    * 获取积分信息
    */
   getinteral(){
-    if (this.data.uid==null){
+    if (app.globalData.udata.userId==null){
       tool.alert('参数缺失');
       return;
     }
     let _this = this;
     api.getintegral({
       type: this.data.tabtype,
-      userId: this.data.uid
+      userId: app.globalData.udata.userId
     }).then((res) => {
       console.log(res)
       if (res.data.Code == 200) {
@@ -44,12 +45,6 @@ Page({
    */
   onLoad: function (options) {
     let _this = this
-    wx.getStorage({
-      key: 'userdata',
-      success: function(res) {
-        _this.setData({ uid : res.data.userId});
-      },
-    })
     this.getinteral();
   },
 

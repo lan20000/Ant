@@ -19,6 +19,7 @@ App({
     try {
       var value = wx.getStorageSync('userdata');
       console.log(value)
+      value.identity == 0 ? this.globalData.footertab = false : this.globalData.footertab = true;
       value ? this.globalData.ulogin = true : this.globalData.ulogin = false;
       if (!this.globalData.ulogin) {
         console.log('是否登录', this.globalData.ulogin);
@@ -27,7 +28,6 @@ App({
         })
       }
       value ? this.globalData.udata = value : '';
-      this.globalData.udata.userId = 1;
     } catch (e) {
       console.log('错误')
     }
@@ -42,23 +42,22 @@ App({
       return api.decryptnumber({ aesIv: aesIv, EncryptedData: edata, Code: res.code})
     }).then(res => {
       console.log("请求后端登录接口返回-->", res)
-      if (res.data.code === 1) {
-        let { data } = res.data
-        if (!wx.getStorageSync("userInfo")) wx.setStorageSync("userInfo", {})
-        wx.setStorageSync("userId", data.data)
+      if (res.data.Code === 200) {
+        // let { data } = res.data
+        // if (!wx.getStorageSync("userInfo")) wx.setStorageSync("userInfo", {})
+        // wx.setStorageSync("userId", data.data)
         // getphonecode
-
-
         tool.loading_h()
         tool.alert("静默登录成功")
       } else {
-        if (this.globalData.loginNum < 5) {
-          myLogin()
-          this.globalData.loginNum++
-        } else {
-          tool.alert("登录失败，请稍后再试")
-          this.globalData.loginNum = 0
-        }
+        tool.alert("为了用户体验，请先注册我们的会员");
+        // if (this.globalData.loginNum < 5) {
+        //   this.silentLogin();
+        //   this.globalData.loginNum++
+        // } else {
+        //   tool.alert("登录失败，请稍后再试")
+        //   this.globalData.loginNum = 0
+        // }
       }
     })
   },
