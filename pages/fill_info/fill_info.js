@@ -32,7 +32,7 @@ Page({
   },
   submitForm(e) { // 提交立即办卡
     const params = e.detail.value
-	  tool.jump_nav("/pages/usercenter/successful/successful")
+	  
     // console.log(params)
 
     // 传入表单数据，调用验证方法
@@ -68,10 +68,13 @@ Page({
 	  console.log(dat);
 	  request_01.kaika(dat).then((res)=>{
 		  console.log(res);
+		  if(res.data.Code=="200"){
+			  tool.jump_nav("/pages/usercenter/successful/successful")
+		  }else{
+			  console.log("提交失败")
+		  }
+
 	  })
-    this.showModal({
-      msg: '提交成功',
-    })
   },
   initValidate() {
     // 验证字段的规则
