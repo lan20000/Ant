@@ -29,6 +29,7 @@ Page({
       if (res.data.Code == 200) {
         app.globalData.udata = res.data.Data;
         _this.setData({ userdata : res.data.Data })
+        console.log(res.data.Data)
       } else {
         tool.alert('获取个人信息失败');
       }
@@ -47,6 +48,12 @@ Page({
     if (e.currentTarget.dataset.index.indexOf('userStart')>-1){
       wx.navigateTo({
         url: './../..'+e.currentTarget.dataset.index
+      });
+      return;
+    }
+    if (e.currentTarget.dataset.index.indexOf('fill_info') > -1) {
+      wx.navigateTo({
+        url: './../..' + e.currentTarget.dataset.index
       });
       return;
     }

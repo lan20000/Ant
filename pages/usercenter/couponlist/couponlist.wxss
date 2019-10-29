@@ -55,3 +55,4 @@ border-radius: 0rpx;padding: 10rpx 0rpx;}
 .badge:after, .tab-nav-item.tab-active:before, .tab-nav-item.tabbt:before,.tab-nav-item:not(:last-child):after, .tab-nav:after {
     content: '';
 }
+.total{padding: 20rpx 0rpx;font-size:24rpx;font-weight:500;color:rgba(148,151,163,1);line-height:34rpx;text-align: center;display: block;}

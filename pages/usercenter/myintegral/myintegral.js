@@ -29,14 +29,13 @@ Page({
     }
     let _this = this;
     api.getintegral({
-      type: this.data.tabtype,
-      userId: app.globalData.udata.userId
+      type: this.data.tabtype+1
     }).then((res) => {
       console.log(res)
       if (res.data.Code == 200) {
         _this.setData({ listdata: res.data.Data})
       } else {
-        tool.alert('注册失败');
+        tool.alert('获取失败');
       }
     })
   },

@@ -1,11 +1,11 @@
 <!--pages/About/Selectaddress/Selectaddress.wxml-->
 <view class="top ">
-  <view class="flex-ali ">
-    <text class="city">长沙</text>
+  <view class="flex-ali " bindtap="onChangeAddress" >
+    <text class="city" >长沙</text>
     <image src="./../../../assets/static/ic_arrowDown.png" style="margin-left:20rpx;width:20rpx;height:12rpx;"></image>
-    <text class="line"></text>
-    <input type="text" class="flex1" placeholder-class="pla" placeholder="输入您的位置"></input>
-    <text class="sos">搜索</text>
+    <text class="line" ></text>
+    <input type="text" class="flex1" disabled="{{true}}" placeholder-class="pla" value="{{adata.address}}" placeholder="输入您的位置"></input>
+    <!-- <text class="sos">搜索</text> -->
   </view>
 </view>
 <view class='view'>
@@ -29,10 +29,11 @@
     <view class="footer_txt flex-ali">
       <view class="round"></view>
       <view class="flex-col">
-        <text>嘉明苑-北门</text>
-        <text>附近可约课门店为河西王府井店</text>
+        <text wx:if="near==null" >请选择地址</text>
+        <text wx:if="{{near!=null}}" >{{near}}</text>
+        <text wx:if="{{near!=null}}" >附近可约课门店为河西王府井店</text>
       </view>
     </view>
-    <view class="footer flex-cen theme" >马上约课</view>
+    <view class="footer flex-cen theme" bindtap="" >马上约课</view>
   </view>
 </view>

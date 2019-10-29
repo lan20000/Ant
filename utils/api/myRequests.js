@@ -29,9 +29,6 @@ const getPhoneNumber = (data, url = '/api/Oauth/decryptedPhone') => { return myR
 //解密手机号
 const decryptnumber = (data, url = 'Login/GetPhoneNumber') => { return myRequest(data, url, 'get') }
 
-
-
-
 /**
  * 安全
  */
@@ -42,9 +39,13 @@ const Getcode = (data, url = 'Login/GetPhoneCode') => { return myRequest(data, u
  * 个人中心
  */
 // 获取积分列表
-const getintegral = (data, url = '') => { return myRequest(data, url, 'get') }
+const getintegral = (data, url = 'Point/GetPointRecord') => { return myRequest(data, url, 'get') }
 // 获取积分列表
 const uDetail = (data, url = 'User/GetUserDetail') => { return myRequest(data, url, 'get') }
+// 查询赠送的卡券 Get
+const getCoupons = (data, url = 'Coupon/GetCoupons') => { return myRequest(data, url, 'get') }
+// 兑换卡券 Post
+const exCoupon = (data, url = 'Coupon/ExchangeCoupon') => { return myRequest(data, url) }
 
 /**
  * 约课
@@ -55,6 +56,8 @@ const getStore = (data, url = 'Store/GetAllStores') => { return myRequest(data, 
 const storeTime = (data, url = 'Course/GetNewestCourseTime') => { return myRequest(data, url, 'get') }
 //通过门店获取某天排课列表
 const getCourse = (data, url = 'Course/GetCoursePlanByStore') => { return myRequest(data, url, 'get') }
+//取消用户课程
+const cancelCourse = (data, url = 'Course/CancelCourse') => { return myRequest(data, url, 'get') }
 
 /**
  * 课表
@@ -86,5 +89,7 @@ module.exports = {
   uDetail,
   evalcourse,
   teachercourse,
-  decryptnumber
+  decryptnumber,
+  getCoupons,
+  exCoupon
 }
