@@ -54,7 +54,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 74,
+			"current": 84,
 			"list": [
 				{
 					"id": 0,
@@ -641,6 +641,13 @@
 					"id": -1,
 					"name": "pages/About/Selectaddress/Selectaddress",
 					"pathName": "pages/About/Selectaddress/Selectaddress",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/course/schedule/schedule",
+					"pathName": "pages/course/schedule/schedule",
 					"scene": null
 				}
 			]

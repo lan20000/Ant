@@ -8,15 +8,15 @@ const ajax = (url, data = {}, tokenKey, method = 'GET', callback) => {
       'content-type': 'application/json',
       "Authorization": tokenKey
     },
-    success: function(res) {
+    success: function (res) {
       callback(res)
     },
-    fail: function(err) {
+    fail: function (err) {
       callback(res)
     }
   })
 }
-const gets = (url, data = {}, tokenKey,callback) => {
+const gets = (url, data = {}, tokenKey, callback) => {
   wx.request({
     url: url,
     data: data,
@@ -25,10 +25,10 @@ const gets = (url, data = {}, tokenKey,callback) => {
       'content-type': 'application/json',
       "Authorization": tokenKey
     },
-    success: function(res) {
+    success: function (res) {
       callback(res)
     },
-    fail: function(err) {
+    fail: function (err) {
       callback(res)
     }
   })
@@ -42,10 +42,10 @@ const post = (url, data = {}, tokenKey, callback) => {
       'content-type': 'application/json',
       "Authorization": tokenKey
     },
-    success: function(res) {
+    success: function (res) {
       callback(res)
     },
-    fail: function(err) {
+    fail: function (err) {
       callback(res)
     }
   })
@@ -60,10 +60,10 @@ const getP = (url, data = {}, tokenKey, header = {
       data: data,
       method: 'GET',
       header: header,
-      success: function(res) {
+      success: function (res) {
         resolve(res)
       },
-      fail: function(err) {
+      fail: function (err) {
         reject(err)
       }
     })
@@ -79,10 +79,10 @@ const postP = (url, data = {}, tokenKey, header = {
       data: data,
       method: 'POST',
       header: header,
-      success: function(res) {
+      success: function (res) {
         resolve(res)
       },
-      fail: function(err) {
+      fail: function (err) {
         reject(err)
       }
     })

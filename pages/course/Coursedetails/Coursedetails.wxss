@@ -6,11 +6,11 @@
 .coursetitle>text{font-size:38rpx;font-weight:bold;color:rgba(49,49,52,1);margin-right: 23rpx;}
 .coursetitle>.icon{background:rgba(216,178,123,1);border-radius:6px;font-size:22rpx;padding:  10rpx 20rpx;font-weight:bold;color:rgba(255,255,255,1);}
 
-.teacher_details{margin-top: 10rpx;padding: 29rpx;}
+.teacher_details{margin: 10rpx auto;padding: 29rpx;}
 .teacher>image{width:90rpx;height:90rpx;border-radius:50%;}
-.teacher>text:first-child{padding-left: 30rpx;font-size:34rpx;font-weight:bold;color:rgba(49,49,52,1);}
+.teacher>.txt{padding-left: 30rpx;font-size:34rpx;font-weight:bold;color:rgba(49,49,52,1);}
 .score{font-size:24rpx;font-weight:500;color:rgba(148,151,163,1);padding-left: 20rpx;}
-.teacher_text{font-size:24rpx;font-weight:500;color:rgba(148,151,163,1);line-height:34rpx;}
+.teacher_text{font-size:24rpx;font-weight:500;color:rgba(148,151,163,1);line-height:34rpx;padding-top: 30rpx;display: block;}
 
 
 .list_c>.title{font-size:28rpx;font-weight:500;color:rgba(148,151,163,1);line-height:34rpx;}
@@ -23,7 +23,7 @@
 .Jane>.title,.video_c>.title,.progress>.title{font-size:34rpx;font-weight:bold;color:rgba(49,49,52,1);padding-bottom: 37rpx;display: inline-block;}
 .Jane>.txt,.video_c>.txt,.progress>.txt{font-size:24rpx;font-weight:500;color:rgba(148,151,163,1);line-height:34rpx;padding-bottom: 35rpx;}
 
-.video_img{width:220rpx;height:140rpx;background:rgba(50,51,68,1);opacity:0.4;border-radius:10rpx;margin-right: 40rpx;}
+.video_img{width:220rpx;height:140rpx;background:rgba(50,51,68,1);opacity:0.4;border-radius:10rpx;margin-right: 40rpx;background-size: 100% 100%;}
 .img_list>image{width: 45rpx;height: 45rpx;margin-top: 35rpx;margin-right: 10rpx;}
 .video_list{display: flex;flex-direction: column;}
 .video_list>text:first-child{font-size:28rpx;font-weight:bold;color:rgba(50,51,68,1);}

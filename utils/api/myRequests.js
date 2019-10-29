@@ -1,17 +1,13 @@
 import $ from './request.js'
 const SERVICE = "http://119.23.75.89/"
-var tokenKey = null;
-wx.getStorage({
-  key: 'userdata',
-  success(res) {
-    tokenKey = res.data.tokenKey;
-  }
-});
+
 const myRequest = (data, url, type = 'post') => {
+  let key = '';
   let _url = `${SERVICE}${url}`
   console.log("_url", _url)
+  let app = getApp();
   return new Promise((resolve, reject) => {
-    $[`${type}P`](_url, data, tokenKey).then(res => {
+    $[`${type}P`](_url, data, app.globalData.udata.tokenKey).then(res => {
       resolve(res)
     }).catch(err => {
       reject(err)
