@@ -39,6 +39,7 @@ App({
     auth.login().then(res => {
       return res
     }).then(res => {
+		console.log(aesIv, '==', edata, '==', res.code)
       return api.decryptnumber({ aesIv: aesIv, EncryptedData: edata, Code: res.code})
     }).then(res => {
       console.log("请求后端登录接口返回-->", res)

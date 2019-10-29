@@ -6,7 +6,8 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-
+		recordData:null,
+		isHas:false,
 	},
 
 	/**
@@ -70,6 +71,7 @@ Page({
 		}
 		request_01.getDotrecord(dat).then((res)=>{
 			console.log(res.data);
+			if (res.data.Code == 200) this.setData({ recordData: res.data.Data, isHas:!res.data.Data.length>0})
 		})
 	}
 })

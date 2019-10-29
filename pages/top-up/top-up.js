@@ -15,6 +15,8 @@ Page({
 		giftList:[],
 		pid:null,
 		price:null,
+		myPhone:null,
+		useData:null,
 	},
 
 	/**
@@ -23,6 +25,8 @@ Page({
 	onLoad: function (options) {
 		this.getUDdots();
 		this.getGifts();
+		this.getUseinfo();
+		this.setData({ myPhone:wx.getStorageSync("userdata").phone})
 	},
 
 	/**
@@ -108,6 +112,15 @@ Page({
 			tool.alert("请选择面值")	
 		}
 		
+	},
+	getUseinfo(){
+		let dat = {
+			userId: wx.getStorageSync("userdata").userId
+		}
+		request_01.getUseinfo(dat).then((res)=>{
+			console.log(res.data);
+			if (res.data.Code == 200) this.setData({ useData:res.data.Data})
+		})
 	}
 	/**
 	 * 用户点击右上角分享

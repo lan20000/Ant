@@ -4,14 +4,16 @@
 		<view class="handimg">
 			<view class="leftBox">
 				<view class="useInfo">
-					<view class="leftImg" style="background-image:url({{STATICIMG}}/test.jpg)"></view>
+					<view class="leftImg">
+						<open-data type="userAvatarUrl" class="titleImg"></open-data>
+					</view>
 					<view class="rightInfo nowrap">
-						<text class="txt0">哈哈哈哈</text>
-						<text class="txts">18271346587</text>
+						<open-data class="txt0"  type="userNickName"></open-data>
+						<text class="txts">{{myPhone}}</text>
 					</view>
 				</view>
 				<view class="handCen">
-					<text class="txt3">400</text>
+					<text class="txt3">{{useData.token}}</text>
 					<text class="txt4">剩余U点</text>
 				</view>
 			</view>

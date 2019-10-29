@@ -43,6 +43,7 @@ page{
 	border-radius:50%;
 	background: center no-repeat;
 	background-size: cover;
+	overflow: hidden;
 }
 .rightInfo{
 	flex: 1;

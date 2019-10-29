@@ -93,8 +93,26 @@ const getPay= (data = {}) => { //优惠券充值
 		})
 	})
 }
-const getDotrecord = (data = {}) => { //获取充值记录
+const getDotrecord = (data = {}) => { //获取充值记录User/GetUserDetail
 	let url = `${BASEURL}/UDot/GetChargeRecord`
+	method = 'get';
+	return new Promise((resolve, reject) => {
+		wx.request({
+			url,
+			data,
+			method,
+			header,
+			success(res) {
+				resolve(res)
+			},
+			fail(err) {
+				reject(err)
+			}
+		})
+	})
+}
+const getUseinfo = (data = {}) => { //查询用户信息
+	let url = `${BASEURL}/User/GetUserDetail`
 	method = 'get';
 	return new Promise((resolve, reject) => {
 		wx.request({
@@ -118,4 +136,5 @@ module.exports = {
 	getGifts,
 	getPay,
 	getDotrecord,
+	getUseinfo,
 }
