@@ -620,6 +620,27 @@
 					"id": -1,
 					"name": "pages/usercenter/Cardexchange/Cardexchange",
 					"pathName": "pages/usercenter/Cardexchange/Cardexchange",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Selectaddress/Selectaddress",
+					"pathName": "pages/About/Selectaddress/Selectaddress",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/usercenter/invitation/invitation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Selectaddress/Selectaddress",
+					"pathName": "pages/About/Selectaddress/Selectaddress",
 					"scene": null
 				}
 			]
