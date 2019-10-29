@@ -1,6 +1,7 @@
 <!--pages/usercenter/couponlist/couponlist.wxml-->
 <scroll-view>
-  <view class="list">
+  <text class="total" wx:if="listdata.length<=0">空空如也</text>
+  <view class="list not_txt" wx:for="{{listdata}}" wx:for-index="idx" wx:for-item="itemName">
     <view class="top flex">
       <view class="left">
         <text class="prie">200</text>
@@ -17,12 +18,12 @@
     </view>
     <view class="footer flex not">
       <text class="time flex1">有效期：2019.09.12-2019.12.12</text>
-      <text class="status">立即使用</text>      
+      <text class="status">立即使用</text>
       <image src="./../../../assets/static/ic_arrowRight.png" style="width:12rpx;height:21rpx;"></image>
     </view>
 
   </view>
-   <view class="list not_txt">
+  <!-- <view class="list ">
     <view class="top flex">
       <view class="left">
         <text class="prie">200</text>
@@ -42,11 +43,11 @@
       <text class="status">已使用</text>
     </view>
 
-  </view>
+  </view> -->
   <view class="failure tab-nav-item tab-active">
     <text>已失效的券</text>
   </view>
-  <view class="list not_txt">
+  <view class="list not_txt" wx:for="{{listdata}}" wx:for-index="idx" wx:for-item="itemName">
     <view class="top flex">
       <view class="left">
         <text class="prie">200</text>
@@ -67,5 +68,9 @@
     </view>
 
   </view>
-  <button class="bt theme">兑换卡券</button>
+  <navigator url="/pages/usercenter/Cardexchange/Cardexchange" hover-class="navigator-hover">
+    <button class="bt theme">兑换卡券</button>
+  </navigator>
+
+
 </scroll-view>

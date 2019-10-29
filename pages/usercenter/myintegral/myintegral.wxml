@@ -1,4 +1,5 @@
 <!--pages/usercenter/myintegral/myintegral.wxml-->
+<wxs src="./../../../utils/time.wxs" module="tools" />
 <scroll-view  scroll-y="true" bindscrolltolower="more()">
   <view class="top_padding flex-cen-col">
     <text class="num theme_txt">100</text>
@@ -12,12 +13,12 @@
       <text class="tab {{ tabtype==1 ? 'tab-nav-item tab-active theme_txt' : ''}}">教师约课</text>
     </view>
   </view>
-  <view class="list flex-ali tab-nav-item tabbt" wx:for="{{listdata}}">
+  <view class="list flex-ali tab-nav-item tabbt" wx:for="{{listdata}}" wx:for-index="idx" wx:for-item="itemName">
     <view class="flex-col flex1">
-      <text class="name">新人赠送</text>
-      <text class="time">2019-10-04 19:04</text>
+      <text class="name">{{itemName.title}}</text>
+      <text class="time">{{tools.time(itemName.time)}}</text>
     </view>
-    <text class="num">+1000</text>
+    <text class="num">+{{itemName.integra}}</text>
   </view>
   <text class="pub_prompt">暂无更多</text>
   <view class="list flex-ali " style="height: 50rpx;" wx:if="{{listdata.length>4}}">

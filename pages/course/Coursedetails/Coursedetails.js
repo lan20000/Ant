@@ -17,6 +17,44 @@ Page({
     courseId: null,
     coursedata: {}
   },
+  coursecancel(){
+    if (app.globalData.udata.userId == null || this.data.courseId == null || this.data.applyId == null) {
+      tool.alert('参数缺失');
+      return;
+    }
+    tool.loading();
+    let _this = this;
+    api.getCourse({
+      userId: app.globalData.udata.userId,
+      courseId: this.data.courseId,
+      applyId: 0
+    }).then((res) => {
+      tool.loading_h();
+      console.log(res)
+      if (res.data.Code == 200) {
+        wx.navigateBack({
+          delta: 1
+        });
+      } else {
+        tool.alert('取消失败');
+      }
+    });
+  },
+  cancel(){
+    var _this = this;
+    wx.showModal({
+      title: '确定取消该课程吗？',
+      content: '会立即取消课程',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('点击确认回调')
+          _this.coursecancel();
+        } else {
+          console.log('点击取消回调')
+        }
+      }
+    });
+  },
   getdetails() {
     if (this.data.courseId == null) {
       tool.alert('参数缺失');
@@ -25,7 +63,7 @@ Page({
     tool.loading();
     let _this = this;
     api.getCourse({
-      userId: app.globalData.udata.userId,
+      UserId: app.globalData.udata.userId,
       courseId: this.data.courseId
     }).then((res) => {
       tool.loading_h();

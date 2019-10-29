@@ -11,4 +11,4 @@
     </view>
   </view>
 </view>
-<button class="theme">取消预约</button>
+<button class="theme" bindtap="cancel">取消预约</button>

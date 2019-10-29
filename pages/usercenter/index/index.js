@@ -29,6 +29,7 @@ Page({
       if (res.data.Code == 200) {
         app.globalData.udata = res.data.Data;
         _this.setData({ userdata : res.data.Data })
+        console.log(res.data.Data)
       } else {
         tool.alert('获取个人信息失败');
       }

@@ -2,12 +2,12 @@
 <text class="top_txt">温馨提示：</text>
 <text class="top_txt"> 卡劵兑换码为数字码，一经使用当即作废！</text>
 <view class="flex content">
-  <input type="text" class="flex1 flex-ali" placeholder-class="pla" placeholder="请输入兑换码"></input>
-  <button class="theme" bindtap="exchange()">兑换</button>
+  <input type="text" class="flex1 flex-ali" bindinput="oninput" placeholder-class="pla" placeholder="请输入兑换码"></input>
+  <button class="theme" bindtap="exchange">兑换</button>
 
 </view>
 
-<view class="list">
+<view class="list" wx:if="{{carddat!=null}}" >
   <view class="top flex">
     <view class="left">
       <text class="prie">200</text>

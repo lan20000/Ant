@@ -1,14 +1,46 @@
 // pages/usercenter/Cardexchange/Cardexchange.js
+const api = require('../../../utils/api/myRequests.js');
+const tool = require('../../../utils/publics/tool.js');
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    carddat: null,
+    code: null
   },
-  exchange(){
-    
+  oninput(e) {
+    this.setData({ code: e.detail.value })
+  },
+  exchange() {
+    if (this.data.code == null) {
+      tool.alert('请填写正确的兑换码');
+      return;
+    }
+    if (app.globalData.udata.userId == null || this.data.code == null) {
+      tool.alert('参数缺失');
+      return;
+    }
+    tool.loading();
+    let _this = this;
+    api.exCoupon({
+      ticketId: this.data.code,
+      userId: app.globalData.udata.userId
+    }).then((res) => {
+      tool.loading_h();
+      console.log(res)
+      if (res.data.Code == 200) {
+        if (!res.data.Data){
+          tool.alert('兑换码错误');
+          return;
+        }
+        _this.setData({ carddat: res.data.Data })
+      } else {
+        tool.alert('查询失败');
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面加载
