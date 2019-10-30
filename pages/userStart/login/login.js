@@ -24,13 +24,24 @@ Page({
    * 获取手机号
    */
   getPhoneNumber: function (e) {
-    console.log(e)
-    // app.silentLogin(e.detail.iv, e.detail.encryptedData);
     if (this.data.session_key==null){
+      tool.alert("注册失败，请稍后试试");
+      return;
+    }
+    if (e.detail.cloudID == undefined) {
+      tool.alert("为了用户体验，请先注册我们的会员");
       return;
     }
     api.decryptnumber({ aesIv: encodeURIComponent(e.detail.iv), EncryptedData: encodeURIComponent(e.detail.encryptedData), SessionKey: encodeURIComponent(this.data.session_key) }).then(res => {
-      console.log(res)
+      // console.log(res)
+      tool.loading_h();
+      if (res.data.Code === 200) {
+        wx.redirectTo({
+          url: "/pages/userStart/bindingPhone/bindingPhone?phone=" + res.data.phoneNumber
+        });
+      } else {
+        tool.alert("登录失败");
+      }
     })
   },
   logincode() {
@@ -38,8 +49,10 @@ Page({
     login().then(res => {
       return res.code;
     }).then(res => {
+      tool.loading("");
       api.getSessionKey({ Code: encodeURIComponent(res) }).then(dat => {
         console.log(dat)
+        tool.loading_h();
         if (dat.data.Code == 200) {
           if (dat.data.Data.openid != null) {
             wx.setStorageSync('openid', dat.data.Data.openid);
