@@ -36,7 +36,6 @@ Page({
       if (res.data.Code == 200) {
         wx.setStorageSync('userdata', res.data.Data);
         app.globalData.udata = res.data.Data;
-        app.globalData.udata.userId = 1;
         app.globalData.ulogin = true;
         res.data.Data.identity == 1 ? app.globalData.footertab = true : app.globalData.footertab = false;
         wx.redirectTo({

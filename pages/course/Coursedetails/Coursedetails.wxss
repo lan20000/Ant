@@ -23,7 +23,7 @@
 .Jane>.title,.video_c>.title,.progress>.title{font-size:34rpx;font-weight:bold;color:rgba(49,49,52,1);padding-bottom: 37rpx;display: inline-block;}
 .Jane>.txt,.video_c>.txt,.progress>.txt{font-size:24rpx;font-weight:500;color:rgba(148,151,163,1);line-height:34rpx;padding-bottom: 35rpx;}
 
-.video_img{width:220rpx;height:140rpx;background:rgba(50,51,68,1);opacity:0.4;border-radius:10rpx;margin-right: 40rpx;background-size: 100% 100%;}
+.video_img{width:220rpx;height:140rpx;background:rgba(50,51,68,1);border-radius:10rpx;margin-right: 40rpx;background-size: 100% 100%;}
 .img_list>image{width: 45rpx;height: 45rpx;margin-top: 35rpx;margin-right: 10rpx;}
 .video_list{display: flex;flex-direction: column;}
 .video_list>text:first-child{font-size:28rpx;font-weight:bold;color:rgba(50,51,68,1);}

@@ -82,7 +82,6 @@ Page({
 	},
 	getVideo(){
 		let dat = {
-			userId:1,
 			isTecher:false
 		}
 		request_01.videoList(dat).then((res)=>{

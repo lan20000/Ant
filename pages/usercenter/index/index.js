@@ -15,6 +15,7 @@ Page({
     
   },
   getdata(){
+    console.log(app.globalData.udata.userId)
     if (app.globalData.udata.userId==null){
       tool.alert('参数丢失');
       return;
