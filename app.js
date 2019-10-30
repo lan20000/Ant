@@ -24,7 +24,7 @@ App({
       if (!this.globalData.ulogin) {
         console.log('是否登录', this.globalData.ulogin);
         wx.redirectTo({
-          url: "pages/userStart/login/login"
+          url: "/pages/userStart/login/login"
         })
       }
       value ? this.globalData.udata = value : '';

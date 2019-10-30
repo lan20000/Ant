@@ -6,6 +6,7 @@ const myRequest = (data, url, type = 'post') => {
   let _url = `${SERVICE}${url}`
   console.log("_url", _url)
   let app = getApp();
+  console.log(app.globalData.ulogin ? app.globalData.udata.tokenKey : '')
   return new Promise((resolve, reject) => {
     $[`${type}P`](_url, data, app.globalData.ulogin ? app.globalData.udata.tokenKey : '').then(res => {
       resolve(res)

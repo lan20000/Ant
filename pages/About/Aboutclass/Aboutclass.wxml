@@ -97,7 +97,7 @@
       <button class="pre theme">100U点预约</button>
     </view> -->
     <view class="card flex" wx:for="{{storedata}}" wx:for-index="idx" wx:for-item="ditem">
-      <image src=""></image>
+      <image src="{{ditem.courseImage}}"></image>
       <view class="flex-col">
         <text class="title">{{tools.time(ditem.startTime)}} - {{tools.time(ditem.endTime)}} {{ditem.courseName}}课程</text>
         <text class="name">老师：{{ditem.teacherName}}</text>
