@@ -1,6 +1,6 @@
 const alert = require('../../utils/publics/tool.js');
 const BASEURL = "http://119.23.75.89";
-let tokenkey = wx.getStorageSync("userdata").tokenKey;
+let tokenkey = wx.getStorageSync("token");
 let method = 'get'
 let header = { 'content-type': 'application/json','Authorization': tokenkey}
 const videoList = (data = {}) => { //独角兽视频列表
