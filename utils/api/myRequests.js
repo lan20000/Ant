@@ -6,9 +6,14 @@ const myRequest = (data, url, type = 'post') => {
   let _url = `${SERVICE}${url}`
   console.log("_url", _url)
   let app = getApp();
-  console.log(app.globalData.ulogin ? app.globalData.udata.tokenKey : '')
+  console.log(app.globalData.ulogin)
+  let token = '';
+  if (app.globalData.ulogin){
+    token = app.globalData.token;
+  }  
+  console.log(token);
   return new Promise((resolve, reject) => {
-    $[`${type}P`](_url, data, app.globalData.ulogin ? app.globalData.udata.tokenKey : '').then(res => {
+    $[`${type}P`](_url, data, token).then(res => {
       resolve(res)
     }).catch(err => {
       reject(err)

@@ -88,6 +88,9 @@ Page({
     // console.log(app.globalData.footertab);
     console.log(app.globalData)
     // console.log(this.)
+    if (!app.globalData.ulogin) {
+      return;
+    }    
     //判断是否开通了会员
     if (this.data.useris) {
       this.setData({ utype: 3 })
