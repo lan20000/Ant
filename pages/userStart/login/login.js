@@ -1,7 +1,15 @@
 // pages/login/login.js
 const api = require('../../../utils/api/myRequests.js');
 const tool = require('../../../utils/publics/tool.js');
-
+const login = () => {
+  return new Promise((resolve, reject) => {
+    wx.login({
+      success: res => {
+        resolve(res)
+      }
+    })
+  })
+}
 const app = new getApp();
 Page({
 
@@ -9,6 +17,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    session_key: null,
     getphone: false,//获取手机号码
   },
   /**
@@ -16,14 +25,36 @@ Page({
    */
   getPhoneNumber: function (e) {
     console.log(e)
-    app.silentLogin(e.detail.iv, e.detail.encryptedData);
+    // app.silentLogin(e.detail.iv, e.detail.encryptedData);
+    if (this.data.session_key==null){
+      return;
+    }
+    api.decryptnumber({ aesIv: encodeURIComponent(e.detail.iv), EncryptedData: encodeURIComponent(e.detail.encryptedData), SessionKey: encodeURIComponent(this.data.session_key) }).then(res => {
+      console.log(res)
+    })
   },
-
+  logincode() {
+    var _this = this;
+    login().then(res => {
+      return res.code;
+    }).then(res => {
+      api.getSessionKey({ Code: encodeURIComponent(res) }).then(dat => {
+        console.log(dat)
+        if (dat.data.Code == 200) {
+          if (dat.data.Data.openid != null) {
+            wx.setStorageSync('openid', dat.data.Data.openid);
+            _this.setData({ session_key: dat.data.Data.session_key });
+          }
+        }
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     console.log(1111)
+    this.logincode();
   },
 
   /**
