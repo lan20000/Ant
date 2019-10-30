@@ -49,12 +49,15 @@ App({
     }).then(res => {
       console.log("请求后端登录接口返回-->", res)
       if (res.data.Code === 200) {
+        wx.redirectTo({
+          url: "/pages/userStart/bindingPhone/bindingPhone?phone=" + res.data.phoneNumber
+        });
         // let { data } = res.data
         // if (!wx.getStorageSync("userInfo")) wx.setStorageSync("userInfo", {})
         // wx.setStorageSync("userId", data.data)
         // getphonecode
         tool.loading_h()
-        tool.alert("静默登录成功")
+        // tool.alert("静默登录成功")
       } else {
         tool.alert("为了用户体验，请先注册我们的会员");
         // if (this.globalData.loginNum < 5) {

@@ -8,7 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    listdata:[]
+    listdata:[],
+    text: ['未使用','已使用','已过期']
   },
   getlist() {
     if (app.globalData.udata.userId == null) {
