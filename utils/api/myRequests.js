@@ -26,6 +26,8 @@ const getOpenid = (data, url = 'Login/Login') => { return myRequest(data, url) }
 const getPhoneNumber = (data, url = '/api/Oauth/decryptedPhone') => { return myRequest(data, url) }
 //解密手机号
 const decryptnumber = (data, url = 'Login/GetPhoneNumber') => { return myRequest(data, url, 'get') }
+//解密手机号
+const getSessionKey = (data, url = 'Login/GetSessionKey') => { return myRequest(data, url, 'get') }
 
 /**
  * 安全
@@ -89,5 +91,6 @@ module.exports = {
   teachercourse,
   decryptnumber,
   getCoupons,
-  exCoupon
+  exCoupon,
+  getSessionKey
 }

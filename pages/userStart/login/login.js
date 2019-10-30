@@ -15,6 +15,7 @@ Page({
    * 获取手机号
    */
   getPhoneNumber: function (e) {
+    console.log(e)
     app.silentLogin(e.detail.iv, e.detail.encryptedData);
   },
   
