@@ -9,7 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    getphone:false,//获取手机号码
+    getphone: false,//获取手机号码
   },
   /**
    * 获取手机号
@@ -18,7 +18,7 @@ Page({
     console.log(e)
     app.silentLogin(e.detail.iv, e.detail.encryptedData);
   },
-  
+
   /**
    * 生命周期函数--监听页面加载
    */
