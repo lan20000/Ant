@@ -24,20 +24,23 @@ Page({
    * 获取手机号
    */
   getPhoneNumber: function (e) {
+    console.log(e)
     if (this.data.session_key==null){
       tool.alert("注册失败，请稍后试试");
       return;
     }
-    if (e.detail.cloudID == undefined) {
+    if (e.detail.encryptedData == undefined) {
       tool.alert("为了用户体验，请先注册我们的会员");
       return;
     }
-    api.decryptnumber({ aesIv: encodeURIComponent(e.detail.iv), EncryptedData: encodeURIComponent(e.detail.encryptedData), SessionKey: encodeURIComponent(this.data.session_key) }).then(res => {
-      // console.log(res)
+    // encodeURIComponent
+    console.log(encodeURIComponent(JSON.stringify({ aesIv: e.detail.iv, EncryptedData: e.detail.encryptedData, SessionKey: this.data.session_key })))
+    api.decryptnumber({ AesIv: e.detail.iv, EncryptedData: e.detail.encryptedData, SessionKey: this.data.session_key }).then(res => {
+      console.log(res)
       tool.loading_h();
       if (res.data.Code === 200) {
         wx.redirectTo({
-          url: "/pages/userStart/bindingPhone/bindingPhone?phone=" + res.data.phoneNumber
+          url: "/pages/userStart/bindingPhone/bindingPhone?phone=" + res.data.Data.phoneNumber
         });
       } else {
         tool.alert("登录失败");
