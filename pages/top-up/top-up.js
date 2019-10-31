@@ -24,10 +24,10 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
+		this.getopenid();
 		this.getUDdots();
 		this.getGifts();
 		this.getUseinfo();
-		this.getopenid();
 		this.setData({ myPhone:wx.getStorageSync("userdata").phone})
 	},
 
@@ -99,6 +99,7 @@ Page({
 		tool.jump_nav("/pages/top_record/top_record")
 	},
 	getPay(){
+		let that = this;
 		if (this.data.price==0){
 			let dat = {
 				tokenId: this.data.pid,
@@ -118,11 +119,35 @@ Page({
 		}else if(this.data.price>0){
 			let dat = {
 				OpenID:this.data.openid,
-				TotalFee:500,
-				Body:"asda"
+				TotalFee: this.data.price,
+				Body:"mgud"
 			}
 			request_01.WXpay(dat).then((res)=>{
-				console.log(res.data);
+				// console.log(res.data);
+				if (res.data.code =="OK")
+				wx.requestPayment({
+					timeStamp: res.data.time_stamp,
+					nonceStr: res.data.nonce_str,
+					package: res.data.package_value,
+					signType: res.data.sign_type,
+					paySign: res.data.pay_sign,
+					success(res) {
+						wx.showToast({
+							title: '支付成功',
+							icon: 'success',
+							duration: 2000
+						})
+						that.getUDdots();
+						that.getGifts();
+					},
+					fail(res) {
+						wx.showToast({
+							title: '取消支付',
+							icon: 'none',
+							duration: 2000
+						})
+					}
+				})
 			})
 			console.log("微信支付")
 			// tool.jump_nav("/pages/usercenter/Paysuccess/Paysuccess")
@@ -141,6 +166,7 @@ Page({
 		})
 	},
 	getopenid(){
+		console.log(21)
 		let that = this;
 		wx.login({
 			success(res) {
