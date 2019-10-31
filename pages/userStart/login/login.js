@@ -69,8 +69,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(1111)
     this.logincode();
+    wx.removeStorage({
+      key: 'token',
+      success(res) {
+        console.log(res)
+      }
+    });
+    wx.removeStorage({
+      key: 'userdata',
+      success(res) {
+        console.log(res)
+      }
+    });
   },
 
   /**

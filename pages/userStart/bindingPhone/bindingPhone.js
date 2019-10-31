@@ -25,10 +25,10 @@ Page({
       tool.alert('请输入验证码');
       return;
     }
-    if (this.data.ucode != this.data.code) {
-      tool.alert('验证码错误');
-      return;
-    }
+    // if (this.data.ucode != this.data.code) {
+    //   tool.alert('验证码错误');
+    //   return;
+    // }
     api.getOpenid({
       phone: this.data.phone,
       verifyCode: this.data.ucode
