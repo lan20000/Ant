@@ -11,6 +11,7 @@ Page({
   data: {
     iscode: false,
     second: 60,
+    isinput:false,
     phone: null,
     code: null,
     ucode:null
@@ -94,7 +95,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options.phone)
+    if (options.phone!=undefined){
+      this.setData({isinput:true});
+      this.setData({ phone : options.phone});
+    }
   },
 
   /**

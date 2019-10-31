@@ -7,7 +7,7 @@
       <image src="./../../../assets/static/pic_phoneNumber.png" style="width:32rpx;height:40rpx;"></image>
       <text>手机</text>
     </view>
-    <input type="number" placeholder="请输入手机号码" maxlength="11" data-value="phone" bindinput="oninput" placeholder-class="phone_pla"></input>
+    <input type="number" placeholder="请输入手机号码" maxlength="11" disabled="{{isinput}}" value="{{phone}}" data-value="phone" bindinput="oninput" placeholder-class="phone_pla"></input>
     <view class="input_title flex-ali" style="margin-top:48rpx;">
       <image src="./../../../assets/static/pic_verificationCode.png" style="width:32rpx;height:40rpx;"></image>
       <text>验证码</text>
