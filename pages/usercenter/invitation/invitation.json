@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "showModal": "/components/showModal/showModal",
+    "getAuth": "/components/getAuth/getAuth"
+  },
   "navigationBarTitleText": "邀请推广"
 }

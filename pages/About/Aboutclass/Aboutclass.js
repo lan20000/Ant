@@ -80,6 +80,33 @@ Page({
     //U点足够
   },
   /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    this.setData({ payalert: false });
+    this.getdata();
+  },
+  getdata() {
+    console.log(app.globalData.udata.userId)
+    if (app.globalData.udata.userId == null) {
+      tool.alert('参数丢失');
+      return;
+    }
+    tool.loading();
+    let _this = this;
+    api.uDetail({
+      userId: app.globalData.udata.userId
+    }).then((res) => {
+      tool.loading_h();
+      console.log(res)
+      if (res.data.Code == 200) {
+        app.globalData.udata = res.data.Data;
+      } else {
+        tool.alert('获取个人信息失败');
+      }
+    })
+  },
+  /**
    * 
    */
   close() {

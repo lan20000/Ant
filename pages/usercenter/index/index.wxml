@@ -99,7 +99,7 @@
         <text>我的积分</text>
       </view>
       <view class="meun_list flex-cen-col flex1">
-        <image src="./../../../assets/static/ic_invite.png"></image>
+        <image src="./../../../assets/static/ic_invite.png"  bindtap="blank" data-index="invitation/invitation"></image>
         <text>邀请好友</text>
       </view>
     </view>

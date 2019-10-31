@@ -655,6 +655,20 @@
 					"id": -1,
 					"name": "Paysuccess",
 					"pathName": "pages/usercenter/Paysuccess/Paysuccess",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/couponlist/couponlist",
+					"pathName": "pages/usercenter/couponlist/couponlist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/invitation/invitation",
+					"pathName": "pages/usercenter/invitation/invitation",
 					"scene": null
 				}
 			]
