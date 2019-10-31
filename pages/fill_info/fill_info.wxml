@@ -46,7 +46,7 @@
     <view class="rowIpt">
       <view class="lables">生日</view>
       <view class="ipts">
-        <picker mode="date" name="brith" value="{{date}}" start="2015-09-01" end="2027-09-01" bindchange="bindDateChange">
+        <picker mode="date" name="brith" value="{{date}}" start="1970-09-01" end="2019-09-01" bindchange="bindDateChange">
           <view class="picker">
             <text class="txt4 _txt1">{{date}}</text>
             <!-- <text wx:if="{{sex==3}}" class="txt4">选择持卡人性别</text> -->
