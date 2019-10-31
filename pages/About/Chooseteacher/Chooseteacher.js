@@ -23,15 +23,15 @@ Page({
     // console.log(app.globalData.udata.userId)
     tool.loading("正在加载中")
     let _this = this;
-    api.teachercourse({
-      storeId: id
+    api.allTeacher({
+     
     }).then((res) => {
       console.log(res)
       tool.loading_h();
       if (res.data.Code == 200) {
         _this.setData({ listdata: res.data.Data });
       } else {
-        tool.alert('获取店铺列表失败');
+        // tool.alert('获取店铺列表失败');
       }
     });
 

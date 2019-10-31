@@ -15,7 +15,7 @@ Page({
       isShow: false,
       type: 0,
       title: "获取位置信息",
-      test: "小程序将访问您的手机定位，自动定位到您当前所在城市信息。",
+      test: "小程序将访问您的手机定位，自动定位到您当前所在城市信息。【如果您没有打开GPS，请通过手机设置打开GPS再授权哦！】",
       cancelText: "取消",
       confirmText: "授权",
       color_confirm: '#A3271F'

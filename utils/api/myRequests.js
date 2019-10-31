@@ -65,6 +65,8 @@ const cancelCourse = (data, url = 'Course/CancelCourse') => { return myRequest(d
 const teacherlesson = (data, url = 'Course/GetCoursePlanByTeacher') => { return myRequest(data, url, 'get') }
 //获取老师
 const teachercourse = (data, url = 'Course/GetRecommendTeachers') => { return myRequest(data, url, 'get') }
+//获取所有老师
+const allTeacher = (data, url = 'Course/GetAllTeacher') => { return myRequest(data, url, 'get') }
 
 
 /**
@@ -95,5 +97,6 @@ module.exports = {
   getCoupons,
   exCoupon,
   getSessionKey,
-  teacherlesson
+  teacherlesson,
+  allTeacher
 }
