@@ -34,7 +34,30 @@ Page({
     paymeet: 0,
     paydata: null,//支付对象
     teacherdata:null,//教师
-    udata: null
+    udata: null,
+    storeId:null
+  },
+  /**
+   * 教师课程
+   */
+  teacherlesson(){
+    console.log(app.globalData.udata.userId)
+    tool.loading("正在加载中")
+    let _this = this;
+    api.teacherlesson({
+      storeId: this.data.storeadd[0].storeId,
+      time: this.data.storet[this.data.tab].courseTime,
+      teacherId: this.data.teacherdata[0].teachers[0].teacherId
+    }).then((res) => {
+      console.log(res)
+      tool.loading_h();
+      if (res.data.Code == 200) {
+        _this.setData({ storedata: res.data.Data });
+        // teacherlesson
+      } else {
+        tool.alert('获取课程失败');
+      }
+    });
   },
   /**
    * 教师约课
@@ -49,10 +72,10 @@ Page({
       console.log(res)
       tool.loading_h();
       if (res.data.Code == 200) {
-        
         _this.setData({ teacherdata: res.data.Data });
         console.log(_this.data.teacherdata);
         console.log(_this.data.teacherdata[0].teachers)
+        _this.teacherlesson();
       } else {
         tool.alert('获取店铺列表失败');
       }
@@ -144,11 +167,13 @@ Page({
     }
     console.log('门店课程')
     let _this = this;
+    tool.loading();
     api.getCourse({
       storeId: this.data.storeadd[0].storeId,
       time: this.data.storet[this.data.tab].courseTime
     }).then((res) => {
       console.log(res)
+      tool.loading_h();
       if (res.data.Code == 200) {
         _this.setData({ storedata: res.data.Data })
       } else {
@@ -188,7 +213,11 @@ Page({
       return;
     }
     this.setData({ tab: e.target.dataset.index });
-    this.timeCourse();
+    if(this.data.tabtype==0){
+      this.timeCourse();
+      return;
+    }
+    this.teacherlesson();
   },
   /**
    * 选择类型
@@ -196,8 +225,11 @@ Page({
   tabchoose(e) {
     this.setData({ tabtype: e.currentTarget.dataset.type });
     if (e.currentTarget.dataset.type==1){
+      console.log('老师-------------------》')
       this.teacherabout();
+      return;
     }
+    this.timeCourse();
   },
   //loading框
   isShowLoading() {
@@ -210,6 +242,13 @@ Page({
    */
   onLoad: function (options) {
     this.setData({ useris: app.globalData.footertab });
+    //选择老师ID
+    if (options.id!=undefined){
+      this.storeTime();
+      this.setData({ teacherid: options.id, tabtype:1});
+      return;
+    }
+    //选择地理位置
     if (options.lat!=undefined){
       this.setData({ latitude: options.lat, longitude: options.lon });
       this.storelist();

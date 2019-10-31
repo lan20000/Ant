@@ -9,6 +9,16 @@ Page({
   data: {
     listdata:[],
   },
+  bank(e){
+    console.log(e)
+    if (e.currentTarget.dataset.id==undefined){
+      tool.alert('参数缺失');
+      return;
+    }
+    // wx.redirectTo({
+    //   url: '/pages/About/Aboutclass/Aboutclass?id=' + e.currentTarget.dataset.id
+    // });
+  },
   getlist(id) {
     // console.log(app.globalData.udata.userId)
     tool.loading("正在加载中")

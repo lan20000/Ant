@@ -1,9 +1,13 @@
 <!--pages/About/Chooseteacher/Chooseteacher.wxml-->
 <scroll-view>
-  <navigator url="/pages/usePage/usePage?storeid={{storeadd[0].storeId}}" hover-class="navigator-hover" wx:for="{{listdata}}" wx:for-index="idx" wx:for-item="item" >
+  <view wx:for="{{listdata}}" wx:for-index="idx" wx:for-item="item">
+
     <text class="shop_name">{{item.storeName}}</text>
+
     <view class="teacher flex-ali tab-nav-item tab-active">
-      <image class="" src="{{item.teachers[0].teacherAvatar}}"></image>
+      <navigator url="/pages/usePage/usePage?storeid={{storeadd[0].storeId}}" hover-class="navigator-hover">
+        <image class="" src="{{item.teachers[0].teacherAvatar}}"></image>
+      </navigator>
       <view class="flex-col flex1">
         <view class="flex-ali">
           <text class="name">{{item.teachers[0].teacherName}}</text>
@@ -11,9 +15,9 @@
         </view>
         <text class="type">{{item.teachers[0].teacherContent}}</text>
       </view>
-      <navigator url="/pages/About/Aboutsuccess/Aboutsuccess" hover-class="navigator-hover">
-        <button class="button">预约</button>
-      </navigator>
+      <!-- <navigator url="/pages/About/Aboutsuccess/Aboutsuccess" hover-class="navigator-hover"> -->
+      <button class="button" bindtap="bank" data-id="{{item.teachers[0].teacherId}}">预约</button>
+      <!-- </navigator> -->
     </view>
-  </navigator>
+  </view>
 </scroll-view>

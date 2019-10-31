@@ -1,8 +1,7 @@
 <!--pages/Aboutclass/Aboutclass.wxml-->
 <wxs src="./time.wxs" module="tools" />
-<view class="more flex-cen" wx:if="{{payalert}}">
-
-</view>
+<showModal showModalOption="{{showModalOption}}" bindoperation="operation"></showModal>
+<view class="more flex-cen" wx:if="{{payalert}}"></view>
 <view class="pay_content" wx:if="{{payalert}}">
   <view class="choose">
     <view class="flex-ali">
