@@ -18,7 +18,7 @@ App({
 	getulogin() {
 		try {
 			var value = wx.getStorageSync('userdata');
-      var token = wx.getStorageSync('token');
+      		var token = wx.getStorageSync('token');
 			value ? this.globalData.ulogin = true : this.globalData.ulogin = false;
 			if (!this.globalData.ulogin) {
 				console.log('是否登录', this.globalData.ulogin);

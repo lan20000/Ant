@@ -1,6 +1,5 @@
 // pages/dujiaoxi/dujiaoxi.js
 const route = require("../../utils/tool/router.js");
-
 const request_01 = require("../../utils/api/request_01.js");
 const app = new getApp();
 Page({
@@ -10,16 +9,16 @@ Page({
 	 */
 	data: {
     useris:false,
-		STATICIMG: app.globalData.STATICIMG,
+	STATICIMG: app.globalData.STATICIMG,
     more:false,//弹窗
-		currtab:1
+	currtab:1
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
   onLoad: function (options) {
-	  this.getVideo();
+	//   this.getVideo();
 	},
 
 	/**
