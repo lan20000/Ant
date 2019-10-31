@@ -56,7 +56,7 @@ const getStore = (data, url = 'Store/GetAllStores') => { return myRequest(data, 
 const storeTime = (data, url = 'Course/GetNewestCourseTime') => { return myRequest(data, url, 'get') }
 //通过门店获取某天排课列表
 const getCourse = (data, url = 'Course/GetCoursePlanByStore') => { return myRequest(data, url, 'get') }
-//取消用户课程
+//预约课程
 const cancelCourse = (data, url = 'Course/CancelCourse') => { return myRequest(data, url, 'get') }
 
 /**
@@ -70,10 +70,6 @@ const mycuresDetail = (data, url = 'Course/GetCourseDetail') => { return myReque
 const evalcourse = (data, url = 'Course/ReviewCourse') => { return myRequest(data, url, 'get') }
 //教师课程
 const teachercourse = (data, url = 'Course/GetRecommendTeachers') => { return myRequest(data, url, 'get') }
-
-
-
-
 
 module.exports = {
   myRequest,

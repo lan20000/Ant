@@ -181,13 +181,16 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function () {
-    let _this = this;
-    console.log(app.globalData)
+  onLoad: function (options) {
+    this.setData({ useris: app.globalData.footertab });
+    if (options.lat!=undefined){
+      this.setData({ latitude: options.lat, longitude: options.lon });
+      this.storelist();
+      return;
+    }
     if (app.globalData.ulogin) {
       this.getPosition()
     }
-    this.setData({ useris: app.globalData.footertab });
   },
   getPosition() {
     tool.loading("自动定位中")

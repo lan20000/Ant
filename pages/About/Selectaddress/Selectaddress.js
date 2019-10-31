@@ -12,6 +12,15 @@ Page({
     adata: null,
     near: null
   },
+  blank(){
+    if (this.data.adata.longitude != undefined && this.data.adata.latitude != undefined) {
+      wx.redirectTo({
+        url: 'pages/About/Aboutclass/Aboutclass?lat=' + this.data.adata.latitude + "&lon=" + this.data.adata.longitude
+      });
+      return;
+    }
+    tool.alert('请选择地址');
+  },
   //事件处理函数
   bindViewTap: function() {
 
