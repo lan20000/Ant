@@ -14,7 +14,13 @@ Component({
         type: 5,//几颗星
         width: 40,//星星大小
         spacing: 16,//星星间距
-        score: 2//默认分数
+      },
+      observer: function (newVal, oldVal, changedPath) {
+        console.log('newVal',newVal)
+        this.setData({ star: newVal, score: newVal.score});
+        console.log(this.data.star)
+        // 属性被改变时执行的函数（可选），也可以写成在methods段中定义的方法名字符串, 如：'_propertyChange'
+        // 通常 newVal 就是新设置的数据， oldVal 是旧数据
       }
     }
   },
@@ -23,7 +29,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-    score: 0
+    score: 0,
+    star:{}
   },
   ready() {
     this.setData({ score: this.data.starOption.score})
