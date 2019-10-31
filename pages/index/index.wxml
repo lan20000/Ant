@@ -4,7 +4,7 @@
   <text class="content">为了更好的提升我们的课程和服务质量，UNICORN邀请您对结束课程进行匿名评分！</text>
   <view class="bottom">
     <view>
-    <text class="txt">陈朕老师 10月20日 20:00  【Breaking初级课程】</text>
+    <text class="txt">陈朕老师 10月20日 20:00  【Breaking初级课程】</text>y
     </view>
     <text class="Toobtain">评分成功可获得10积分！</text>
     <navigator url="/pages/course/score/score" hover-class="navigator-hover" class="updata">

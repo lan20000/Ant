@@ -17,6 +17,7 @@ Page({
 		price:null,
 		myPhone:null,
 		useData:null,
+		openid:null,
 	},
 
 	/**
@@ -26,6 +27,7 @@ Page({
 		this.getUDdots();
 		this.getGifts();
 		this.getUseinfo();
+		this.getopenid();
 		this.setData({ myPhone:wx.getStorageSync("userdata").phone})
 	},
 
@@ -97,18 +99,34 @@ Page({
 		tool.jump_nav("/pages/top_record/top_record")
 	},
 	getPay(){
-		if (this.data.price==0&&this.data.price){
+		if (this.data.price==0){
 			let dat = {
 				tokenId: this.data.pid,
 				type: 1
 			}
 			request_01.getPay(dat).then((res) => {
 				console.log(res.data);
+				if(res.data.Code==200){
+					tool.jump_nav("/pages/usercenter/Paysuccess/Paysuccess")	
+				}else{
+					wx.showToast({
+						icon:"none",
+						title: res.data.Error
+					})
+				}
 			})
 		}else if(this.data.price>0){
+			let dat = {
+				OpenID:this.data.openid,
+				TotalFee:500,
+				Body:"asda"
+			}
+			request_01.WXpay(dat).then((res)=>{
+				console.log(res.data);
+			})
 			console.log("微信支付")
-			tool.jump_nav("/pages/usercenter/Paysuccess/Paysuccess")
-		}else{
+			// tool.jump_nav("/pages/usercenter/Paysuccess/Paysuccess")
+		} else if (this.data.price==null){
 			tool.alert("请选择面值")	
 		}
 		
@@ -120,6 +138,22 @@ Page({
 		request_01.getUseinfo(dat).then((res)=>{
 			console.log(res.data);
 			if (res.data.Code == 200) this.setData({ useData:res.data.Data})
+		})
+	},
+	getopenid(){
+		let that = this;
+		wx.login({
+			success(res) {
+				let dat = {
+					Code: encodeURIComponent(res.code)
+				}
+				request_01.getOpenid(dat).then((res) => {
+					console.log(res.data.Data);
+					if(res.data.Code==200){
+						that.setData({ openid:res.data.Data.openid});
+					}
+				})
+			}
 		})
 	}
 	/**

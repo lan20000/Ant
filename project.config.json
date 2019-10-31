@@ -648,6 +648,13 @@
 					"id": -1,
 					"name": "pages/course/schedule/schedule",
 					"pathName": "pages/course/schedule/schedule",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Paysuccess",
+					"pathName": "pages/usercenter/Paysuccess/Paysuccess",
 					"scene": null
 				}
 			]
