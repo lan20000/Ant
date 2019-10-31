@@ -33,8 +33,8 @@ Page({
   submitForm(e) { // 提交立即办卡
     const params = e.detail.value
 	  
-    // console.log(params)
-
+    console.log(params)
+	// return;
     // 传入表单数据，调用验证方法
     if (!this.WxValidate.checkForm(params)) {
       const error = this.WxValidate.errorList[0]
@@ -48,8 +48,8 @@ Page({
 		sex:params.sex,
 		birthday: params.brith,
 		address: params.address.toString() + params.deladdress,
-		storeName: params.mendian > 0 ? arrayStore[params.mendian]:null,
-		danceType: params.kecheng > 0 ? danceType[params.kecheng]:null,
+		storeName: params.mendian > 0 ? this.data.arrayStore[parseInt(params.mendian)]:null,
+		danceType: params.kecheng > 0 ? this.data.danceType[parseInt(params.kecheng)]:null,
 	}
 	  if (params.brith =="0000-00-00"){
 		  wx.showToast({
