@@ -1,7 +1,7 @@
 /* pages/course/Coursedetails/Coursedetails.wxss */
 .list,.coursetitle,.teacher_details,.Jane,.video_c,.progress{background-color: #fff;}
 
-.video{height:400rpx;background:rgba(50,51,68,1);opacity:0.4;}
+.video{height:400rpx;background:rgba(50,51,68,1);}
 .coursetitle{padding: 40rpx 30rpx;}
 .coursetitle>text{font-size:38rpx;font-weight:bold;color:rgba(49,49,52,1);margin-right: 23rpx;}
 .coursetitle>.icon{background:rgba(216,178,123,1);border-radius:6px;font-size:22rpx;padding:  10rpx 20rpx;font-weight:bold;color:rgba(255,255,255,1);}
