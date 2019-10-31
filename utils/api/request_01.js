@@ -1,170 +1,60 @@
 const alert = require('../../utils/publics/tool.js');
+const _requst = require("../../utils/api/request.js");
 const BASEURL = "http://119.23.75.89";
 const PAYBASE = "http://tba.oomobi.com/";
-let tokenkey = wx.getStorageSync("token");
+let app = new getApp();
+let tokenkey = app.globalData.token || wx.getStorageSync("token");
+console.log("token", tokenkey, app.globalData.token, wx.getStorageSync("token"));
 let method = 'get'
 let header = { 'content-type': 'application/json','Authorization': tokenkey}
+
+
+
 const videoList = (data = {}) => { //独角兽视频列表
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
 	let url = `${BASEURL}/TopVideo?userId=${data.userId}&isTecher=${data.isTecher}`
-	return new Promise((resolve, reject) => {
-		wx.request({
-			url,
-			data,
-			method,
-			header,
-			success(res) {
-				resolve(res)
-			},
-			fail(err) {
-				reject(err)
-			}
-		})
-	})
+	return _requst.postP(url, data, tokenkey);
 }
 const kaika = (data = {}) => { //点击立即开卡
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
 	let url = `${BASEURL}/User/CreateUserCard`
-	method = 'post'
-	return new Promise((resolve, reject) => {
-		wx.request({
-			url,
-			data,
-			method,
-			header,
-			success(res) {
-				resolve(res)
-			},
-			fail(err) {
-				reject(err)
-			}
-		})
-	})
+	return _requst.postP(url, data, tokenkey);
 }
 
-const getUDdots = (data = {}) => { //点击立即开卡
+const getUDdots = (data = {}) => { //获取U点
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
 	let url = `${BASEURL}/UDot/GetUDdots`
-	method = 'get'
-	return new Promise((resolve, reject) => {
-		wx.request({
-			url,
-			data,
-			method,
-			header,
-			success(res) {
-				resolve(res)
-			},
-			fail(err) {
-				reject(err)
-			}
-		})
-	})
+	return _requst.getP(url, data, tokenkey);
 }
 const getGifts = (data = {}) => { //获取首充好礼信息
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
 	let url = `${BASEURL}/UDot/GetGifts`
-	method = 'get'
-	return new Promise((resolve, reject) => {
-		wx.request({
-			url,
-			data,
-			method,
-			header,
-			success(res) {
-				resolve(res)
-			},
-			fail(err) {
-				reject(err)
-			}
-		})
-	})
+	return _requst.getP(url, data, tokenkey);
 }
 const getPay= (data = {}) => { //优惠券充值
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
 	let url = `${BASEURL}/UDot/Charge`
-	method = 'post';
-	return new Promise((resolve, reject) => {
-		wx.request({
-			url,
-			data,
-			method,
-			header,
-			success(res) {
-				resolve(res)
-			},
-			fail(err) {
-				reject(err)
-			}
-		})
-	})
+	return _requst.postP(url, data, tokenkey);
 }
 const getDotrecord = (data = {}) => { //获取充值记录User/GetUserDetail
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
 	let url = `${BASEURL}/UDot/GetChargeRecord`
-	method = 'get';
-	return new Promise((resolve, reject) => {
-		wx.request({
-			url,
-			data,
-			method,
-			header,
-			success(res) {
-				resolve(res)
-			},
-			fail(err) {
-				reject(err)
-			}
-		})
-	})
+	return _requst.getP(url, data, tokenkey);
 }
 const getUseinfo = (data = {}) => { //查询用户信息
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
 	let url = `${BASEURL}/User/GetUserDetail`
-	method = 'get';
-	return new Promise((resolve, reject) => {
-		wx.request({
-			url,
-			data,
-			method,
-			header,
-			success(res) {
-				resolve(res)
-			},
-			fail(err) {
-				reject(err)
-			}
-		})
-	})
+	return _requst.getP(url, data, tokenkey);
 }
 const getOpenid = (data = {}) => { //查询用户信息
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
 	let url = `${BASEURL}/Login/GetSessionKey`
-	method = 'get';
-	return new Promise((resolve, reject) => {
-		wx.request({
-			url,
-			data,
-			method,
-			header,
-			success(res) {
-				resolve(res)
-			},
-			fail(err) {
-				reject(err)
-			}
-		})
-	})
+	return _requst.getP(url, data, tokenkey);
 }
 const WXpay = (data = {}) => { //查询用户信息
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
 	let url = `${PAYBASE}/order/create`
-	method = 'Post';
-	return new Promise((resolve, reject) => {
-		wx.request({
-			url,
-			data,
-			method,
-			header,
-			success(res) {
-				resolve(res)
-			},
-			fail(err) {
-				reject(err)
-			}
-		})
-	})
+	return _requst.postP(url, data, tokenkey);
 }
 module.exports = {
 	videoList,

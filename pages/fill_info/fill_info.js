@@ -42,7 +42,7 @@ Page({
       return false
     }
 	let dat = {
-		userId:1,
+		userId:wx.getStorageSync("userdata").userId,
 		userName: params.userName,
 		userCardId: params.idcard,
 		sex:params.sex,
@@ -69,7 +69,7 @@ Page({
 	  request_01.kaika(dat).then((res)=>{
 		  console.log(res);
 		  if(res.data.Code=="200"){
-			  tool.jump_nav("/pages/usercenter/successful/successful")
+			  tool.jump_red("/pages/usercenter/successful/successful")
 		  }else{
 			  console.log("提交失败")
 		  }
