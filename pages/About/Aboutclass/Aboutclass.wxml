@@ -32,7 +32,7 @@
         <text class="hot flex-cen">U点不足</text>
       </view>
     </view>
-     <navigator url="/pages/top-up/top-up" hover-class="navigator-hover" wx:if="{{paymeet==0}}">
+     <navigator url="/pages/fill_info/fill_info" hover-class="navigator-hover" wx:if="{{paymeet==0}}">
       <button class="top-up" >去开通</button>
     </navigator>
     <navigator url="/pages/top-up/top-up" hover-class="navigator-hover" wx:if="{{paymeet==3}}">
