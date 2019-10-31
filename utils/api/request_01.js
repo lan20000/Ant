@@ -1,5 +1,6 @@
 const alert = require('../../utils/publics/tool.js');
 const BASEURL = "http://119.23.75.89";
+const PAYBASE = "http://tba.oomobi.com/";
 let tokenkey = wx.getStorageSync("token");
 let method = 'get'
 let header = { 'content-type': 'application/json','Authorization': tokenkey}
@@ -129,6 +130,42 @@ const getUseinfo = (data = {}) => { //查询用户信息
 		})
 	})
 }
+const getOpenid = (data = {}) => { //查询用户信息
+	let url = `${BASEURL}/Login/GetSessionKey`
+	method = 'get';
+	return new Promise((resolve, reject) => {
+		wx.request({
+			url,
+			data,
+			method,
+			header,
+			success(res) {
+				resolve(res)
+			},
+			fail(err) {
+				reject(err)
+			}
+		})
+	})
+}
+const WXpay = (data = {}) => { //查询用户信息
+	let url = `${PAYBASE}/order/create`
+	method = 'Post';
+	return new Promise((resolve, reject) => {
+		wx.request({
+			url,
+			data,
+			method,
+			header,
+			success(res) {
+				resolve(res)
+			},
+			fail(err) {
+				reject(err)
+			}
+		})
+	})
+}
 module.exports = {
 	videoList,
 	kaika,
@@ -137,4 +174,6 @@ module.exports = {
 	getPay,
 	getDotrecord,
 	getUseinfo,
+	getOpenid,
+	WXpay,
 }

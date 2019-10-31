@@ -71,7 +71,9 @@ page{
 	margin-top: 40rpx;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-end;
+	align-items: center;
+	padding-left: 200rpx;
+	box-sizing: border-box;
 }
 .txt3{
 	font-size:60rpx;

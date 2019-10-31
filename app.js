@@ -40,7 +40,7 @@ App({
       return res
     }).then(res => {
       console.log(aesIv, '==', edata, '==', res.code)
-      return api.decryptnumber({ aesIv: aesIv, EncryptedData: edata, Code: res.code })
+		return api.decryptnumber({ aesIv: aesIv, EncryptedData: edata, Code: encodeURIComponent(res.code) })
     }).then(res => {
       console.log("请求后端登录接口返回-->", res)
       if (res.data.Code === 200) {
