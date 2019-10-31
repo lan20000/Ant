@@ -18,6 +18,7 @@ App({
 	getulogin() {
 		try {
 			var value = wx.getStorageSync('userdata');
+      var token = wx.getStorageSync('token');
 			value ? this.globalData.ulogin = true : this.globalData.ulogin = false;
 			if (!this.globalData.ulogin) {
 				console.log('是否登录', this.globalData.ulogin);
@@ -26,6 +27,7 @@ App({
 				});
 				return;
 			}
+      token ? this.globalData.token = token : this.globalData.token = null;
 			value.identity == 0 ? this.globalData.footertab = false : this.globalData.footertab = true;
 			value ? this.globalData.udata = value : '';
 		} catch (e) {

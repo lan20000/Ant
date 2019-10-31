@@ -2,14 +2,17 @@ import $ from './request.js'
 const SERVICE = "http://119.23.75.89/"
 
 const myRequest = (data, url, type = 'post') => {
-  let key = '';
-  let _url = `${SERVICE}${url}`
-  console.log("_url", _url)
   let app = getApp();
-  console.log(app.globalData.ulogin)
-  
+  let _url = `${SERVICE}${url}`
   return new Promise((resolve, reject) => {
     $[`${type}P`](_url, data, app.globalData.ulogin ? app.globalData.token : '').then(res => {
+      if (res.statusCode == 416){
+        app.globalData.ulogin = false;
+        wx.redirectTo({
+          url: "/pages/userStart/login/login"
+        });
+        return;
+      }
       resolve(res)
     }).catch(err => {
       reject(err)
