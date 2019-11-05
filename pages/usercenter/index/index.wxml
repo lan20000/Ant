@@ -4,7 +4,7 @@
 <view class="body_content">
   <!-- 学生 -->
   <view class="bodys" wx:if="{{utype!=3}}">
-    <view class="header" style="background-image: url({{ utype==2 ? './../../../assets/static/pic_card_golden.png' : './../../../assets/static/pic_card_gray.png'}});">
+    <view class="header" style="background: url(./../../../assets/static/{{ utype==2 ? 'pic_card_golden.png' : 'pic_card_gray.png'}});">
       <view class="header_top ">
         <view class="flex">
           <view class="flex1 flex-col">
