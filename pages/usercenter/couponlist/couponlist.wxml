@@ -12,7 +12,7 @@
         <view class="triangle"></view>
       </view>
       <view class="right">
-        <text class="title ">{{itemName.type==0 ? ',赠送券' : '充值券'}}满{{itemName.fullToken}}U点赠送{{itemName.token}}U点</text>
+        <text class="title ">{{itemName.type==0 ? '赠送券' : '充值券'}}满{{itemName.fullToken}}U点赠送{{itemName.token}}U点</text>
         <text class="remark ">{{itemName.desc}}</text>
       </view>
 
@@ -76,7 +76,7 @@
         <view class="triangle"></view>
       </view>
       <view class="right">
-        <text class="title ">{{item.type==0 ? ',赠送券' : '充值券'}}满{{item.fullToken}}U点赠送{{item.token}}U点</text>
+        <text class="title ">{{item.type==0 ? '赠送券' : '充值券'}}满{{item.fullToken}}U点赠送{{item.token}}U点</text>
         <text class="remark ">{{item.desc}}</text>
       </view>
 
