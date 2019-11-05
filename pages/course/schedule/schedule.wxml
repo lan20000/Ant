@@ -4,8 +4,8 @@
   <view class="content">
     <view class="m-top" wx:for="{{listdata}}" wx:for-index="idx" wx:for-item="item" >
       <view class="b_left"></view>
-      <view class="score_d flex-ali" style="{{true ? 'left:-21rpx' : 'left:-15rpx'}};">
-        <image src="./../../../assets/static/classSchedule_nor_ic_now.png" style="width: 42rpx;height: 42rpx;"></image>
+      <view class="score_d flex-ali" style="{{item.status==2 ? 'left:-21rpx' : 'left:-15rpx'}};">
+        <image src="./../../../assets/static/{{item.status==2 ? 'classSchedule_nor_ic_now.png' : 'classSchedule_nor_pic_completed.png'}}" style="width: 42rpx;height: 42rpx;"></image>
         <text class="this">{{tools.time(item.startTime)}}</text>
       </view>
       <view class="c_right this" >
