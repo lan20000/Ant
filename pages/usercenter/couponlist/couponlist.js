@@ -19,7 +19,7 @@ Page({
     tool.loading();
     let _this = this;
     api.getCoupons({
-      userId: app.globalData.udata.userId
+      
     }).then((res) => {
       tool.loading_h();
       console.log(res)

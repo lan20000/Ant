@@ -711,6 +711,13 @@
 					"id": -1,
 					"name": "pages/usercenter/Cardexchange/Cardexchange",
 					"pathName": "pages/usercenter/Cardexchange/Cardexchange",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Aboutclass/Aboutclass",
+					"pathName": "pages/About/Aboutclass/Aboutclass",
 					"scene": null
 				}
 			]

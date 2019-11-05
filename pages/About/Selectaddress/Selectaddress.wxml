@@ -1,7 +1,7 @@
 <!--pages/About/Selectaddress/Selectaddress.wxml-->
 <view class="top ">
   <view class="flex-ali " bindtap="onChangeAddress" >
-    <text class="city" >长沙</text>
+    <!-- <text class="city" >长沙</text> -->
     <image src="./../../../assets/static/ic_arrowDown.png" style="margin-left:20rpx;width:20rpx;height:12rpx;"></image>
     <text class="line" ></text>
     <input type="text" class="flex1" disabled="{{true}}" placeholder-class="pla" value="{{adata.address}}" placeholder="输入您的位置"></input>
