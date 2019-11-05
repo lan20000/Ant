@@ -8,12 +8,14 @@
       <view class="header_top ">
         <view class="flex">
           <view class="flex1 flex-col">
-            <text class="login" bindtap="blank" data-index="/userStart/login/login">{{ulogin ? userdata.userNickname : '点击登录'}}</text>
+            <!-- <text class="login" bindtap="blank" data-index="/userStart/login/login">{{ulogin ? userdata.userNickname : '点击登录'}}</text> -->
+            <open-data type="userNickName" class="login" ></open-data>
             <text class="card_type" wx:if="{{utype==2}}">独角兽卡</text>
             <text class="time_end" wx:if="{{utype==2}}"></text>
           </view>
-          <image class="user_head" src="{{userdata.userAvatar==null ? 'https://img2.woyaogexing.com/2019/11/04/9c0d35d66e384ba882891ba69ec078c1!400x400.jpeg' : userdata.userAvatar}}" wx:if="ulogin"></image>
-          <view class="user_head" wx:if="{{!ulogin}}">
+          <!-- <image class="user_head" src="{{userdata.userAvatar==null ? 'https://img2.woyaogexing.com/2019/11/04/9c0d35d66e384ba882891ba69ec078c1!400x400.jpeg' : userdata.userAvatar}}" wx:if="ulogin"></image> -->
+          <!-- wx:if="{{!ulogin}}" -->
+          <view class="user_head">
             <open-data type="userAvatarUrl"></open-data>
           </view>
         </view>
@@ -96,17 +98,17 @@
       </view>
       <view class="meun_list flex-cen-col flex1">
         <image src="./../../../assets/static/ic_credit.png" bindtap="blank" data-index="myintegral/myintegral"></image>
-        <text bindtap="blank" data-index="myintegral/myintegral" >我的积分</text>
+        <text bindtap="blank" data-index="myintegral/myintegral">我的积分</text>
       </view>
       <view class="meun_list flex-cen-col flex1">
-        <image src="./../../../assets/static/ic_invite.png"  bindtap="blank" data-index="invitation/invitation"></image>
-        <text bindtap="blank" data-index="invitation/invitation" >邀请好友</text>
+        <image src="./../../../assets/static/ic_invite.png" bindtap="blank" data-index="invitation/invitation"></image>
+        <text bindtap="blank" data-index="invitation/invitation">邀请好友</text>
       </view>
     </view>
     <view class="flex-ali">
       <view class="meun_list flex-cen-col flex1">
         <image src="./../../../assets/static/ic_cardChange.png" bindtap="blank" data-index="couponlist/couponlist"></image>
-        <text bindtap="blank" data-index="couponlist/couponlist" >卡券兑换</text>
+        <text bindtap="blank" data-index="couponlist/couponlist">卡券兑换</text>
       </view>
       <view class="meun_list flex-cen-col flex1"></view>
       <view class="meun_list flex-cen-col flex1"></view>
