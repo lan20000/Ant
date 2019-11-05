@@ -718,6 +718,13 @@
 					"id": -1,
 					"name": "pages/About/Aboutclass/Aboutclass",
 					"pathName": "pages/About/Aboutclass/Aboutclass",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userStart/bindingPhone/bindingPhone",
+					"pathName": "pages/userStart/bindingPhone/bindingPhone",
 					"scene": null
 				}
 			]

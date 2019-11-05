@@ -81,6 +81,7 @@ Page({
       if (res.data.Code == 200) {
         _this.setData({ coursedata: res.data.Data, 'starOption.score': res.data.Data.teacherScore});
         for (var x in res.data.Data.classProgress) {
+          console.log(res.data.Data.classProgress[x].status)
           if (res.data.Data.classProgress[x].status==2){
             _this.setData({ 'tcourese.data': res.data.Data.classProgress[x],'tcourese.index':x})
             return;
