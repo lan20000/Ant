@@ -59,7 +59,7 @@ Page({
     }).then((res) => {
       console.log(res)
       if (res.data.Code == 200) {
-        this.setData({ code: res.data.Data.verifyCode });
+        this.setData({ code: res.data.Data });
       } else {
         tool.alert('获取失败');
       }

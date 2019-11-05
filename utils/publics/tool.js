@@ -158,7 +158,7 @@ const canvasImg = (options, callback) => {
 //获取定位
 const getPosition = () => {
   return new Promise((resolve, reject) => {
-    let qqmapsdk = new QQMapWX({ key: 'GW3BZ-NMN6J-JSEFT-FTC6R-F7DA3-Z3FVJ' })
+    let qqmapsdk = new QQMapWX({ key: '7L6BZ-DBDKG-JW2QT-IWFPA-I5LQQ-75FNY' })
     qqmapsdk.reverseGeocoder({
       success: res => {//成功后的回调
         resolve(res)
