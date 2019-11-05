@@ -65,9 +65,9 @@
     <view class="flex">
       <view class="video_img" style="background-image: url({{coursedata.courseImage[tcourese.index]}});"> </view>
       <view class="video_list flex1">
-        <text>{{tcourese.className}}</text>
+        <text>{{tcourese.data.className}}</text>
         <view class="flex-ali">
-          <image src="{{coursedata.courseImage}}" style="width:24rpx;height:24rpx;margin-right:16rpx;"></image>
+          <image src="./../../../assets/static/ic_time.png" style="width:24rpx;height:24rpx;margin-right:16rpx;"></image>
           <text></text>
         </view>
       </view>

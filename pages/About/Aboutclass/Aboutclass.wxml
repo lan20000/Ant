@@ -67,13 +67,13 @@
     <!--老师选择-->
     <navigator wx:if="{{tabtype==1}}" url="/pages/About/Chooseteacher/Chooseteacher?storeid={{storeadd[0].storeId}}" hover-class="navigator-hover">
       <view class="teacher flex-ali  ">
-        <image class="" src="{{teacherdata[0].teachers[0].teacherAvatar}}"></image>
+        <image class="" src="{{teacherdata[0].teacherAvatar}}"></image>
         <view class="flex-col flex1">
           <view class="flex-ali">
-            <text class="name">{{teacherdata[0].teachers[0].teacherName}}</text>
-            <text class="price">U</text>
+            <text class="name">{{teacherdata[0].teacherName}}</text>
+            <text class="price">{{teacherdata[0].coursePrice}} U</text>
           </view>
-          <text class="type">{{teacherdata[0].teachers[0].teacherContent}}</text>
+          <text class="type">{{teacherdata[0].teacherContent}}</text>
         </view>
         <image src="./../../../assets/static/ic_arrowRight.png" style="width:15rpx;height:24rpx;margin-right: 0rpx;"></image>
       </view>

@@ -49,6 +49,8 @@ const uDetail = (data, url = 'User/GetUserDetail') => { return myRequest(data, u
 const getCoupons = (data, url = 'Coupon/GetCoupons') => { return myRequest(data, url, 'get') }
 // 兑换卡券 Post
 const exCoupon = (data, url = 'Coupon/ExchangeCoupon') => { return myRequest(data, url) }
+//使用卡券 
+const useCoupon = (data, url = 'Coupon/UseCoupon') => { return myRequest(data, url) }
 
 /**
  * 约课
@@ -64,7 +66,7 @@ const cancelCourse = (data, url = 'Course/CancelCourse') => { return myRequest(d
 //通过老师获取某天排课列表
 const teacherlesson = (data, url = 'Course/GetCoursePlanByTeacher') => { return myRequest(data, url, 'get') }
 //获取老师
-const teachercourse = (data, url = 'Course/GetRecommendTeachers') => { return myRequest(data, url, 'get') }
+const teachercourse = (data, url = 'Teacher/GetRecommendTeachers') => { return myRequest(data, url, 'get') }
 //获取所有老师
 const allTeacher = (data, url = 'Course/GetAllTeacher') => { return myRequest(data, url, 'get') }
 

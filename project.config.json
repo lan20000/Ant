@@ -690,6 +690,41 @@
 					"id": -1,
 					"name": "pages/About/Chooseteacher/Chooseteacher",
 					"pathName": "pages/About/Chooseteacher/Chooseteacher",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/index/index",
+					"pathName": "pages/usercenter/logistics/logistics",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/couponlist/couponlist",
+					"pathName": "pages/usercenter/couponlist/couponlist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/Cardexchange/Cardexchange",
+					"pathName": "pages/usercenter/Cardexchange/Cardexchange",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Aboutclass/Aboutclass",
+					"pathName": "pages/About/Aboutclass/Aboutclass",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userStart/bindingPhone/bindingPhone",
+					"pathName": "pages/userStart/bindingPhone/bindingPhone",
 					"scene": null
 				}
 			]

@@ -14,7 +14,8 @@ Page({
     isinput:false,
     phone: null,
     code: null,
-    ucode:null
+    ucode:null,
+    invitation:null
   },
   login(){
     if(this.data.code==null){
@@ -31,7 +32,8 @@ Page({
     // }
     api.getOpenid({
       phone: this.data.phone,
-      verifyCode: this.data.ucode
+      verifyCode: this.data.ucode,
+      invitation:''
     }).then((res) => {
       console.log()
       if (res.data.Code == 200) {
@@ -66,6 +68,10 @@ Page({
   oninput(e) {
     if (e.target.dataset.value=='code'){
       this.setData({ ucode: e.detail.value});
+      return;
+    }
+    if (e.target.dataset.value == 'invitation') {
+      this.setData({ invitation: e.detail.value });
       return;
     }
     this.setData({ phone: e.detail.value });

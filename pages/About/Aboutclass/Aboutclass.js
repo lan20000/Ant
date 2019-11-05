@@ -45,9 +45,8 @@ Page({
     tool.loading("正在加载中")
     let _this = this;
     api.teacherlesson({
-      storeId: this.data.storeadd[0].storeId,
       time: this.data.storet[this.data.tab].courseTime,
-      teacherId: this.data.teacherdata[0].teachers[0].teacherId
+      teacherId: this.data.teacherdata[0].teacherId
     }).then((res) => {
       console.log(res)
       tool.loading_h();
@@ -67,14 +66,13 @@ Page({
     tool.loading("正在加载中")
     let _this = this;
     api.teachercourse({
-      storeId: this.data.storeadd[0].storeId
+      // storeId: this.data.storeadd[0].storeId
     }).then((res) => {
       console.log(res)
       tool.loading_h();
       if (res.data.Code == 200) {
         _this.setData({ teacherdata: res.data.Data });
         console.log(_this.data.teacherdata);
-        console.log(_this.data.teacherdata[0].teachers)
         _this.teacherlesson();
       } else {
         tool.alert('获取店铺列表失败');
@@ -265,8 +263,6 @@ Page({
       let _address_component = res.result.address_component
       console.log("经度---->", res.result.location.lng)
       console.log("纬度---->", res.result.location.lat)
-
-
       // latitude: null,
       // longitude: null
       console.log("省---->", _address_component.province)
