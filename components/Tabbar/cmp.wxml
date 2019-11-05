@@ -3,7 +3,7 @@
 <view class="footer {{ isIponeX ? 'iPhone' : '' }}">
     <view class="tabbar {{ isIponeX ? 'iPhone' : '' }}">
         <view wx:for="{{tabbarList}}" data-item="item" wx:for-index="idx" class="tabbar_item {{currentIndex == idx ? 'active' : ''}}" data-index="{{idx}}" bindtap="switchBtn">
-            <image src="./../../assets/iconfont/{{currentIndex == idx ? item.icon+'sel' : item.icon+'nor'}}.png" style="width:41rpx;height:40rpx;"></image>
+            <image src="./../../assets/iconfont/{{currentIndex == idx ? item.icon+'sel' : item.icon+'nor'}}.png" style="width:60rpx;height:60rpx;"></image>
             <text>{{item.text}}</text>
         </view>
     </view>
