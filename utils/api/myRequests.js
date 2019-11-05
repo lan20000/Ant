@@ -49,6 +49,8 @@ const uDetail = (data, url = 'User/GetUserDetail') => { return myRequest(data, u
 const getCoupons = (data, url = 'Coupon/GetCoupons') => { return myRequest(data, url, 'get') }
 // 兑换卡券 Post
 const exCoupon = (data, url = 'Coupon/ExchangeCoupon') => { return myRequest(data, url) }
+//使用卡券 
+const useCoupon = (data, url = 'Coupon/UseCoupon') => { return myRequest(data, url) }
 
 /**
  * 约课

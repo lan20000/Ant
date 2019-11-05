@@ -9,7 +9,7 @@ Page({
    */
   data: {
     listdata:[],
-    text: ['未使用','已使用','已过期']
+    text: ['未使用','已使用','已过期','已失效']
   },
   getlist() {
     if (app.globalData.udata.userId == null) {
@@ -30,11 +30,43 @@ Page({
       }
     })
   },
+  useCoupons(e){
+    if (e.currentTarget.dataset.type == 1){
+      return;
+    }
+    if (e.currentTarget.dataset.ticketId == undefined) {
+      tool.alert('参数缺失');
+      return;
+    }
+    let _this = this;
+    wx.showModal({
+      title: '提示',
+      content: '是否确定使用该卷？',
+      success(res) {
+        if (res.confirm) {
+          api.useCoupon({
+            ticketId: e.currentTarget.dataset.ticketId
+          }).then((res) => {
+            tool.loading_h();
+            console.log(res)
+            if (res.data.Code == 200) {
+              _this.getlist();
+              tool.alert('使用成功');
+            } else {
+              tool.alert('使用失败');
+            }
+          });
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getlist();
+    
   },
 
   /**
@@ -48,7 +80,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getlist();
   },
 
   /**

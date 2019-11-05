@@ -11,6 +11,34 @@ Page({
     carddat: null,
     code: null
   },
+  useCoupons(e) {
+    if (this.data.carddat.ticketId==undefined){
+      tool.alert('参数有误');
+      return;
+    }
+    let _this = this;
+    wx.showModal({
+      title: '提示',
+      content: '是否确定使用该卷？',
+      success(res) {
+        if (res.confirm) {
+          api.useCoupon({
+            ticketId: this.data.carddat.ticketId
+          }).then((res) => {
+            tool.loading_h();
+            if (res.data.Code == 200) {
+              tool.alert('使用成功');
+              _this.setData({ code: '', carddat:null });
+            } else {
+              tool.alert('使用失败');
+            }
+          });
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
   oninput(e) {
     this.setData({ code: e.detail.value })
   },
@@ -36,7 +64,8 @@ Page({
           tool.alert('兑换码错误');
           return;
         }
-        _this.setData({ carddat: res.data.Data })
+        _this.setData({ carddat: res.data.Data });
+        console.log(_this.data.carddat)
       } else {
         tool.alert('查询失败');
       }
