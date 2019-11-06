@@ -31,10 +31,11 @@ Page({
     })
   },
   useCoupons(e){
+    console.log(e)
     if (e.currentTarget.dataset.type == 1){
       return;
     }
-    if (e.currentTarget.dataset.ticketId == undefined) {
+    if (e.currentTarget.dataset.ticketid == undefined) {
       tool.alert('参数缺失');
       return;
     }
@@ -45,7 +46,7 @@ Page({
       success(res) {
         if (res.confirm) {
           api.useCoupon({
-            ticketId: e.currentTarget.dataset.ticketId
+            ticketId: e.currentTarget.dataset.ticketid
           }).then((res) => {
             tool.loading_h();
             console.log(res)

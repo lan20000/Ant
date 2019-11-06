@@ -100,5 +100,6 @@ module.exports = {
   exCoupon,
   getSessionKey,
   teacherlesson,
-  allTeacher
+  allTeacher,
+  useCoupon
 }

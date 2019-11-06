@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/usercenter/index/index",
     "pages/index/index",
     "pages/techPage/techPage",
     "pages/usePage/usePage",
@@ -34,7 +35,6 @@
     "pages/usercenter/Usingrecord/Usingrecord",
     "pages/usercenter/couponlist/couponlist",
     "pages/usercenter/editorAdd/editorAdd",
-    "pages/usercenter/index/index",
     "pages/usercenter/insuccess/insuccess",
     "pages/usercenter/logistics/logistics",
     "pages/usercenter/myintegral/myintegral",

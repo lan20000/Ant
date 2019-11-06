@@ -725,6 +725,13 @@
 					"id": -1,
 					"name": "pages/userStart/bindingPhone/bindingPhone",
 					"pathName": "pages/userStart/bindingPhone/bindingPhone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/couponlist/couponlist",
+					"pathName": "pages/usercenter/couponlist/couponlist",
 					"scene": null
 				}
 			]
