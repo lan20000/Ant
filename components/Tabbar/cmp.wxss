@@ -38,7 +38,7 @@
     color:#1354BB;
 }
 .tabbar .tabbar_item text{
-    font-size:20rpx;
+    font-size:24rpx;
     color:#828183;
 }
 .tabbar .tabbar_item.active text{
