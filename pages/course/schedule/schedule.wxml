@@ -1,7 +1,8 @@
 <!--pages/course/schedule/schedule.wxml-->
 <wxs src="../../../utils/time.wxs" module="tools" />
 <scroll-view>
-  <view class="content">
+  <view class="content {{listdata.length==0 ? 'flex-cen cflex' : ''}}">
+    <text class="ts">没有课程</text>
     <view class="m-top" wx:for="{{listdata}}" wx:for-index="idx" wx:for-item="item" >
       <view class="b_left"></view>
       <view class="score_d flex-ali" style="{{item.status==2 ? 'left:-21rpx' : 'left:-15rpx'}};">

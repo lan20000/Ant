@@ -25,7 +25,7 @@
       <view class="cards onpay flex-ali">
         <image src="./../../../assets/static/pic_ineffective.png" style="margin-right:39rpx;"></image>
         <view class="flex-col cards_content flex1">
-          <text>免费体验卡</text>
+          <text>蓝巫师卡</text>
           <text>剩余100U点</text>
         </view>
         <text class="hot flex-cen">U点不足</text>
