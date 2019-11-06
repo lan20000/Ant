@@ -69,7 +69,8 @@ const teacherlesson = (data, url = 'Course/GetCoursePlanByTeacher') => { return 
 const teachercourse = (data, url = 'Teacher/GetRecommendTeachers') => { return myRequest(data, url, 'get') }
 //获取所有老师
 const allTeacher = (data, url = 'Course/GetAllTeacher') => { return myRequest(data, url, 'get') }
-
+//获取所有老师
+const recommendshop = (data, url = 'Store/GetRecommendStores') => { return myRequest(data, url, 'get') }
 
 /**
  * 课表
@@ -101,5 +102,6 @@ module.exports = {
   getSessionKey,
   teacherlesson,
   allTeacher,
-  useCoupon
+  useCoupon,
+  recommendshop
 }

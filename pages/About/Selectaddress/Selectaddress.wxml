@@ -31,8 +31,8 @@
       <view class="flex-col">
         <text wx:if="{{near==null}}" >附近的店</text>
         <text wx:if="{{near==null}}" >请选择地址</text>
-        <text wx:if="{{near!=null}}" >{{near}}</text>
-        <text wx:if="{{near!=null}}" >附近可约课门店为河西王府井店</text>
+        <text wx:if="{{near!=null}}" >{{near[0].storeAddress}}</text>
+        <text wx:if="{{near!=null}}" >附近可约课门店为{{near[0].storeName}}</text>
       </view>
     </view>
     <view class="footer flex-cen theme" bindtap="blank" >马上约课</view>

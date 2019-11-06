@@ -32,8 +32,7 @@ Page({
     }
     tool.loading();
     let _this = this;
-    api.uDetail({
-      userId: app.globalData.udata.userId,
+    api.recommendshop({
       longitude: this.data.adata.longitude,
       latitude: this.data.adata.latitude
     }).then((res) => {

@@ -732,6 +732,20 @@
 					"id": -1,
 					"name": "pages/usercenter/couponlist/couponlist",
 					"pathName": "pages/usercenter/couponlist/couponlist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Selectaddress/Selectaddress",
+					"pathName": "pages/About/Selectaddress/Selectaddress",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Aboutclass/Aboutclass",
+					"pathName": "pages/About/Aboutclass/Aboutclass",
 					"scene": null
 				}
 			]
