@@ -26,10 +26,11 @@
 </view>
 <view class="bottom">
   <view class="bg">
-    <view class="footer_txt flex-ali">
+    <view class="footer_txt flex-ali" bindtap="onChangeAddress" >
       <view class="round"></view>
       <view class="flex-col">
-        <text wx:if="near==null" >请选择地址</text>
+        <text wx:if="{{near==null}}" >附近的店</text>
+        <text wx:if="{{near==null}}" >请选择地址</text>
         <text wx:if="{{near!=null}}" >{{near}}</text>
         <text wx:if="{{near!=null}}" >附近可约课门店为河西王府井店</text>
       </view>
