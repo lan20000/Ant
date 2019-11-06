@@ -3,7 +3,7 @@ const router = require('../../utils/tool/router.js');
 
 const method = require('../../utils/tool/method.js');
 
-const app = getApp();
+const app = new getApp();
 Component({
   /**
    * 组件的属性列表
@@ -31,7 +31,7 @@ Component({
     },
     IMGSERVICE:{
       type:String,
-      value:app.globalData.IMGSERVICE
+		value: app.globalData.STATICIMG
     },
   },
 
@@ -41,8 +41,9 @@ Component({
   data: {
     currentIndex:null,
     tabbarList:[],
-    useris:false,
+    useris:true,
     isIponeX:false,
+	IMG: app.globalData.STATICIMG
   },
   attached(){
     this.initData();
@@ -55,6 +56,7 @@ Component({
     // { text: '独角兽', path: '/pages/index/index', icon: 'tab_home_' },
     // { text: '独角兽', path: '/pages/index/index', icon: 'tab_unicorn_' },
     initData(){
+	console.log(this.data.IMG)
       if (this.data.useris) {
 		  this.setData({ tabbarList: [ { text: '上课', path: '/pages/attendClass/attendClass', icon: 'tab_appointCourse_' }, { text: '课表', path: '/pages/course/schedule/schedule', icon: 'tab_classSchedule_' }, { text: '我的', path: '/pages/usercenter/index/index', icon: 'tab_myCenter_' }] });
       } else {
