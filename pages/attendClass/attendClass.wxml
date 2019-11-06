@@ -1,14 +1,14 @@
 <view class="whole">
-	<view class="hander">爵士舞基础课程</view>
+	<view class="hander">{{teachData.courseTitle}}</view>
 	<view class="secendbox">
-		<text class="txt1">《韩舞no baby》3/4节</text>
-		<text class="txt2">2019-11-23 20:00</text>
-		<view class="attendBox">
+		<text class="txt1">{{teachData.courseName}}</text>
+		<text class="txt2">{{teachData.courseTime}}</text>
+		<view class="attendBox" bindtap="sweepYard">
 			<image mode="widthFix" src="{{STATICIMG}}/ic_scan.png" class="saomiao"></image>
 			<text class="txt3">上课考勤</text>
 		</view>
-		<view class="time">00：22：32</view>
-		<view class="beginClass">开始上课</view>
+		<view class="time">{{classTime}}</view>
+		<view class="beginClass" bindtap="beginClass">{{isstart?'结束课程':'开始上课'}}</view>
 	</view>
 	<view class="tabsBox">
 		<view class="leftTab {{currTab==1?'active':''}}" bindtap="changeTabs" data-tab="1">课程内容</view>
@@ -26,8 +26,8 @@
 			</text>
 			</view>
 	</view>
-	<view class="study">
-		<view class="studylist" wx:for="{{10}}">
+	<view class="study" wx:if="{{currTab==2}}">
+		<view class="studylist" wx:for="{{Student}}">
 			<view class="leftInfo">
 				<view class="l_img" style="background-image:url({{STATICIMG}}/test.jpg)"></view>
 				<view class="r_info">
@@ -38,8 +38,8 @@
 			<view class="rightInfo">缺勤</view>
 		</view>
 	</view>
-	<!-- 学员签到弹窗 -->
-	<view class="siginPop theme" wx:if="{{false}}">
+	<!-- 老师签到弹窗 -->
+	<view class="siginPop" wx:if="{{false}}">
 		<view class="popDel">
 			<image mode="widthFix" src="{{STATICIMG}}/test.jpg" class="s_img"></image>
 			<text class="s_txt1">学员名字</text>

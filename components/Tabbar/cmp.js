@@ -41,7 +41,7 @@ Component({
   data: {
     currentIndex:null,
     tabbarList:[],
-    useris:false,
+    useris:true,
     isIponeX:false,
   },
   attached(){

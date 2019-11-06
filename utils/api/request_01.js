@@ -51,10 +51,30 @@ const getOpenid = (data = {}) => { //查询用户信息
 	let url = `${BASEURL}/Login/GetSessionKey`
 	return _requst.getP(url, data, tokenkey);
 }
-const WXpay = (data = {}) => { //查询用户信息
+const WXpay = (data = {}) => { //支付
 	tokenkey = app.globalData.token || wx.getStorageSync("token");
 	let url = `${PAYBASE}/order/create`
 	return _requst.postP(url, data, tokenkey);
+}
+const TodayCours = (data = {}) => { //查询老师今天的课程
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
+	let url = `${BASEURL}/Course/GetTodayCoursesForTeacher`
+	return _requst.getP(url, data, tokenkey);
+}
+const startClass = (data = {}) => { //开始上课
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
+	let url = `${BASEURL}/Course/StartCourse`
+	return _requst.getP(url, data, tokenkey);
+}
+const endClass = (data = {}) => { //开始上课
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
+	let url = `${BASEURL}/Course/EndCourse`
+	return _requst.getP(url, data, tokenkey);
+}
+const GetStudents = (data = {}) => { //开始上课
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
+	let url = `${BASEURL}/Course/GetStudents`
+	return _requst.getP(url, data, tokenkey);
 }
 module.exports = {
 	videoList,
@@ -66,4 +86,8 @@ module.exports = {
 	getUseinfo,
 	getOpenid,
 	WXpay,
+	TodayCours,
+	startClass,
+	endClass,
+	GetStudents,
 }
