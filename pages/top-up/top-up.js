@@ -117,10 +117,17 @@ Page({
 				}
 			})
 		}else if(this.data.price>0){
+			let dat0 = {
+				tokenId: this.data.pid,
+				type:1
+			}
+			request_01.GetChargeNum(dat0).then((res) => {
+				console.log(res);
 			let dat = {
 				OpenID:this.data.openid,
-				TotalFee: this.data.price,
-				Body:"mgud"
+				TotalFee:this.data.price,
+				Body:"mgud",
+				OutTradeNo: res.data.Data.num
 			}
 			request_01.WXpay(dat).then((res)=>{
 				// console.log(res.data);
@@ -156,6 +163,7 @@ Page({
 				}
 				
 			})
+			})
 			console.log("微信支付")
 			// tool.jump_nav("/pages/usercenter/Paysuccess/Paysuccess")
 		} else if (this.data.price==null){
@@ -188,6 +196,10 @@ Page({
 				})
 			}
 		})
+	},
+	GetChargeNum(){
+		
+		
 	}
 	/**
 	 * 用户点击右上角分享

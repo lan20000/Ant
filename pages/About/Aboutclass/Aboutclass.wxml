@@ -69,7 +69,7 @@
     <!--老师选择-->
     <navigator wx:if="{{tabtype==1}}" url="/pages/About/Chooseteacher/Chooseteacher?storeid={{storeadd[0].storeId}}" hover-class="navigator-hover">
       <view class="teacher flex-ali  ">
-        <image class="" src="{{teacherdata.teacherAvatar}}"></image>
+        <image class="" src="{{teacherdata.teacherAvatar}}" catchtap="goteachpage"></image>
         <view class="flex-col flex1">
           <view class="flex-ali">
             <text class="name">{{teacherdata.teacherName}}</text>

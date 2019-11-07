@@ -1,6 +1,6 @@
 // pages/techPage/techPage.js
 const route = require("../../utils/tool/router.js");
-
+const request_01 = require("../../utils/api/request_01.js");
 const app = new getApp();
 Page({
 
@@ -30,7 +30,7 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
-
+		this.getTeach()
 	},
 
 	/**
@@ -71,5 +71,13 @@ Page({
 		let tab = e.currentTarget.dataset.tab;
 		this.setData({ currtab: tab })
 		console.log(e.currentTarget.dataset.tab);
+	},
+	getTeach(){
+		let dat = {
+			userId:"afdasfwewew"
+		}
+		request_01.getTeach(dat).then((res)=>{
+			console.log(res);
+		})
 	}
 })

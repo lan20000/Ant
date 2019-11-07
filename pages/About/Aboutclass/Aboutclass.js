@@ -333,5 +333,10 @@ Page({
     let _showModalOption = this.data.showModalOption
     _showModalOption.isShow = !_showModalOption.isShow
     this.setData({ showModalOption: _showModalOption })
-  }
+  },
+	goteachpage(){
+		wx.navigateTo({
+			url: '/pages/techPage/techPage',
+		})
+	}
 })

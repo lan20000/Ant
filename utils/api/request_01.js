@@ -76,9 +76,19 @@ const GetStudents = (data = {}) => { //获取学生列表
 	let url = `${BASEURL}/Course/GetStudents`
 	return _requst.getP(url, data, tokenkey);
 }
-const comYuyue = (data = {}) => { //获取学生列表
+// const comYuyue = (data = {}) => { //获取学生列表
+// 	tokenkey = app.globalData.token || wx.getStorageSync("token");
+// 	let url = `${BASEURL}/Course/OrderCourse`
+// 	return _requst.getP(url, data, tokenkey);
+// }
+const GetChargeNum = (data = {}) => { //获取交易流水
 	tokenkey = app.globalData.token || wx.getStorageSync("token");
-	let url = `${BASEURL}/Course/OrderCourse`
+	let url = `${BASEURL}/UDot/GetChargeNum`
+	return _requst.getP(url, data, tokenkey);
+}
+const getTeach = (data = {}) => { //获取老师主页
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
+	let url = `${BASEURL}/Teacher/GetTeacherBasicInfo`
 	return _requst.getP(url, data, tokenkey);
 }
 module.exports = {
@@ -95,5 +105,7 @@ module.exports = {
 	startClass,
 	endClass,
 	GetStudents,
-	comYuyue,
+	// comYuyue,
+	GetChargeNum,
+	getTeach,
 }
