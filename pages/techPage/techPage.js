@@ -14,9 +14,11 @@ Page({
 		teachid:null,
 		worksData:null,
 		page:1,
-		page1:2,
+		page1:1,
 		fllowData:[],//关注列表
 		FenNum:[],//粉丝列表
+		hasData:false,
+		hasData2: false,
 	},
 
 	/**
@@ -38,6 +40,7 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
+		this.setData({page:1,page1:1,});
 		this.getTeach();
 		this.GetFollow();
 		this.GetFans();
@@ -68,7 +71,15 @@ Page({
 	 * 页面上拉触底事件的处理函数
 	 */
 	onReachBottom: function () {
-
+		if (this.data.currtab == 2 && this.data.hasData) {
+			this.setData({ page: ++this.data.page })
+			this.GetFans();
+		}
+		if (this.data.currtab == 3 && this.data.hasData2){
+			this.setData({ page1: ++this.data.page })
+			this.guanzhu();
+		}
+		
 	},
 
 	/**
@@ -118,9 +129,13 @@ Page({
 			pageSize:10,
 			pageIndex: this.data.page
 		}
+		let arr = this.data.fllowData;
 		request_01.GetFollow(dat).then((res)=>{
-			if(res.data.Code=='200')
-			this.setData({ fllowData:res.data.Data})
+			if (res.data.Code == '200' && res.data.Data.length>0){
+				arr = arr.concat(res.data.Data);
+				this.setData({ fllowData: res.data.Data, hasData: res.data.Data.length > 0 })
+			}
+			
 		})
 	},
 	GetFans(){//获取用户粉丝
@@ -129,9 +144,13 @@ Page({
 			pageSize:10,
 			pageIndex: this.data.page1	
 		}
+		let arr = this.data.FenNum;
 		request_01.GetFans(dat).then((res)=>{
-			if(res.data.Code=="200")
-				this.setData({ FenNum:res.data.Data})
+			if (res.data.Code == "200" && res.data.Data.length > 0){
+				arr = arr.concat(res.data.Data);
+				this.setData({ FenNum: arr, hasData2: res.data.Data.length > 0 })
+			}
+			
 		})
 	}
 })
