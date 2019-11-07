@@ -1,21 +1,23 @@
 
 function formatTime(date, types, index) {
-  if (types === 's') {
-    date = getDate(date * 1000);
-  } else if (types === 'ms') {
-    date = getDate(date);
-  }
+  // if (types === 's') {
+  //   date = getDate(date * 1000);
+  // } else if (types === 'ms') {
+    date = getDate(date*1000);
+  // }
   console.log(date)
   if (index == 0) {
     return "今天";
   } else if (index == 1) {
     return "明天";
   } else {
-    return (date.getMonth() + 1) + '月' + date.getDate() + '日';
+    console.log(date)
+    console.log("getDay", date.getMonth())
+    return (date.getMonth() + 1) + '月' + date.getDay() + '日';
   }
 }
 function newdate(date) {
-  return getDate(date).getHours() + ':' + getDate(date).getMinutes();
+  return getDate().getHours() + ':' + getDate(date).getMinutes();
 }
 module.exports = {
   time: newdate,
