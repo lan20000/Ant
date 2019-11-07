@@ -13,15 +13,16 @@ Page({
     second: 60,
     blank: 0,
     code: null,
-    ucode: ['','','',''],
+    ucode: ['', '', '', ''],
     phone: null,
     cid: null
   },
   aboutclass() {
-    if (this.data.ucode[3]==''){
+    if (this.data.ucode[3] == '') {
       tool.alert("请输入验证码");
       return;
     }
+    var _this = this;
     api.checkPhoneCode({
       phone: this.data.phone,
       verifyCode: this.data.ucode,
@@ -30,10 +31,10 @@ Page({
       if (res.data.Code == 200) {
         tool.loading();
         api.orderCourse({
-          courseSectionId: this.data.cid,
+          courseSectionId: _this.data.cid,
           userId: app.globalData.udata.userId,
           phone: app.globalData.udata.phone,
-          verifyCode: this.data.ucode.join(''),
+          verifyCode: _this.data.ucode.join(''),
         }).then((res) => {
           console.log(res)
           tool.loading_h();
@@ -102,7 +103,7 @@ Page({
     console.log(e.target.dataset.index)
     if (e.target.dataset.index == 3 && e.detail.value != '') {
       this.data.ucode[e.target.dataset.index] = e.detail.value;
-      this.setData({ indexnum: 3, ucode: this.data.ucode});
+      this.setData({ indexnum: 3, ucode: this.data.ucode });
       console.log('输入完成')
       return;
     }
@@ -115,7 +116,7 @@ Page({
       return;
     }
     this.data.ucode[e.target.dataset.index] = e.detail.value;
-    this.setData({ indexnum: e.target.dataset.index + 1, ucode: this.data.ucode});
+    this.setData({ indexnum: e.target.dataset.index + 1, ucode: this.data.ucode });
   },
   /**
    * 生命周期函数--监听页面加载
