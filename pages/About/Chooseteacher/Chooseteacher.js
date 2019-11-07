@@ -15,9 +15,19 @@ Page({
       tool.alert('参数缺失');
       return;
     }
-    wx.redirectTo({
-      url: '/pages/About/Aboutclass/Aboutclass?&idata=' + JSON.stringify(e.currentTarget.dataset.idata)
+    // wx.redirectTo({
+    //   url: '/pages/About/Aboutclass/Aboutclass?&idata=' + JSON.stringify(e.currentTarget.dataset.idata)
+    // });
+    let pages = getCurrentPages();
+    let prevPage = pages[pages.length - 2];
+    prevPage.setData({
+      idata: JSON.stringify(e.currentTarget.dataset.idata)
     });
+    setTimeout(() => {
+      wx.navigateBack({
+        delta: 1 //想要返回的层级
+      })
+    }, 500);
   },
   getlist(id) {
     // console.log(app.globalData.udata.userId)

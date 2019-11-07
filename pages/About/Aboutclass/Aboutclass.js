@@ -265,25 +265,46 @@ Page({
       isShowLoading: !this.data.isShowLoading
     })
   },
+  jump(e){
+    console.log(e)
+    if (e.currentTarget.dataset.url==undefined){
+      return;
+    }
+    wx.navigateTo({
+      url: e.currentTarget.dataset.url
+    })
+  },
   /**
-   * 生命周期函数--监听页面加载
+   * 生命周期函数--监听页面显示
    */
-  onLoad: function (options) {
+  onShow: function () {
     this.setData({ useris: app.globalData.footertab });
-    console.log(options)
+    console.log('=============================================')
+    var pages = getCurrentPages();
+    var currPage = pages[pages.length - 1];
+    var idata = currPage.data.idata;
+    console.log(idata)
+    console.log('=============================================')
     //选择地理位置
-    if (options.lat!=undefined){
-      this.setData({ latitude: options.lat, longitude: options.lon });
+    if (idata==undefined){return;}
+    if (JSON.parse(idata).lat != undefined) {
+      this.setData({ latitude: JSON.parse(idata).lat, longitude: JSON.parse(idata).lon });
       this.recommendshop();
       console.log('地图选课')
       return;
     }
     //选择老师ID
-    if (options.idata != undefined) {
-      this.setData({ teacherid: JSON.parse(options.idata).userId, tabtype: 1, teacherdata: JSON.parse(options.idata)});
+    if (idata != undefined) {
+      this.setData({ teacherid: JSON.parse(idata).userId, tabtype: 1, teacherdata: JSON.parse(idata) });
       this.getPosition(1);
       return;
     }
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    console.log('约课列表');
     if (app.globalData.ulogin) {
       this.getPosition()
     }

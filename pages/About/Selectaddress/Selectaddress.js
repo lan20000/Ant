@@ -15,9 +15,19 @@ Page({
   blank(){
     console.log(this.data.adata)
     if (this.data.adata.longitude != undefined && this.data.adata.latitude != undefined) {
-      wx.redirectTo({
-        url: '/pages/About/Aboutclass/Aboutclass?lat=' + this.data.adata.latitude + "&lon=" + this.data.adata.longitude
+      // wx.redirectTo({
+      //   url: '/pages/About/Aboutclass/Aboutclass?lat=' + this.data.adata.latitude + "&lon=" + this.data.adata.longitude
+      // });
+      let pages = getCurrentPages();
+      let prevPage = pages[pages.length - 2];
+      prevPage.setData({
+        idata: JSON.stringify({ lat: this.data.adata.latitude, lon:this.data.adata.longitude})
       });
+      setTimeout(() => {
+        wx.navigateBack({
+          delta: 1 //想要返回的层级
+        })
+      }, 500);
       return;
     }
     tool.alert('请选择地址');

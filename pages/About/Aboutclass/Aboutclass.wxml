@@ -97,21 +97,21 @@
       </view>
       <button class="pre theme">100U点预约</button>
     </view> -->
-    <navigator  wx:for="{{storedata}}" wx:for-index="idx" wx:for-item="ditem" url="/pages/course/Coursedetails/Coursedetails?id={{ditem.courseId}}&storeId={{ditem.storeId}}"hover-class="navigator-hover">
-      <view class="card flex">
-        <image src="{{ditem.courseImage}}"></image>
-        <view class="flex-col">
-          <text class="title">{{tools.time(ditem.startTime)}} - {{tools.time(ditem.endTime)}} {{ditem.courseName}}课程</text>
-          <text class="name">老师：{{ditem.teacherName}}</text>
-          <view class="flex-ali">
-            <text class="satuts flex1 this theme_txt" wx:if="{{ditem.states!=1}}">差 {{ditem.maxCount-ditem.currentCount}} 人约满</text>
-            <text class="satuts flex1" wx:if="{{ditem.states==1}}">已约满</text>
-            <button class="pre flex-cen {{ditem.states==0 ? 'theme' : ''}}" bindtap="pay" data-index="{{ditem}}" wx:if="{{ditem.states==0}}">{{ditem.coursePrice}}U点预约</button>
-          </view>
+    <!-- <navigator  wx:for="{{storedata}}" wx:for-index="idx" wx:for-item="ditem" url="/pages/course/Coursedetails/Coursedetails?id={{ditem.courseId}}&storeId={{ditem.storeId}}"hover-class="navigator-hover"> -->
+    <view class="card flex" catchtap="jump" data-url="/pages/course/Coursedetails/Coursedetails?id={{ditem.courseId}}&storeId={{ditem.storeId}}" wx:for="{{storedata}}" wx:for-index="idx" wx:for-item="ditem" >
+      <image src="{{ditem.courseImage}}"></image>
+      <view class="flex-col">
+        <text class="title">{{tools.time(ditem.startTime)}} - {{tools.time(ditem.endTime)}} {{ditem.courseName}}课程</text>
+        <text class="name">老师：{{ditem.teacherName}}</text>
+        <view class="flex-ali">
+          <text class="satuts flex1 this theme_txt" wx:if="{{ditem.states!=1}}">差 {{ditem.maxCount-ditem.currentCount}} 人约满</text>
+          <text class="satuts flex1" wx:if="{{ditem.states==1}}">已约满</text>
+          <button class="pre flex-cen {{ditem.states==0 ? 'theme' : ''}}" catchtap="pay" data-index="{{ditem}}" wx:if="{{ditem.states==0}}">{{ditem.coursePrice}}U点预约</button>
         </view>
-
       </view>
-    </navigator>
+
+    </view>
+    <!-- </navigator> -->
     <view class=" " style="height:400rpx;">
 
     </view>
