@@ -357,7 +357,7 @@ Page({
   },
 	goteachpage(){
 		wx.navigateTo({
-			url: '/pages/techPage/techPage',
+      url: '/pages/techPage/techPage?userId=' + this.data.teacherdata.userId,
 		})
 	}
 })

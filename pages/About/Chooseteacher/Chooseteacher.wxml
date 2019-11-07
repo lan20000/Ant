@@ -4,8 +4,8 @@
 
     <text class="shop_name">{{item.storeName}}</text>
 
-    <view class="teacher flex-ali tab-nav-item tab-active" bindtap="bank" data-idata="{{item}}" >
-      <navigator url="/pages/usePage/usePage?storeid={{storeadd[0].storeId}}" hover-class="navigator-hover">
+    <view class="teacher flex-ali tab-nav-item tab-active" catchtap="bank" data-idata="{{item}}" >
+      <navigator url="/pages/usePage/usePage?userId={{item.userId}}" hover-class="navigator-hover">
         <image class="" src="{{item.teacherAvatar}}"></image>
       </navigator>
       <view class="flex-col flex1">
