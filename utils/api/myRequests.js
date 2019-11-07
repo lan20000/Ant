@@ -68,9 +68,13 @@ const teacherlesson = (data, url = 'Course/GetCoursePlanByTeacher') => { return 
 //获取老师
 const teachercourse = (data, url = 'Teacher/GetRecommendTeachers') => { return myRequest(data, url, 'get') }
 //获取所有老师
-const allTeacher = (data, url = 'Course/GetAllTeacher') => { return myRequest(data, url, 'get') }
-//获取所有老师
+const allTeacher = (data, url = 'Teacher/GetAllTeachers') => { return myRequest(data, url, 'get') }
+//经纬度查询店铺
 const recommendshop = (data, url = 'Store/GetRecommendStores') => { return myRequest(data, url, 'get') }
+//预约课程
+const orderCourse = (data, url = 'Course/OrderCourse') => { return myRequest(data, url, 'get') }
+//经纬度查询店铺
+// const orderCourse = (data, url = 'Store/GetRecommendStores') => { return myRequest(data, url, 'get') }
 
 /**
  * 课表
@@ -103,5 +107,6 @@ module.exports = {
   teacherlesson,
   allTeacher,
   useCoupon,
+  orderCourse,
   recommendshop
 }

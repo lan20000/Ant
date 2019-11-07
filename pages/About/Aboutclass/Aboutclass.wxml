@@ -39,7 +39,7 @@
     </navigator>
     <!-- <navigator url="/pages/Paymentverification/Paymentverification" hover-class="navigator-hover" wx:if="{{paymeet==2}}">
       <button class="top-up flex-cen" >立即支付</button> -->
-    <navigator url="/pages/usercenter/Paymentverification/Paymentverification" hover-class="navigator-hover" wx:if="{{paymeet==2}}">
+    <navigator url="/pages/usercenter/Paymentverification/Paymentverification?courseId={{paydata.courseSectionId}}" hover-class="navigator-hover" wx:if="{{paymeet==2}}">
       <button class="top-up" >立即支付</button>
     </navigator>
   </view>
@@ -69,13 +69,13 @@
     <!--老师选择-->
     <navigator wx:if="{{tabtype==1}}" url="/pages/About/Chooseteacher/Chooseteacher?storeid={{storeadd[0].storeId}}" hover-class="navigator-hover">
       <view class="teacher flex-ali  ">
-        <image class="" src="{{teacherdata[0].teacherAvatar}}"></image>
+        <image class="" src="{{teacherdata.teacherAvatar}}"></image>
         <view class="flex-col flex1">
           <view class="flex-ali">
-            <text class="name">{{teacherdata[0].teacherName}}</text>
-            <text class="price">{{teacherdata[0].coursePrice}} U</text>
+            <text class="name">{{teacherdata.teacherName}}</text>
+            <text class="price">{{teacherdata.coursePrice}} U</text>
           </view>
-          <text class="type">{{teacherdata[0].teacherContent}}</text>
+          <text class="type">{{teacherdata.teacherContent}}</text>
         </view>
         <image src="./../../../assets/static/ic_arrowRight.png" style="width:15rpx;height:24rpx;margin-right: 0rpx;"></image>
       </view>

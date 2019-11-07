@@ -35,8 +35,35 @@ Page({
     paydata: null,//支付对象
     teacherdata:null,//教师
     udata: null,
-    storeId:null
+    storeId:null,
+    teacherid:null
   },
+  /**
+   * 通过经纬度查询店铺
+   */
+  recommendshop() {
+    console.log('地图选课')
+    if (this.data.latitude == null || this.data.longitude == null || app.globalData.udata.userId == null) {
+      tool.alert('参数缺失');
+      return;
+    }
+    let _this = this;
+    api.recommendshop({
+      longitude: this.data.tabtype,
+      latitude: this.data.latitude
+    }).then((res) => {
+      console.log(res)
+      if (res.data.Code == 200) {
+        _this.setData({ storeadd: res.data.Data });
+        _this.storeTime();
+      } else {
+        tool.alert('获取店铺列表失败');
+      }
+    });
+  },
+  /**
+   * 个人老师
+   */
   /**
    * 教师课程
    */
@@ -46,13 +73,12 @@ Page({
     let _this = this;
     api.teacherlesson({
       time: this.data.storet[this.data.tab].courseTime,
-      teacherId: this.data.teacherdata[0].teacherId
+      teacherId: this.data.teacherid
     }).then((res) => {
       console.log(res)
       tool.loading_h();
       if (res.data.Code == 200) {
         _this.setData({ storedata: res.data.Data });
-        // teacherlesson
       } else {
         tool.alert('获取课程失败');
       }
@@ -71,7 +97,7 @@ Page({
       console.log(res)
       tool.loading_h();
       if (res.data.Code == 200) {
-        _this.setData({ teacherdata: res.data.Data });
+        _this.setData({ teacherdata: res.data.Data[0], teacherid: res.data.Data[0].teacherId});
         console.log(_this.data.teacherdata);
         _this.teacherlesson();
       } else {
@@ -136,7 +162,7 @@ Page({
   /**
    * 获取时间列表
    */
-  storeTime() {
+  storeTime(type) {
     console.log(this.data.storeadd)
     if (this.data.storeadd[0].storeId == null) {
       tool.alert('参数缺失');
@@ -149,7 +175,11 @@ Page({
       if (res.data.Code == 200) {
         _this.setData({ storet: res.data.Data });
         console.log(res)
-        _this.timeCourse();
+        if (type==undefined){
+          _this.timeCourse();
+        }else{
+          _this.teacherlesson();
+        }
       } else {
         tool.alert('获取日期失败');
       }
@@ -182,7 +212,7 @@ Page({
   /**
    * 店铺列表
    */
-  storelist() {
+  storelist(type) {
     console.log(app.globalData.udata.userId)
     if (this.data.latitude == null || this.data.longitude == null || app.globalData.udata.userId == null) {
       tool.alert('参数缺失');
@@ -197,7 +227,7 @@ Page({
       console.log(res)
       if (res.data.Code == 200) {
         _this.setData({ storeadd: res.data.Data });
-        _this.storeTime();
+        _this.storeTime(type);
       } else {
         tool.alert('获取店铺列表失败');
       }
@@ -240,23 +270,25 @@ Page({
    */
   onLoad: function (options) {
     this.setData({ useris: app.globalData.footertab });
-    //选择老师ID
-    if (options.id!=undefined){
-      this.storeTime();
-      this.setData({ teacherid: options.id, tabtype:1});
-      return;
-    }
+    console.log(options)
     //选择地理位置
     if (options.lat!=undefined){
       this.setData({ latitude: options.lat, longitude: options.lon });
-      this.storelist();
+      this.recommendshop();
+      console.log('地图选课')
+      return;
+    }
+    //选择老师ID
+    if (options.idata != undefined) {
+      this.setData({ teacherid: JSON.parse(options.idata).userId, tabtype: 1, teacherdata: JSON.parse(options.idata)});
+      this.getPosition(1);
       return;
     }
     if (app.globalData.ulogin) {
       this.getPosition()
     }
   },
-  getPosition() {
+  getPosition(type) {
     tool.loading("自动定位中")
     tool.getPosition().then(res => {
       console.log("定位详细信息", res)
@@ -269,7 +301,7 @@ Page({
       console.log("市---->", _address_component.city)
       console.log("区---->", _address_component.district)
       this.setData({ region: [_address_component.province, _address_component.city, _address_component.district], latitude: res.result.location.lat, longitude: res.result.location.lng });
-      this.storelist();
+      this.storelist(type);
       tool.loading_h()
     }).catch(err => {
       console.log("定位失败", err)

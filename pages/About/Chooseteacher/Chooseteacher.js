@@ -7,24 +7,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-    listdata:[],
+    listdata: [],
   },
-  bank(e){
+  bank(e) {
     console.log(e)
-    if (e.currentTarget.dataset.id==undefined){
+    if (e.currentTarget.dataset.idata == undefined) {
       tool.alert('参数缺失');
       return;
     }
-    // wx.redirectTo({
-    //   url: '/pages/About/Aboutclass/Aboutclass?id=' + e.currentTarget.dataset.id
-    // });
+    wx.redirectTo({
+      url: '/pages/About/Aboutclass/Aboutclass?&idata=' + JSON.stringify(e.currentTarget.dataset.idata)
+    });
   },
   getlist(id) {
     // console.log(app.globalData.udata.userId)
     tool.loading("正在加载中")
     let _this = this;
     api.allTeacher({
-     
+
     }).then((res) => {
       console.log(res)
       tool.loading_h();

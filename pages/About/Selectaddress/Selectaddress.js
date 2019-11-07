@@ -13,9 +13,10 @@ Page({
     near: null
   },
   blank(){
+    console.log(this.data.adata)
     if (this.data.adata.longitude != undefined && this.data.adata.latitude != undefined) {
       wx.redirectTo({
-        url: 'pages/About/Aboutclass/Aboutclass?lat=' + this.data.adata.latitude + "&lon=" + this.data.adata.longitude
+        url: '/pages/About/Aboutclass/Aboutclass?lat=' + this.data.adata.latitude + "&lon=" + this.data.adata.longitude
       });
       return;
     }

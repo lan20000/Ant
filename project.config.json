@@ -753,6 +753,27 @@
 					"id": -1,
 					"name": "pages/About/Aboutclass/Aboutclass",
 					"pathName": "pages/About/Aboutclass/Aboutclass",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/Paymentverification/Paymentverification",
+					"pathName": "pages/usercenter/Paymentverification/Paymentverification",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/Paymentverification/Paymentverification",
+					"pathName": "pages/usercenter/Paymentverification/Paymentverification",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/About/Chooseteacher/Chooseteacher",
+					"pathName": "pages/About/Chooseteacher/Chooseteacher",
 					"scene": null
 				}
 			]
