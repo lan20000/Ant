@@ -91,6 +91,26 @@ const getTeach = (data = {}) => { //获取老师主页
 	let url = `${BASEURL}/Teacher/GetTeacherBasicInfo`
 	return _requst.getP(url, data, tokenkey);
 }
+const PostFollow = (data = {}) => { //对用户进行关注
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
+	let url = `${BASEURL}/User/PostFollow`
+	return _requst.postP(url, data, tokenkey);
+}
+const GetUserVideos = (data = {}) => { //获取用户作品
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
+	let url = `${BASEURL}/User/GetUserVideos`
+	return _requst.getP(url, data, tokenkey);
+}
+const GetFollow = (data = {}) => { //获取用户关注列表
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
+	let url = `${BASEURL}/User/GetFollow`
+	return _requst.getP(url, data, tokenkey);
+}
+const GetFans = (data = {}) => { //获取用户关注列表
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
+	let url = `${BASEURL}/User/GetFans`
+	return _requst.getP(url, data, tokenkey);
+}
 module.exports = {
 	videoList,
 	kaika,
@@ -108,4 +128,8 @@ module.exports = {
 	// comYuyue,
 	GetChargeNum,
 	getTeach,
+	PostFollow,
+	GetUserVideos,
+	GetFollow,
+	GetFans,
 }

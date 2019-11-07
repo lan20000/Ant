@@ -220,3 +220,6 @@
 	position: absolute;
 	right: 0; 
 }
+.ygz{
+	background-color: #888 !important;
+}

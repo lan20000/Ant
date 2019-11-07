@@ -9,14 +9,21 @@ Page({
 	 */
 	data: {
 		STATICIMG: app.globalData.STATICIMG,
-		currtab: 1
+		currtab: 2,
+		teachData:null,
+		teachid:null,
+		worksData:null,
+		page:1,
+		page1:2,
+		fllowData:[],//关注列表
+		FenNum:[],//粉丝列表
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-
+		this.setData({teachid:options.teachid})
 	},
 
 	/**
@@ -30,7 +37,9 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
-		this.getTeach()
+		this.getTeach();
+		this.GetFollow();
+		this.GetFans();
 	},
 
 	/**
@@ -74,10 +83,54 @@ Page({
 	},
 	getTeach(){
 		let dat = {
-			userId:"afdasfwewew"
+			userId:this.data.teachid
 		}
 		request_01.getTeach(dat).then((res)=>{
+			// console.log(res);
+			if(res.data.Code)
+			this.setData({ teachData:res.data.Data})
+		})
+	},
+	guanzhu(){
+		let dat = {
+			userId: wx.getStorageSync('userdata').userId,
+			followUserId:this.data.teachid	
+		}
+		request_01.PostFollow(dat).then((res)=>{
 			console.log(res);
+			if(res.data.Code=="200")
+			this.getTeach();
+		})	
+	},
+	getwokes(){//获取用户作品
+	    let dat = {
+			userId:this.data.teachid
+		} 
+		request_01.GetUserVideos(dat).then((res)=>{
+			if(res.data.Code=="200")
+				this.setData({ worksData:res.data.Data})
+		})
+	},
+	GetFollow(){//获取用户关注列表
+		let dat = {
+			userId:this.data.teachid,
+			pageSize:10,
+			pageIndex: this.data.page
+		}
+		request_01.GetFollow(dat).then((res)=>{
+			if(res.data.Code=='200')
+			this.setData({ fllowData:res.data.Data})
+		})
+	},
+	GetFans(){//获取用户粉丝
+		let dat = {
+			userId:this.data.teachid,
+			pageSize:10,
+			pageIndex: this.data.page1	
+		}
+		request_01.GetFans(dat).then((res)=>{
+			if(res.data.Code=="200")
+				this.setData({ FenNum:res.data.Data})
 		})
 	}
 })
