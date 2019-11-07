@@ -129,10 +129,9 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-    this.setData({ payalert: false });
-    this.getdata();
-  },
+  // onShow: function () {
+  //   this.getdata();
+  // },
   getdata() {
     console.log(app.globalData.udata.userId)
     if (app.globalData.udata.userId == null) {
@@ -279,6 +278,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
+    this.setData({ payalert: false });
     this.setData({ useris: app.globalData.footertab });
     console.log('=============================================')
     var pages = getCurrentPages();
