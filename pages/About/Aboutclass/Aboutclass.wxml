@@ -106,7 +106,6 @@
           <text class="satuts flex1 this theme_txt" wx:if="{{ditem.states!=1}}">差 {{ditem.maxCount-ditem.currentCount}} 人约满</text>
           <text class="satuts flex1" wx:if="{{ditem.states==1}}">已约满</text>
           <button class="pre flex-cen {{ditem.states==0 ? 'theme' : ''}}" bindtap="pay" data-index="{{ditem}}" wx:if="{{ditem.states==0}}">{{ditem.coursePrice}}U点预约</button>
-          : flex-end;
         </view>
       </view>
 
