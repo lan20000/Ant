@@ -1,6 +1,19 @@
 <!--pages/usercenter/index/index.wxml-->
 
 <myheader title="" btnIcon="home" is="{{false}}" bind:headerBack="headerBack"></myheader>
+<view class="more" wx:if="{{invitation}}"></view>
+<view class="flex-cen receive" wx:if="{{invitation}}">
+  <view class="receive_cont">
+    <view class="flex-ali">
+      <text class="flex1 txt_center">恭喜你，\n 领取成功！</text>
+      <image src="./../../../assets/static/popview_ic_close.png" style="width:26rpx;height:26rpx;"></image>
+    </view>
+    <text class="Upoint flex-cen">200U点</text>
+    <text class="flex-cen prompt">蓝巫师小程序内通用</text>
+    <text class="prompt2 flex-cen">需先免费开通蓝巫师卡，U点将自动放入！</text>
+    <button class="prompt3 flex-cen" bindtap="getinvitation">立即开卡</button>
+  </view>
+</view>
 <view class="body_content">
   <!-- 学生 -->
   <view class="bodys" wx:if="{{utype!=3}}">
@@ -9,7 +22,7 @@
         <view class="flex">
           <view class="flex1 flex-col">
             <!-- <text class="login" bindtap="blank" data-index="/userStart/login/login">{{ulogin ? userdata.userNickname : '点击登录'}}</text> -->
-            <open-data type="userNickName" class="login" ></open-data>
+            <open-data type="userNickName" class="login"></open-data>
             <text class="card_type" wx:if="{{utype==2}}">独角兽卡</text>
             <text class="time_end" wx:if="{{utype==2}}"></text>
           </view>

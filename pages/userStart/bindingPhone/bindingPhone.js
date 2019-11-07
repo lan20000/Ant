@@ -39,12 +39,13 @@ Page({
       if (res.data.Code == 200) {
         wx.setStorageSync('userdata', res.data.Data);
         wx.setStorageSync('token', res.data.Data.tokenKey);
+        // wx.setStorageSync('invitation', res.data.Data.isInvite);        
         app.globalData.udata = res.data.Data;
         app.globalData.ulogin = true;
         app.globalData.token = res.data.Data.tokenKey;
         res.data.Data.identity == 1 ? app.globalData.footertab = true : app.globalData.footertab = false;
         wx.redirectTo({
-          url: './../../usercenter/index/index'
+          url: './../../usercenter/index/index?isInvite=' + res.data.Data.isInvite
         });
       } else {
         tool.alert('注册失败');

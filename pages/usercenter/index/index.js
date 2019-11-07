@@ -11,8 +11,14 @@ Page({
     userdata: null,
     ulogin:false,//是否登录
     utype:1,//用户类型 1非VIP 2vip 3老师
-    useris:null//
-    
+    useris:null,//
+    invitation:false
+  },
+  getinvitation(){
+    this.setData({ invitation : false});
+    wx.navigateTo({
+      url: '/pages/fill_info/fill_info'
+    });
   },
   getdata(){
     console.log(app.globalData.udata.userId)
@@ -73,7 +79,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    if (options.invitation){
+      this.setData({invitation : true});
+    }
   },
 
   /**

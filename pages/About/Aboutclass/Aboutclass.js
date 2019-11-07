@@ -97,7 +97,7 @@ Page({
       console.log(res)
       tool.loading_h();
       if (res.data.Code == 200) {
-        _this.setData({ teacherdata: res.data.Data[0], teacherid: res.data.Data[0].teacherId});
+        _this.setData({ teacherdata: res.data.Data[0], teacherid: res.data.Data[0].userId});
         console.log(_this.data.teacherdata);
         _this.teacherlesson();
       } else {
@@ -198,7 +198,8 @@ Page({
     tool.loading();
     api.getCourse({
       storeId: this.data.storeadd[0].storeId,
-      time: this.data.storet[this.data.tab].courseTime
+      time: this.data.storet[this.data.tab].courseTime,
+      userId: app.globalData.udata.userId
     }).then((res) => {
       console.log(res)
       tool.loading_h();
