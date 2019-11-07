@@ -53,9 +53,9 @@
 .card>image{width:180rpx;height:140rpx;border-radius:10rpx;background-color: rgba(148,151,163,1);margin-right: 30rpx;}
 .card .title{font-size:28rpx;font-family:PingFang SC;font-weight:bold;color:rgba(50,51,68,1);padding-bottom: 20rpx;}
 .card .name{font-size:22rpx;font-family:PingFang SC;font-weight:bold;color:rgba(180,180,180,1);padding-bottom: 32rpx;}
-.card .satuts{font-size:22rpx;font-family:PingFang SC;font-weight:bold;color:rgba(180,180,180,1);}
+.card .satuts{align-self: flex-end;padding-bottom: 0.25rem;font-size:22rpx;font-family:PingFang SC;font-weight:bold;color:rgba(180,180,180,1);}
 .satuts.this{color:rgba(216,178,123,1);}
-.card .pre{width:auto;height:56rpx;background:rgba(216,178,123,1);border-radius:10rpx;font-size:24rpx;font-family:PingFang SC;font-weight:bold;color:rgba(255,255,255,1);align-self: flex-end;}
+.card .pre{width:auto;height:56rpx;background:rgba(216,178,123,1);border-radius:10rpx;font-size:24rpx;font-family:PingFang SC;font-weight:bold;color:rgba(255,255,255,1);padding: 0rpx 13rpx;}
 
 
 

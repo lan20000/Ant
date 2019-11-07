@@ -31,16 +31,16 @@
         <text class="hot flex-cen">U点不足</text>
       </view>
     </view>
-     <navigator url="/pages/fill_info/fill_info" hover-class="navigator-hover" wx:if="{{paymeet==0}}">
-      <button class="top-up" >去开通</button>
+    <navigator url="/pages/fill_info/fill_info" hover-class="navigator-hover" wx:if="{{paymeet==0}}">
+      <button class="top-up">去开通</button>
     </navigator>
     <navigator url="/pages/top-up/top-up" hover-class="navigator-hover" wx:if="{{paymeet==3}}">
-      <button class="top-up" >去充值</button>
+      <button class="top-up">去充值</button>
     </navigator>
     <!-- <navigator url="/pages/Paymentverification/Paymentverification" hover-class="navigator-hover" wx:if="{{paymeet==2}}">
       <button class="top-up flex-cen" >立即支付</button> -->
     <navigator url="/pages/usercenter/Paymentverification/Paymentverification?courseId={{paydata.courseSectionId}}" hover-class="navigator-hover" wx:if="{{paymeet==2}}">
-      <button class="top-up" >立即支付</button>
+      <button class="top-up">立即支付</button>
     </navigator>
   </view>
 </view>
@@ -102,12 +102,14 @@
       <view class="flex-col">
         <text class="title">{{tools.time(ditem.startTime)}} - {{tools.time(ditem.endTime)}} {{ditem.courseName}}课程</text>
         <text class="name">老师：{{ditem.teacherName}}</text>
-        <text class="satuts this theme_txt" wx:if="{{ditem.states!=1}}">差 {{ditem.maxCount-ditem.currentCount}} 人约满</text>
-        <text class="satuts" wx:if="{{ditem.states==1}}">已约满</text>
+        <view class="flex-ali">
+          <text class="satuts flex1 this theme_txt" wx:if="{{ditem.states!=1}}">差 {{ditem.maxCount-ditem.currentCount}} 人约满</text>
+          <text class="satuts flex1" wx:if="{{ditem.states==1}}">已约满</text>
+          <button class="pre flex-cen {{ditem.states==0 ? 'theme' : ''}}" bindtap="pay" data-index="{{ditem}}" wx:if="{{ditem.states==0}}">{{ditem.coursePrice}}U点预约</button>
+          : flex-end;
+        </view>
       </view>
-      <!-- <navigator url="/pages/About/Aboutsuccess/Aboutsuccess" class="pre" hover-class="navigator-hover" wx:if="{{ditem.states==0}}"> -->
-      <button class="pre {{ditem.states==0 ? 'theme' : ''}}" bindtap="pay" data-index="{{ditem}}" wx:if="{{ditem.states==0}}">{{ditem.coursePrice}}U点预约</button>
-      <!-- </navigator> -->
+
     </view>
 
     <view class=" " style="height:400rpx;">
