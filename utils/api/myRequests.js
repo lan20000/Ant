@@ -74,7 +74,7 @@ const recommendshop = (data, url = 'Store/GetRecommendStores') => { return myReq
 //预约课程
 const orderCourse = (data, url = 'Course/OrderCourse') => { return myRequest(data, url, 'get') }
 //经纬度查询店铺
-// const orderCourse = (data, url = 'Store/GetRecommendStores') => { return myRequest(data, url, 'get') }
+const checkPhoneCode = (data, url = 'Login/CheckPhoneCode') => { return myRequest(data, url, 'get') }
 
 /**
  * 课表
@@ -108,5 +108,6 @@ module.exports = {
   allTeacher,
   useCoupon,
   orderCourse,
-  recommendshop
+  recommendshop,
+  checkPhoneCode
 }

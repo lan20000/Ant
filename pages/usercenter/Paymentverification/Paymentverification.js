@@ -22,23 +22,33 @@ Page({
       tool.alert("请输入验证码");
       return;
     }
-    tool.loading();
-    api.orderCourse({
-      courseSectionId: this.data.cid,
-      userId: app.globalData.udata.userId,
-      phone: app.globalData.udata.phone,
-      verifyCode: this.data.ucode.join(''),
+    api.checkPhoneCode({
+      phone: this.data.phone,
+      verifyCode: this.data.ucode,
     }).then((res) => {
-      console.log(res)
-      tool.loading_h();
+      console.log()
       if (res.data.Code == 200) {
-        wx.redirectTo({
-          url: '/pages/About/Aboutsuccess/Aboutsuccess'
-        });
+        tool.loading();
+        api.orderCourse({
+          courseSectionId: this.data.cid,
+          userId: app.globalData.udata.userId,
+          phone: app.globalData.udata.phone,
+          verifyCode: this.data.ucode.join(''),
+        }).then((res) => {
+          console.log(res)
+          tool.loading_h();
+          if (res.data.Code == 200) {
+            wx.redirectTo({
+              url: '/pages/About/Aboutsuccess/Aboutsuccess'
+            });
+          } else {
+            tool.alert('约课失败');
+          }
+        })
       } else {
-        tool.alert('约课失败');
+        tool.alert('验证码错误');
       }
-    })
+    });
   },
   /***
    * 校验手机号

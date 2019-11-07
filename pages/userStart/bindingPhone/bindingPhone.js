@@ -50,7 +50,6 @@ Page({
         tool.alert('注册失败');
       }
     })
-
   },
   getphonecode() {
     // Getcode
