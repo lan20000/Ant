@@ -9,7 +9,7 @@
 .theme,
 .tab-item.tab-active:before,
 .course>.tab-nav-item.tab-active:before{background:rgba(0,74,149,1) !important;}
-
+button{line-height: auto;}
 .theme_txt{color:rgba(0,74,149,1) !important;}
 .pink{background:rgba(255,163,152,1) !important;}
 .theme_border{border:1px solid rgba(0,74,149,1) !important;}

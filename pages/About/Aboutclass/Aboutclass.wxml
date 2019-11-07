@@ -38,7 +38,7 @@
       <button class="top-up" >去充值</button>
     </navigator>
     <navigator url="/pages/Paymentverification/Paymentverification" hover-class="navigator-hover" wx:if="{{paymeet==2}}">
-      <button class="top-up" >立即支付</button>
+      <button class="top-up flex-cen" >立即支付</button>
     </navigator>
   </view>
 </view>

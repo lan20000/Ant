@@ -29,7 +29,13 @@ Page({
       console.log(res)
       if (res.data.Code == 200) {
         app.globalData.udata = res.data.Data;
-        _this.setData({ userdata : res.data.Data })
+        _this.setData({ userdata : res.data.Data });
+        //判断是否开通了会员
+        if (_this.data.useris) {
+          _this.setData({ utype: 3 })
+        } else if (app.globalData.udata.isVip) {
+          _this.setData({ utype: 2 })
+        }
         console.log(res.data.Data)
       } else {
         tool.alert('获取个人信息失败');
