@@ -25,16 +25,14 @@ Page({
     var _this = this;
     api.checkPhoneCode({
       phone: this.data.phone,
-      verifyCode: this.data.ucode,
+      verifyCode: _this.data.ucode.join('')
     }).then((res) => {
       console.log()
       if (res.data.Code == 200) {
         tool.loading();
         api.orderCourse({
           courseSectionId: _this.data.cid,
-          userId: app.globalData.udata.userId,
-          phone: app.globalData.udata.phone,
-          verifyCode: _this.data.ucode.join(''),
+          userId: app.globalData.udata.userId          
         }).then((res) => {
           console.log(res)
           tool.loading_h();
