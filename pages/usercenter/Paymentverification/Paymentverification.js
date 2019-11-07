@@ -114,8 +114,8 @@ Page({
     // if (options.courseId) {
     //   return;
     // }
-    // this.getcode();
-    this.opencode();
+    this.getcode();
+    // this.opencode();
     this.setData({ phone: app.globalData.udata.phone, cid: options.courseId });
   },
 
