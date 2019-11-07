@@ -5,9 +5,9 @@
     <text class="shop_name">{{item.storeName}}</text>
 
     <view class="teacher flex-ali tab-nav-item tab-active" catchtap="bank" data-idata="{{item}}" >
-      <navigator url="/pages/usePage/usePage?userId={{item.userId}}" hover-class="navigator-hover">
-        <image class="" src="{{item.teacherAvatar}}"></image>
-      </navigator>
+      <!-- <navigator url="/pages/usePage/usePage?userId={{item.userId}}" catchtap="bank" hover-class="navigator-hover"> -->
+        <image class="" catchtap="bank" src="{{item.teacherAvatar}}" catchtap="bank" data-url="/pages/usePage/usePage?userId={{item.userId}}"></image>
+      <!-- </navigator> -->
       <view class="flex-col flex1">
         <view class="flex-ali">
           <text class="name">{{item.teacherName}}</text>

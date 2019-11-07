@@ -11,6 +11,12 @@ Page({
   },
   bank(e) {
     console.log(e)
+    if (e.currentTarget.dataset.url!=undefined){
+      wx.navigateTo({
+        url: e.currentTarget.dataset.url
+      });
+      return;
+    }
     if (e.currentTarget.dataset.idata == undefined) {
       tool.alert('参数缺失');
       return;
