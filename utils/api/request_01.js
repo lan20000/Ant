@@ -6,7 +6,7 @@ let app = new getApp();
 let tokenkey = app.globalData.token || wx.getStorageSync("token");
 console.log("token", tokenkey, app.globalData.token, wx.getStorageSync("token"));
 let method = 'get'
-let header = { 'content-type': 'application/json','Authorization': tokenkey}
+let header = { 'content-type': 'application/json', 'Authorization': tokenkey }
 
 
 
@@ -31,7 +31,7 @@ const getGifts = (data = {}) => { //获取首充好礼信息
 	let url = `${BASEURL}/UDot/GetGifts`
 	return _requst.getP(url, data, tokenkey);
 }
-const getPay= (data = {}) => { //优惠券充值
+const getPay = (data = {}) => { //优惠券充值
 	tokenkey = app.globalData.token || wx.getStorageSync("token");
 	let url = `${BASEURL}/UDot/Charge`
 	return _requst.postP(url, data, tokenkey);
@@ -111,13 +111,16 @@ const GetFans = (data = {}) => { //获取用户关注列表
 	let url = `${BASEURL}/User/GetFans`
 	return _requst.getP(url, data, tokenkey);
 }
-
-const CheckIn = (data = {}) => { //签到
-  tokenkey = app.globalData.token || wx.getStorageSync("token");
-  let url = `${BASEURL}/Course/CheckIn`
-  return _requst.getP(url, data, tokenkey);
+const teachSigin = (data = {}) => { //老师签到
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
+	let url = `${BASEURL}/Course/CheckIn`
+	return _requst.getP(url, data, tokenkey);
 }
-
+const GetCoursesByDate = (data = {}) => { //老师签到
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
+	let url = `${BASEURL}/Course/GetCoursesByDate`
+	return _requst.getP(url, data, tokenkey);
+}
 module.exports = {
 	videoList,
 	kaika,
@@ -139,5 +142,6 @@ module.exports = {
 	GetUserVideos,
 	GetFollow,
 	GetFans,
-  CheckIn,
+	teachSigin,
+	GetCoursesByDate,
 }

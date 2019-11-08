@@ -1,6 +1,7 @@
 // pages/attendClass/attendClass.js
 const route = require("../../utils/tool/router.js");
 const request_01 = require("../../utils/api/request_01.js");
+
 const app = new getApp();
 let time = null;
 Page({
