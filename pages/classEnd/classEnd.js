@@ -1,6 +1,6 @@
 // pages/classEnd/classEnd.js
 const route = require("../../utils/tool/router.js");
-
+const request_01 = require("../../utils/api/request_01.js");
 const app = new getApp();
 Page({
 
@@ -9,7 +9,8 @@ Page({
 	 */
 	data: {
     useris: null,
-		STATICIMG: app.globalData.STATICIMG,
+	STATICIMG: app.globalData.STATICIMG,
+	classData:[],	
 	},
 
 	/**
@@ -30,6 +31,7 @@ Page({
 	 */
 	onShow: function () {
     this.setData({ useris: app.globalData.footertab });
+	this.GetCoursesByDate();
 	},
 
 	/**
@@ -63,7 +65,17 @@ Page({
 	/**
 	 * 用户点击右上角分享
 	 */
-	onShareAppMessage: function () {
+	// onShareAppMessage: function () {
 
+	// }
+	GetCoursesByDate(){//获取课程
+		let timestamp = new Date().getTime();
+		let dat = {
+			time: timestamp
+		}
+		request_01.GetCoursesByDate(dat).then((res)=>{
+			if(res.data.Code=="200")
+			this.setData({ classData:res.data.Data});
+		})
 	}
 })

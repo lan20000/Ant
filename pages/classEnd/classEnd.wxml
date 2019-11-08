@@ -5,8 +5,9 @@
 		<text class="txt2">今日总课程时长：05:12:54</text>
 	</view>
 	<view class="txt3">明日共有2节课程，请继续加油</view>
+	<view class="noData" wx:if="{{!classData.length>0}}">暂无数据~</view>
 	<view class="classList">
-		<view class="classItem" wx:for="{{10}}">
+		<view class="classItem" wx:for="{{classData}}">
 			<view class="leftInfo">
 				<text class="txt4">2019-11-23 20:00</text>
 				<text class="txt5">爵士舞基础课程</text>
