@@ -46,7 +46,7 @@
           <image src="./../../../assets/static/ic_arrowRight_golden.png" style="width:15rpx;height:24rpx;"></image>
         </view>
         <!--  -->
-        <button class="no_paybt flex-cen" bindtap="blank" data-index="top-up/top-up">充值</button>
+        <button class="no_paybt flex-cen" bindtap="blank" data-index="/top-up/top-up">充值</button>
       </view>
       <!--未注册-->
       <text class="header_title" wx:if="{{utype==0}}">使用手机号码登录unicorn即可成为会员</text>
@@ -131,9 +131,14 @@
   <!-- 老师菜单 -->
   <view class="meun meunm" wx:if="{{utype==3}}">
     <view class="flex-ali">
-      <view class="meun_list flex-cen-col flex1">
+      <!-- <view class="meun_list flex-cen-col flex1">
         <image src="./../../../assets/static/ic_myHmoepage.png"></image>
         <text>我的主页</text>
+      </view> -->
+      
+      <view class="meun_list flex-cen-col flex1">
+        <image src="./../../../assets/static/ic_myHmoepage.png" bindtap="blank" data-index="techPage/techPage?userId={{userdata.userId}}"></image>
+        <text bindtap="blank" data-index="invitation/invitation">我的主页</text>
       </view>
       <view class="meun_list flex-cen-col flex1">
         <image src="./../../../assets/static/ic_videoDatebase.png"></image>
@@ -143,11 +148,14 @@
         <image src="./../../../assets/static/ic_videoDatebase.png"></image>
         <text>教师库</text>
       </view>
-      <view class="meun_list flex-cen-col flex1">
+      <!-- <view class="meun_list flex-cen-col flex1">
         <image src="./../../../assets/static/ic_invite.png"></image>
         <text>邀请好友</text>
+      </view> -->
+      <view class="meun_list flex-cen-col flex1">
+        <image src="./../../../assets/static/ic_invite.png" bindtap="blank" data-index="invitation/invitation"></image>
+        <text bindtap="blank" data-index="invitation/invitation">邀请好友</text>
       </view>
-
     </view>
   </view>
   <view class="set_list">

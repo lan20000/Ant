@@ -9,20 +9,20 @@ Page({
    */
   data: {
     userdata: null,
-    ulogin:false,//是否登录
-    utype:1,//用户类型 1非VIP 2vip 3老师
-    useris:null,//
-    invitation:false
+    ulogin: false,//是否登录
+    utype: 1,//用户类型 1非VIP 2vip 3老师
+    useris: null,//
+    invitation: false
   },
-  getinvitation(){
-    this.setData({ invitation : false});
+  getinvitation() {
+    this.setData({ invitation: false });
     wx.navigateTo({
       url: '/pages/fill_info/fill_info'
     });
   },
-  getdata(){
+  getdata() {
     console.log(app.globalData.udata.userId)
-    if (app.globalData.udata.userId==null){
+    if (app.globalData.udata.userId == null) {
       tool.alert('参数丢失');
       return;
     }
@@ -35,7 +35,7 @@ Page({
       console.log(res)
       if (res.data.Code == 200) {
         app.globalData.udata = res.data.Data;
-        _this.setData({ userdata : res.data.Data });
+        _this.setData({ userdata: res.data.Data });
         //判断是否开通了会员
         if (_this.data.useris) {
           _this.setData({ utype: 3 })
@@ -48,23 +48,12 @@ Page({
       }
     })
   },
-  blank(e){
-    if (!e.currentTarget.dataset.index){
+  blank(e) {
+    if (!e.currentTarget.dataset.index) {
       return;
     }
-    if (e.currentTarget.dataset.index.indexOf('top-up') > -1) {
-      wx.navigateTo({
-        url: './../../' + e.currentTarget.dataset.index
-      });
-      return;
-    }
-    if (e.currentTarget.dataset.index.indexOf('userStart')>-1){
-      wx.navigateTo({
-        url: './../..'+e.currentTarget.dataset.index
-      });
-      return;
-    }
-    if (e.currentTarget.dataset.index.indexOf('fill_info') > -1) {
+    let index = e.currentTarget.dataset.index;
+    if (index.indexOf('techPage') > -1 || index.indexOf('top-up') > -1 || index.indexOf('userStart') > -1 || index.indexOf('userStart') > -1 || index.indexOf('fill_info') > -1 ) {
       wx.navigateTo({
         url: './../..' + e.currentTarget.dataset.index
       });
@@ -72,15 +61,15 @@ Page({
     }
     console.log(e.currentTarget.dataset.index.indexOf('page') > -1);
     wx.navigateTo({
-      url: './../' + e.currentTarget.dataset.index
+      url: './../' + index
     });
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if (options.invitation){
-      this.setData({invitation : true});
+    if (options.invitation) {
+      this.setData({ invitation: true });
     }
   },
 
@@ -95,9 +84,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-	  console.log(app.globalData.ulogin)
+    console.log(app.globalData.ulogin)
     if (app.globalData.ulogin) {
-		console.log("denglu")
+      console.log("denglu")
       this.getdata();
     }
     //是否为老师
@@ -107,7 +96,7 @@ Page({
     // console.log(this.)
     if (!app.globalData.ulogin) {
       return;
-    }    
+    }
     //判断是否开通了会员
     if (this.data.useris) {
       this.setData({ utype: 3 })
