@@ -18,15 +18,16 @@
 	<view wx:if="{{currTab==1}}">
 		<view class="eduBox">教学内容：</view>
 		<view class="eduContent">
-			<text>课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容
-	课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容
+			<view class="noData" wx:if="{{!teachData.courseSectionContent}}">暂无内容~</view>
+			<text>
+				{{teachData.courseSectionContent}}
 			</text>
-			<text>课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容
+			<!-- <text>课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容
 	课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容课程内容
-			</text>
+			</text> -->
 			</view>
 	</view>
-	<view class="noData" wx:if="{{!Student.length>0}}">暂无数据~</view>
+	<view class="noData" wx:if="{{!Student.length>0&&currTab==2}}">暂无数据~</view>
 	<view class="study" wx:if="{{currTab==2}}">
 		<view class="studylist" wx:for="{{Student}}">
 			<view class="leftInfo">

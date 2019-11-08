@@ -24,6 +24,7 @@ Page({
       honorObj: {
 
       },
+	  motData:null,//推广信息
       bgUrl: 'https://game.flyh5.cn/resources/game/wechat/dxl/bluennn/image/label/bg_invite.png',
       cardUrl: 'https://game.flyh5.cn/resources/game/wechat/dxl/bluennn/image/label/bg_ticket1.png',
       headUrl: 'https://game.flyh5.cn/resources/game/wechat/dxl/bluennn/image/label/header.jpg',
@@ -341,6 +342,7 @@ Page({
    */
   onShow: function () {
 	  this.getCode();
+	  this.Promotion();
   },
 
   /**
@@ -388,19 +390,19 @@ Page({
       // })
     // }
 
-    // return {
-    //   title: '测一测你是哪种教练',
-    //   path: 'pages/index/index?channelId=' + wx.getStorageSync('channelId'),
-    //   imageUrl: 'https://game.flyh5.cn/resources/game/wechat/dxl/jkd/images/bg_share.png',
-    //   success: function (res) {
-    //     // 转发成功
-    //     console.log("转发成功:" + JSON.stringify(res));
-    //   },
-    //   fail: function (res) {
-    //     // 转发失败
-    //     console.log("转发失败:" + JSON.stringify(res));
-    //   }
-    // }
+    return {
+	  title: this.data.motData.shareTitle,
+      path: 'pages/index/index',
+      imageUrl: 'https://game.flyh5.cn/resources/game/wechat/dxl/jkd/images/bg_share.png',
+      success: function (res) {
+        // 转发成功
+        console.log("转发成功:" + JSON.stringify(res));
+      },
+      fail: function (res) {
+        // 转发失败
+        console.log("转发失败:" + JSON.stringify(res));
+      }
+    }
 
   },
   saveLong() {
@@ -529,5 +531,17 @@ Page({
 		  access_token:"aa"
 	  }
    
-  }
+  },
+  Promotion(){
+		request_01.Promotion().then((res)=>{
+			if(res.data.Code=="200")
+				this.setData({ motData:res.data.Data})
+		})
+	},
+	GetCodeImg(){
+		request_01.Promotion().then((res)=>{
+			if(res.data.Code=="200")
+				this.setData({ motData:res.data.Data})
+		})
+	},
 })

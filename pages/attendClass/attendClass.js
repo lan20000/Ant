@@ -11,9 +11,9 @@ Page({
 	 */
 	data: {
 		STATICIMG: app.globalData.STATICIMG,
-		currTab:2,
+		currTab:1,
 		useris:false,
-		teachData:null,
+		teachData:{},
 		classTime:'00：00：00',
 		isstart:false,
 		Student:null,
@@ -152,6 +152,13 @@ Page({
 		}
 		let m = 0;
 		let that = this;
+		if (!this.data.teachData.courseId){
+			wx.showToast({
+				icon:"none",
+				title: '服务错误'
+			})
+			return;
+		}
 		let dat = {
 			courseId: this.data.teachData.courseId
 		}

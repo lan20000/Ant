@@ -35,7 +35,7 @@
                 </view>
                 <view class='card_details'>
                     <view class='card_details_top'>
-                        <text class="txt1">200</text>
+                        <text class="txt1">{{motData.token}}</text>
                         <text>U点</text>
                     </view>
                     <view class="card_details_bottom">蓝巫师小程序内通用</view>
@@ -65,7 +65,7 @@
 
                 <view class='share_info'>
                     <view>
-                        <text>已成功推广{{resultObj.person}}人,共获得{{resultObj.count}}U点</text>
+                        <text>已成功推广{{motData.shareMenberNumber}}人,共获得{{motData.totalToken}}U点</text>
                     </view>
                     <navigator url="/pages/usercenter/invitationlist/invitationlist" hover-class="navigator-hover">
 

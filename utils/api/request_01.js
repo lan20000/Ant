@@ -121,6 +121,17 @@ const GetCoursesByDate = (data = {}) => { //老师签到
 	let url = `${BASEURL}/Course/GetCoursesByDate`
 	return _requst.getP(url, data, tokenkey);
 }
+
+const Promotion = (data = {}) => { //获取邀请推广的信息
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
+	let url = `${BASEURL}/user/Promotion`
+	return _requst.getP(url, data, tokenkey);
+}
+const GetCodeImg = (data = {}) => { //获取邀请推广的信息
+	tokenkey = app.globalData.token || wx.getStorageSync("token");
+	let url = `${BASEURL}/Login/GetCodeImg`
+	return _requst.getP(url, data, tokenkey);
+}
 module.exports = {
 	videoList,
 	kaika,
@@ -144,4 +155,6 @@ module.exports = {
 	GetFans,
 	teachSigin,
 	GetCoursesByDate,
+	Promotion,
+	GetCodeImg,
 }
