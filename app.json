@@ -50,7 +50,8 @@
     "pages/course/score/score",
     "pages/course/scoresuccess/scoresuccess",
     "pages/top_record/top_record",
-    "pages/usercenter/invitation/invitation"
+    "pages/usercenter/invitation/invitation",
+    "pages/usercenter/invitationlist/invitationlist"
   ],
   "window": {
     "navigationBarTitleText": "蚂蚁小程序",

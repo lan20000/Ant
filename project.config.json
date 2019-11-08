@@ -767,6 +767,20 @@
 					"id": -1,
 					"name": "pages/userStart/bindingPhone/bindingPhone",
 					"pathName": "pages/userStart/bindingPhone/bindingPhone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/invitation/invitation",
+					"pathName": "pages/usercenter/invitation/invitation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/usercenter/invitationlist/invitationlist",
+					"pathName": "pages/usercenter/invitationlist/invitationlist",
 					"scene": null
 				}
 			]

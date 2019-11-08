@@ -1,0 +1,10 @@
+/* pages/usercenter/invitationlist/invitationlist.wxss */
+.title{font-size:26rpx;font-weight:bold;color:rgba(51,51,51,1);}
+view{background-color: #fff;}
+.title:first-child,.txt:first-child{padding-left: 30rpx;}
+
+.txt{font-size:26rpx;font-weight:500;color:rgba(51,51,51,1);padding: 28rpx 0rpx 27rpx 0rpx;}
+.top{border-top:rgba(237,237,237,1) solid 1rpx;padding: 25rpx 0rpx 26rpx 0rpx;}
+.txt_l{border-top:rgba(237,237,237,1) solid 1rpx;}
+
+.em{position: fixed;height: 100%;width: 100%;font-size:26rpx;font-weight:500;color:#9497A3;}

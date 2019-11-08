@@ -1,0 +1,14 @@
+<!--pages/usercenter/invitationlist/invitationlist.wxml-->
+<view class="flex-ali top">
+  <text class="flex1 title">用户名</text>
+  <text class="flex1 title">ID</text>
+  <text class="flex1 title">注册时间</text>
+</view>
+<view class="flex-ali txt_l" wx:for="{{listdata}}" wx:for-index="idx" wx:for-item="itemName" style="background-color: {{(idx%2!=0) ? '#F6F6F6' : ''}}">
+  <text class="txt flex1">小迷糊</text>
+  <text class="txt flex1">小迷糊</text>
+  <text class="txt flex1">2019-09-12  12:44:41</text>
+</view>
+<view class="flex-cen em">
+  您还没有邀请好友噢~
+</view>
