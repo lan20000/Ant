@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "登录",
-  "disableScroll": true,
-  "usingComponents": {
-	  "getPhoneNumber": "/components/getPhoneNumber/getPhoneNumber"
-  }
-}

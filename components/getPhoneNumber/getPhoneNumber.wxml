@@ -1,4 +1,0 @@
-<!--components/getPhoneNumber/getPhoneNumber.wxml-->
-<view>
-  <showModal showModalOption="{{showModal}}" bindoperation="operation"></showModal>
-</view>
