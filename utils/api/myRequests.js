@@ -92,6 +92,12 @@ const accessToken = (data, url = 'login/GetAccessKey') => { return myRequest(dat
 //获取scctoken
 const getCodeImg = (data, url = 'Login/GetCodeImg') => { return myRequest(data, url, 'get') }
 
+/**
+ * 邀请好友
+ */
+const getMyPromotion = (data, url = 'user/GetMyPromotion') => { return myRequest(data, url, 'get') }
+
+
 module.exports = {
   myRequest,
   getOpenid,
@@ -118,5 +124,6 @@ module.exports = {
   checkPhoneCode,
   accessToken,
   cancelCourse,
-  getCodeImg
+  getCodeImg,
+  getMyPromotion
 }
