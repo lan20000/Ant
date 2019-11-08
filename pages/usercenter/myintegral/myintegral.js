@@ -13,6 +13,7 @@ Page({
     listdata:[]
   },
   tabchoose(e) {
+    console.log(e.currentTarget.dataset.type)
     this.setData({ tabtype: e.currentTarget.dataset.type });
     this.getinteral();
   },
@@ -29,7 +30,7 @@ Page({
     }
     let _this = this;
     api.getintegral({
-      type: this.data.tabtype+1
+      type: Number(this.data.tabtype)+1
     }).then((res) => {
       console.log(res)
       if (res.data.Code == 200) {
