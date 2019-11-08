@@ -1,6 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "showModal": "/components/showModal/showModal"
-  }
-}
