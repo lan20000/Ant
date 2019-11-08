@@ -99,11 +99,12 @@ Page({
 		// 		}
 		// })
 		var that = this;
-		var show;
+		
 		wx.scanCode({
 			success: (res) => {
-
-			this.show = "结果:" + JSON.parse(res.result) + "二维码类型:" + res.scanType + "字符集:" + res.charSet + "路径:" + res.path;
+				var show;
+		         // show = "结果:" + JSON.parse(res.result) + "二维码类型:" + res.scanType + "字符集:" + res.charSet + "路径:" + res.path;\
+				console.log(JSON.parse(res.result))
 				let dat = JSON.parse(res.result);
 				request_01.teachSigin(dat).then((res)=>{
 				  if(res.data.Code=='200')
@@ -123,7 +124,7 @@ Page({
 	},
 	TodayCours(){//老师今天的课程
 		let dat = {
-			userId: wx.getStorageSync('userdata').userId
+			userId: wx.getStorageSync('userdata').phone
 		}
 		request_01.TodayCours(dat).then((res)=>{
 			console.log(res);

@@ -262,3 +262,10 @@
 	align-items: center;
 	margin-top: 79rpx;
 }
+.noData{
+	width: 100%;
+	text-align: center;
+	color: #888;
+	font-size: 24rpx;
+	padding-top: 150rpx;
+}

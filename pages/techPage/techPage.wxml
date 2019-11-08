@@ -7,7 +7,7 @@
 			<text>673粉丝  |  2343支持 </text>
 			<text>芭蕾舞/爵士舞/街舞 </text>
 		</view>
-		<view class="gzBox theme {{teachData.isFollow?'ygz':''}}" bindtap="guanzhu">{{teachData.isFollow?"已关注":"关注"}}</view>
+		<view class="gzBox theme {{teachData.isFollow?'ygz':''}}" bindtap="guanzhu">{{teachData.isFollow?"取消关注":"关注"}}</view>
 	</view>
 	<view class="techpro">
 		 {{teachData.teacherDesc}}

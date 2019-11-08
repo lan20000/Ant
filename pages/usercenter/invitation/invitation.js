@@ -279,7 +279,7 @@ Page({
         tool.loading_h()
         _self.showHideModal()
       } else if (res.status == 1 || res.status == 2) {
-        console.log('进下面')
+		  console.log('进下面', _self.data.posterImgUrl)
         _self.saveImageToPhotosAlbum(_self.data.posterImgUrl)
       }
     })
@@ -375,7 +375,7 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function (ops) {
-    if (ops.from === 'button') {
+    // if (ops.from === 'button') {
       // 来自页面内转发按钮
 
       // api.viewShare({
@@ -386,21 +386,21 @@ Page({
       // }).catch((err) => {
 
       // })
-    }
+    // }
 
-    return {
-      title: '测一测你是哪种教练',
-      path: 'pages/index/index?channelId=' + wx.getStorageSync('channelId'),
-      imageUrl: 'https://game.flyh5.cn/resources/game/wechat/dxl/jkd/images/bg_share.png',
-      success: function (res) {
-        // 转发成功
-        console.log("转发成功:" + JSON.stringify(res));
-      },
-      fail: function (res) {
-        // 转发失败
-        console.log("转发失败:" + JSON.stringify(res));
-      }
-    }
+    // return {
+    //   title: '测一测你是哪种教练',
+    //   path: 'pages/index/index?channelId=' + wx.getStorageSync('channelId'),
+    //   imageUrl: 'https://game.flyh5.cn/resources/game/wechat/dxl/jkd/images/bg_share.png',
+    //   success: function (res) {
+    //     // 转发成功
+    //     console.log("转发成功:" + JSON.stringify(res));
+    //   },
+    //   fail: function (res) {
+    //     // 转发失败
+    //     console.log("转发失败:" + JSON.stringify(res));
+    //   }
+    // }
 
   },
   saveLong() {
