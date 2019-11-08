@@ -80,15 +80,15 @@
         <image src="./../../../assets/static/ic_arrowRight.png" style="width:15rpx;height:24rpx;margin-right: 0rpx;"></image>
       </view>
     </navigator>
-    <view class="flex-ali " >
-	  <scroll-view scroll-x class="timeBox">
-	  	<view class="setflex" style="padding-bottom:29rpx;">
-			<view class="time_list flex-cen-col {{tab==idx ? 'tab-item tab-active ' : ''}}" wx:for="{{storet}}" wx:for-index="idx" wx:for-item="ditem">
-				<view class="setwidth {{tab==idx ? 'this theme_txt' : 'no'}}" bindtap="cut" data-index="{{idx}}">{{tools.formatTime(ditem.courseTime,'ms',idx)}}</view>
-				<!-- <text class="{{tab==idx ? 'this theme_txt' : 'no'}}" bindtap="cut" data-index="{{idx}}">约满</text> -->
-			</view>
-		</view>
-	  </scroll-view>
+    <view class="flex-ali ">
+      <scroll-view scroll-x class="timeBox">
+        <view class="setflex" style="padding-bottom:29rpx;">
+          <view class="time_list flex-cen-col {{tab==idx ? 'tab-item tab-active ' : ''}}" wx:for="{{storet}}" wx:for-index="idx" wx:for-item="ditem">
+            <view class="setwidth {{tab==idx ? 'this theme_txt' : 'no'}}" bindtap="cut" data-index="{{idx}}">{{tools.formatTime(ditem.courseTime,'ms',idx)}}</view>
+            <!-- <text class="{{tab==idx ? 'this theme_txt' : 'no'}}" bindtap="cut" data-index="{{idx}}">约满</text> -->
+          </view>
+        </view>
+      </scroll-view>
     </view>
   </view>
   <view class="bottom">
@@ -102,7 +102,7 @@
       <button class="pre theme">100U点预约</button>
     </view> -->
     <!-- <navigator  wx:for="{{storedata}}" wx:for-index="idx" wx:for-item="ditem" url="/pages/course/Coursedetails/Coursedetails?id={{ditem.courseId}}&storeId={{ditem.storeId}}"hover-class="navigator-hover"> -->
-    <view class="card flex" catchtap="jump" data-url="/pages/course/Coursedetails/Coursedetails?id={{ditem.courseId}}&storeId={{ditem.storeId}}&courseSectionId={{ditem.courseSectionId}}" wx:for="{{storedata}}" wx:for-index="idx" wx:for-item="ditem" >
+    <view class="card flex" catchtap="jump" data-url="/pages/course/Coursedetails/Coursedetails?id={{ditem.courseId}}&storeId={{ditem.storeId}}&courseSectionId={{ditem.courseSectionId}}" wx:for="{{storedata}}" wx:for-index="idx" wx:for-item="ditem">
       <image src="{{ditem.courseImage}}"></image>
       <view class="flex-col">
         <text class="title">{{tools.time(ditem.startTime)}} - {{tools.time(ditem.endTime)}} {{ditem.courseName}}课程</text>
@@ -111,7 +111,7 @@
           <text class="satuts flex1 this theme_txt" wx:if="{{ditem.currentCount<ditem.maxCount}}">差 {{ditem.maxCount-ditem.currentCount}} 人约满</text>
           <text class="satuts flex1" wx:if="{{ditem.currentCount>=ditem.maxCount}}">已约满</text>
           <button class="pre flex-cen {{ditem.states==0 ? 'theme' : ''}}" catchtap="pay" data-index="{{ditem}}" wx:if="{{ditem.states==0}}">{{ditem.coursePrice}}U点预约</button>
-          <button class="pre flex-cen"style="background:rgba(199,201,207,1)" catchtap="pay" data-index="{{ditem}}" wx:else="{{ditem.states==0}}">已预约</button>
+          <button class="pre flex-cen" style="background:rgba(199,201,207,1)" catchtap="pay" data-index="{{ditem}}" wx:else="{{ditem.states==1&&ditem.currentCount<ditem.maxCount}}">已预约</button>
         </view>
       </view>
 

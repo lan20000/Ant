@@ -110,6 +110,10 @@ Page({
    * 支付
    */
   pay(e) {
+    if (e.target.dataset.index.states==1){
+      tool.alert('您已预约或约满了哦~');
+      return;
+    }
     this.close();
     //U点是否充足
     this.setData({ paydata: e.target.dataset.index, udata: app.globalData.udata });
