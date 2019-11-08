@@ -10,12 +10,13 @@ Page({
 	 */
 	data: {
 		STATICIMG: app.globalData.STATICIMG,
-		currTab:1,
+		currTab:2,
 		useris:false,
 		teachData:null,
 		classTime:'00：00：00',
 		isstart:false,
 		Student:null,
+		issigin:false,
 	},
 
 	/**
@@ -84,11 +85,39 @@ Page({
 		this.setData({ currTab:tab})
 		console.log(tab);
 	},
+	closePop(){
+		this.setData({issigin:false})	
+	},
 	sweepYard(){
-	    wx.scanCode({
-				success(res) {
-            
-				}
+	    // wx.scanCode({
+		// 		success(res) {
+		// 			console.log(res);
+		// 			wx.navigateTo({
+		// 				url: res.result,
+		// 			})
+		// 		}
+		// })
+		var that = this;
+		var show;
+		wx.scanCode({
+			success: (res) => {
+
+			this.show = "结果:" + JSON.parse(res.result) + "二维码类型:" + res.scanType + "字符集:" + res.charSet + "路径:" + res.path;
+				let dat = JSON.parse(res.result);
+				request_01.teachSigin(dat).then((res)=>{
+				  if(res.data.Code=='200')
+				  this.setData({ issigin:true})
+				})
+			},
+			fail: (res) => {
+				wx.showToast({
+					title: '扫码失败',
+					icon: 'none',
+					duration: 2000
+				})
+			},
+			complete: (res) => {
+			}
 		})
 	},
 	TodayCours(){//老师今天的课程
