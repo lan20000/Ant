@@ -59,10 +59,10 @@ page {
   color :  #fff;
 }
 .page_img > view:nth-child(1) {
-  margin-top: 25rpx;
+  margin-top: 50rpx;
 }
 .page_img > view:nth-child(2) {
-  margin-top: 100rpx;
+  margin-top: 75rpx;
 }
 .page_img > view:nth-child(1) > view:nth-child(2) {
   margin-top: 10rpx;
@@ -102,7 +102,7 @@ color:rgba(255,255,255,1);
 }
 .nick_name {
   position: relative;
-  top:84rpx;
+  top:210rpx;
   color : #000;
   text-align: center;
   font-size : 35rpx;
@@ -116,14 +116,14 @@ color:rgba(255,255,255,1);
   color : #000;
   font-weight: bold;
   z-index : 999;
-  margin-top: 110rpx;
+  margin-top: 225rpx;
   width: 280px;
 }
 .card_info>view{
 	text-align: center;
 }
 .card_info >view:nth-child(2) {
-  margin-top: 25rpx;
+  margin-top: 15rpx;
 }
 .card_details {
   color : #000;
@@ -137,7 +137,7 @@ color:rgba(255,255,255,1);
 .card_bg {
   position: absolute;
   top:0;
-  width: 590.3rpx;
+  width: 100%;
 }
 .card_details >view:nth-child(1) {
   color : #2470BF;
@@ -155,7 +155,7 @@ color:rgba(255,255,255,1);
   margin: 0 10rpx;
 }
 .card_get {
-  margin-top: 57rpx;
+  margin-top: 150rpx;
   /* padding : 0 30rpx; */
   text-align: center;
   font-size : 35rpx;
@@ -164,7 +164,6 @@ color:rgba(255,255,255,1);
   z-index: 999;
   box-sizing: border-box;
   display: flex;
-  padding: 0 60rpx;
 }
 .card_get > .get_txt {
   background-color: #0651a5;
@@ -174,7 +173,7 @@ color:rgba(255,255,255,1);
 }
 .card_get > view:nth-child(2) {
   /* margin-left : 30rpx; */
-  padding-left: 30rpx;
+  padding-left: 40rpx;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -214,8 +213,12 @@ margin-top: 50rpx;
   font-family:PingFang SC;
   color:rgba(49,49,52,1);
 }
+.card_content {
+  width: 650rpx;
+  height : 800rpx;
+}
 .card_content > view {
-  width: 280px;
+  width: 560rpx;
 }
 .card_content .nick_img {
   width: 120rpx;
@@ -252,6 +255,7 @@ margin-top: 50rpx;
 	font-family:PingFang SC;
 	font-weight:500;
 	color:rgba(148,151,163,1);
+  white-space: nowrap
 }
 .setpot{
 	position: relative;

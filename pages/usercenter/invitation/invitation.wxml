@@ -22,9 +22,7 @@
                 <image class="card_bg" mode="widthFix" src="{{ resultObj.cardUrl }}"></image>
 
                 <view class="nick_img">
-                    <!-- <image src="{{ resultObj.headUrl }}"></image>  -->
                     <open-data type="userAvatarUrl"></open-data>
-
                 </view>
                 <view class='nick_name'>
                     <open-data class="txt0" type="userNickName"></open-data>

@@ -62,11 +62,10 @@ Page({
     
     api.getCodeImg().then((res) => {
       console.log(res)
-
       _this.setData({
         img: res.data.Data
       })
-
+      _this.findResult()
     })
 
     // this.data.isLoad = true
@@ -108,7 +107,7 @@ Page({
       width: wx.getSystemInfoSync().windowWidth
     })
 
-    _this.findResult()
+    
 
   },
   measureText(text, fontSize = 10) {
@@ -142,7 +141,8 @@ Page({
     var _this = this
     // tool.loading("海报生成中", "loading")
     var resultObj = _this.data.resultObj
-
+    var img = _this.data.img
+    console.log(img)
     // let num = '';
     // let personList = '';
     // _this.data.positionList.forEach((item, index) => {
@@ -155,22 +155,21 @@ Page({
     //   rs = s.match(reg);
     // rs.push(s.substring(rs.join('').length));
     console.log(resultObj)
-    let txt = '剩余' + resultObj.count + 'U点' + ' | ' + resultObj.day + '后到期'
+    let txt = '剩余' + _this.data.motData.token + 'U点';
     Promise.all([
       util.getImgLocalPath(resultObj.bgUrl),
       util.getImgLocalPath(resultObj.cardUrl),
-      util.getImgLocalPath(resultObj.headUrl),
-
-      util.getImgLocalPath(resultObj.sunUrl)
+      // util.getImgLocalPath(resultObj.headUrl),
+      util.getImgLocalPath(img)
     ]).then(res => {
       tool.canvasImg({
         canvasId: 'myCanvas',
         imgList: [
           { url: res[0], imgW: 574, imgH: 1026, imgX: 0, imgY: 0 },
           { url: res[1], imgW: 494, imgH: 580, imgX: 40, imgY: 205, isRadius: false },
-          { url: res[2], imgW: 100, imgH: 100, imgX: 235, imgY: 160, isRadius: true },
+          // { url: res[2], imgW: 100, imgH: 100, imgX: 235, imgY: 160, isRadius: true },
 
-          { url: res[3], imgW: 120, imgH: 120, imgX: 65, imgY: 635, isRadius: false }
+          { url: res[2], imgW: 120, imgH: 120, imgX: 65, imgY: 635, isRadius: false }
         ],
         textList: [
           {
@@ -180,7 +179,7 @@ Page({
             fontFamily: 'Arial',
             bold: true,
             textX: 195,
-            textY: 30
+            textY: 80
           },
           {
             string: '蜕变出自己最美的颜色',
@@ -189,23 +188,24 @@ Page({
             fontFamily: 'Arial',
             bold: true,
             textX: 135,
-            textY: 90
+            textY: 140
           },
+          // {
+          // string: resultObj.nick,
+          // color: '#373737',
+          // fontSize: 28,
+          // fontFamily: 'Arial',
+          // bold: false,
+          // textX: 265,
+          // textY: 270
+          // }, 
           {
-          string: resultObj.nick,
-          color: '#373737',
-          fontSize: 28,
-          fontFamily: 'Arial',
-          bold: false,
-          textX: 265,
-          textY: 270
-          }, {
             string: '亲爱的!',
             color: '#000',
             fontSize: 24,
             fontFamily: 'Arial',
             bold: true,
-            textX: 65,
+            textX: 245,
             textY: 340
           }, {
             string: '送你一张免费U点券，快来领取吧',
@@ -213,24 +213,25 @@ Page({
             fontSize: 24,
             fontFamily: 'Arial',
             bold: true,
-            textX: 65,
+            textX: 135,
             textY: 390
           }, {
-            string: '免费体验卡',
+            string: txt,
             color: '#2470BF',
             fontSize: 24,
             fontFamily: 'Arial',
             bold: true,
-            textX: 95,
+            textX: 215,
             textY: 465
-          }, {
-            string: txt,
-            color: '#999',
+          },
+           {
+            string: '蓝巫师小程序内通用',
+            color: '#000',
             fontSize: 20,
             fontFamily: 'Arial',
             bold: false,
-            textX: 95,
-            textY: 515
+            textX: 195,
+            textY: 500
           }, {
             string: '立即扫码领取',
             color: '#000',
@@ -249,6 +250,7 @@ Page({
             textY: 710
           }]
       }, res => {
+		console.log(res);
         tool.loading_h();
         console.log(res)
         _this.setData({
@@ -314,6 +316,7 @@ Page({
     if (e.detail.confirm) {
       auth.openSetting(res => {//用户自行从设置勾选授权后
         if (res.authSetting["scope.writePhotosAlbum"] && this.data.posterImgUrl) {
+			console.log(this.data.posterImgUrl)
           this.saveImageToPhotosAlbum(this.data.posterImgUrl)
         }
       })
