@@ -13,8 +13,6 @@
     bottom:0;
     left:0;
     z-index:999;
-    /* box-sizing:border-box; */
-    /* height: 100rpx; */
     padding-top: 16rpx;
     padding-bottom: 13rpx;
 }

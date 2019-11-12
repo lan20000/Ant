@@ -102,7 +102,7 @@ color:rgba(255,255,255,1);
 }
 .nick_name {
   position: relative;
-  top:210rpx;
+  margin-top:60rpx;
   color : #000;
   text-align: center;
   font-size : 35rpx;
@@ -116,8 +116,8 @@ color:rgba(255,255,255,1);
   color : #000;
   font-weight: bold;
   z-index : 999;
-  margin-top: 225rpx;
-  width: 280px;
+  margin-top: 25rpx;
+  /* width: 280px; */
 }
 .card_info>view{
 	text-align: center;
@@ -137,7 +137,8 @@ color:rgba(255,255,255,1);
 .card_bg {
   position: absolute;
   top:0;
-  width: 100%;
+  width: 650rpx;
+  height : 784rpx;
 }
 .card_details >view:nth-child(1) {
   color : #2470BF;
@@ -195,10 +196,11 @@ color:rgba(255,255,255,1);
 }
 .share_box {
   display: flex;
-  justify-content: space-between;
-  width: 580.3rpx;
+  flex-direction: initial !important;
+  justify-content: space-between !important;
+  width: 650rpx;
   margin: 0 auto;
-margin-top: 50rpx;
+  margin-top: 30rpx;
 }
 .share_box > view {
   background: #fff;
@@ -215,8 +217,13 @@ margin-top: 50rpx;
 }
 .card_content {
   width: 650rpx;
-  height : 800rpx;
+  height : 720rpx;
+  position: relative;
 }
+/* .info {
+  position: absolute;
+  top: 50rpx;
+} */
 .card_content > view {
   width: 560rpx;
 }
